@@ -37,7 +37,7 @@ class LocacionController extends Controller
      */
     public function store(Request $request)
     {
-        $locacion = new $Locacion();
+        $locacion = new Locacion();
         $locacion->Nombre = $request->input('Nombre');
         $locacion->Capacidad = $request->input('Capacidad');
         $locacion->CapacidadMax = $request->input('CapacidadMax');
