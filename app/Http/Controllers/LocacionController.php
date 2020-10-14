@@ -26,7 +26,7 @@ class LocacionController extends Controller
     public function create()
     {
         $locaciones = Locacion::all();
-        return view('Locacion',['locaciones'=>$locaciones, 'layout'=>'create']);
+        return view('locacion',['locaciones'=>$locaciones, 'layout'=>'create']);
     }
 
     /**
