@@ -19,16 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="-Logre solucionar lo del formato del html. Para eso cree archivos .css en la carpeta public y los asocie al html.&#10;-Sientanse libres de cambiar el estilo de la pagina como mas les guste. Yo solo puse el de ahora a modo de prueba.">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_14_215342_add__q_r_to_locacions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LocacionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LocacionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_11_012556_create_locacions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_11_012556_create_locacions_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/locacioneslist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/locacioneslist.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR)&#10;-Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso&#10;-Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -213,7 +204,7 @@
       <workItem from="1602659074439" duration="1625000" />
       <workItem from="1602661200601" duration="72000" />
       <workItem from="1602661276801" duration="26000" />
-      <workItem from="1602661318793" duration="8301000" />
+      <workItem from="1602661318793" duration="9021000" />
     </task>
     <task id="LOCAL-00001" summary="Cree el modulo de locaciones y su controlador. &#10;Dentro del controlador actualice todos los metodos.&#10;Dentro de la tabla agregue los atributos (falta ver como hacer para que el id sea un QR). &#10;Por ultimo registre todas las rutas dentro de &quot;web.php&quot; para los metodos del controller.&#10;Hay que ver que base de datos usamos asi ya se puede crear la tabla ahi.">
       <created>1602382520538</created>
@@ -285,7 +276,21 @@
       <option name="project" value="LOCAL" />
       <updated>1602699761307</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR)&#10;-Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso&#10;-Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles">
+      <created>1602718835108</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1602718835108</updated>
+    </task>
+    <task id="LOCAL-00012" summary="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR)&#10;-Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso&#10;-Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles">
+      <created>1602719003245</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1602719003245</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,7 +331,8 @@
     <MESSAGE value="Corrijo detalle para que ande &quot;create&quot; en heroku" />
     <MESSAGE value="Mejore un poco los views. Todavia no se por que no se ven de la misma forma en que las saco de bootstrap" />
     <MESSAGE value="-Logre solucionar lo del formato del html. Para eso cree archivos .css en la carpeta public y los asocie al html.&#10;-Sientanse libres de cambiar el estilo de la pagina como mas les guste. Yo solo puse el de ahora a modo de prueba." />
-    <option name="LAST_COMMIT_MESSAGE" value="-Logre solucionar lo del formato del html. Para eso cree archivos .css en la carpeta public y los asocie al html.&#10;-Sientanse libres de cambiar el estilo de la pagina como mas les guste. Yo solo puse el de ahora a modo de prueba." />
+    <MESSAGE value="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR)&#10;-Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso&#10;-Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" />
+    <option name="LAST_COMMIT_MESSAGE" value="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR)&#10;-Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso&#10;-Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
@@ -405,10 +411,10 @@
       <screen x="0" y="23" width="1680" height="967" />
     </state>
     <state x="584" y="211" key="VCS.ChangeListViewerDialog/0.23.1680.967@0.23.1680.967" timestamp="1602619926369" />
-    <state x="440" y="245" key="Vcs.Push.Dialog.v2" timestamp="1602699783198">
+    <state x="440" y="245" key="Vcs.Push.Dialog.v2" timestamp="1602718846403">
       <screen x="0" y="23" width="1680" height="963" />
     </state>
-    <state x="440" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.963@0.23.1680.963" timestamp="1602699783198" />
+    <state x="440" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.963@0.23.1680.963" timestamp="1602718846403" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.966@0.23.1680.966" timestamp="1602553882633" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.967@0.23.1680.967" timestamp="1602648520626" />
     <state x="638" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602633438449">
@@ -424,6 +430,14 @@
     </state>
     <state x="608" y="400" key="git4idea.remote.GitConfigureRemotesDialog/0.23.1680.967@0.23.1680.967" timestamp="1602633610249" />
     <state x="608" y="402" key="git4idea.remote.GitConfigureRemotesDialog/0.23.1680.973@0.23.1680.973" timestamp="1602632911536" />
+    <state x="559" y="406" key="git4idea.ui.GitResetDialog" timestamp="1602719157841">
+      <screen x="0" y="23" width="1680" height="963" />
+    </state>
+    <state x="559" y="406" key="git4idea.ui.GitResetDialog/0.23.1680.963@0.23.1680.963" timestamp="1602719157841" />
+    <state x="559" y="410" key="git4idea.ui.GitStashDialog" timestamp="1602719222330">
+      <screen x="0" y="23" width="1680" height="963" />
+    </state>
+    <state x="559" y="410" key="git4idea.ui.GitStashDialog/0.23.1680.963@0.23.1680.963" timestamp="1602719222330" />
     <state x="505" y="235" width="670" height="676" key="search.everywhere.popup" timestamp="1602614335035">
       <screen x="0" y="23" width="1680" height="967" />
     </state>
