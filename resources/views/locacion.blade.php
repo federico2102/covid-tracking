@@ -51,7 +51,7 @@
 
                 <div class="card mb-3">
                     <div class="card-body">
-                        <h5 class="card-title">Enter the informations of the new student</h5>
+                        <h5 class="card-title">Ingrese la informacion sobre la nueva locacion</h5>
                         <form action="{{ url('/store') }}" method="post">
                             @csrf
                             <div class="form-group">
