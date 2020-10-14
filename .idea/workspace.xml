@@ -19,7 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="-Vista para lista de locaciones (super basica)&#10;-Formulario para crear locaciones con botones save y reset (ya funciona cargar locaciones)&#10;-Habria que hacer que las vistas sean mas lindas. No se por que la tabla y el formulario no me quedaron como lo que saque de bootstrap" />
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Corrijo detalle para que ande &quot;create&quot; en heroku">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/locacion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/locacion.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/locacioneslist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/locacioneslist.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -199,7 +203,7 @@
       <workItem from="1602372922351" duration="2352000" />
       <workItem from="1602379394535" duration="3438000" />
       <workItem from="1602547608483" duration="6225000" />
-      <workItem from="1602614645332" duration="12740000" />
+      <workItem from="1602614645332" duration="18592000" />
     </task>
     <task id="LOCAL-00001" summary="Cree el modulo de locaciones y su controlador. &#10;Dentro del controlador actualice todos los metodos.&#10;Dentro de la tabla agregue los atributos (falta ver como hacer para que el id sea un QR). &#10;Por ultimo registre todas las rutas dentro de &quot;web.php&quot; para los metodos del controller.&#10;Hay que ver que base de datos usamos asi ya se puede crear la tabla ahi.">
       <created>1602382520538</created>
@@ -250,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602639040619</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Corrijo detalle para que ande &quot;create&quot; en heroku">
+      <created>1602639204336</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1602639204336</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,7 +299,8 @@
     <MESSAGE value="Model y controller de &quot;locaciones&quot; implementados.&#10;View basica de bootstrap para locaciones" />
     <MESSAGE value="Arreglo nombre de una view para ver si me lo toma Heroku" />
     <MESSAGE value="-Vista para lista de locaciones (super basica)&#10;-Formulario para crear locaciones con botones save y reset (ya funciona cargar locaciones)&#10;-Habria que hacer que las vistas sean mas lindas. No se por que la tabla y el formulario no me quedaron como lo que saque de bootstrap" />
-    <option name="LAST_COMMIT_MESSAGE" value="-Vista para lista de locaciones (super basica)&#10;-Formulario para crear locaciones con botones save y reset (ya funciona cargar locaciones)&#10;-Habria que hacer que las vistas sean mas lindas. No se por que la tabla y el formulario no me quedaron como lo que saque de bootstrap" />
+    <MESSAGE value="Corrijo detalle para que ande &quot;create&quot; en heroku" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrijo detalle para que ande &quot;create&quot; en heroku" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
@@ -363,11 +375,11 @@
       <screen x="0" y="23" width="1680" height="967" />
     </state>
     <state x="584" y="211" key="VCS.ChangeListViewerDialog/0.23.1680.967@0.23.1680.967" timestamp="1602619926369" />
-    <state x="440" y="246" key="Vcs.Push.Dialog.v2" timestamp="1602639059197">
+    <state x="440" y="246" key="Vcs.Push.Dialog.v2" timestamp="1602639216960">
       <screen x="0" y="23" width="1680" height="967" />
     </state>
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.966@0.23.1680.966" timestamp="1602553882633" />
-    <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.967@0.23.1680.967" timestamp="1602639059197" />
+    <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.967@0.23.1680.967" timestamp="1602639216960" />
     <state x="638" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602633438449">
       <screen x="0" y="23" width="1680" height="967" />
     </state>
