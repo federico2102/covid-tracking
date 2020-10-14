@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Arregle el problema que no tomaba al Controller. Era un tema de version de laravel.&#10;Empece a hacer el view para las locaciones (solo copie el starter template de bootstrap)">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable path="composer" />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/facade/ignition" />
+      <path value="$PROJECT_DIR$/vendor/facade/ignition-contracts" />
+      <path value="$PROJECT_DIR$/vendor/facade/flare-client-php" />
+      <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/vendor/scrivo/highlight.php" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1ihw1usGpmiz6EYgdhhkrhG9OUv" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/vendor" />
+    </key>
+  </component>
+  <component name="RunManager" selected="PHPUnit.phpunit.xml">
+    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" scope="XML" />
+      <method v="2" />
+    </configuration>
+    <configuration name="yoEstuveAhi-laravel" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" directory="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.yoEstuveAhi-laravel" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="" />
+      <created>1602372920594</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602372920594</updated>
+      <workItem from="1602372922351" duration="2352000" />
+      <workItem from="1602379394535" duration="3438000" />
+      <workItem from="1602547608483" duration="6225000" />
+      <workItem from="1602614645332" duration="8044000" />
+    </task>
+    <task id="LOCAL-00001" summary="Cree el modulo de locaciones y su controlador. &#10;Dentro del controlador actualice todos los metodos.&#10;Dentro de la tabla agregue los atributos (falta ver como hacer para que el id sea un QR). &#10;Por ultimo registre todas las rutas dentro de &quot;web.php&quot; para los metodos del controller.&#10;Hay que ver que base de datos usamos asi ya se puede crear la tabla ahi.">
+      <created>1602382520538</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602382520538</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Actualice los datos de la base de datos (postgres)&#10;Tira error de que no encuentra el archivo Controller.php cuando lo quiero abrir en el browser">
+      <created>1602553877460</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602553877460</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Revert &quot;Actualice los datos de la base de datos (postgres) Tira error de que no encuentra el archivo Controller.php cuando lo quiero abrir en el browser&quot;&#10;&#10;This reverts commit a9a6a2f3">
+      <created>1602620188097</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1602620188097</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Arregle el problema que no tomaba al Controller. Era un tema de version de laravel.&#10;Empece a hacer el view para las locaciones (solo copie el starter template de bootstrap)">
+      <created>1602620677492</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1602620677492</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Cree el modulo de locaciones y su controlador. &#10;Dentro del controlador actualice todos los metodos.&#10;Dentro de la tabla agregue los atributos (falta ver como hacer para que el id sea un QR). &#10;Por ultimo registre todas las rutas dentro de &quot;web.php&quot; para los metodos del controller" />
+    <MESSAGE value="Cree el modulo de locaciones y su controlador. &#10;Dentro del controlador actualice todos los metodos.&#10;Dentro de la tabla agregue los atributos (falta ver como hacer para que el id sea un QR). &#10;Por ultimo registre todas las rutas dentro de &quot;web.php&quot; para los metodos del controller.&#10;Hay que ver que base de datos usamos asi ya se puede crear la tabla ahi." />
+    <MESSAGE value="Actualice los datos de la base de datos (postgres)&#10;Tira error de que no encuentra el archivo Controller.php cuando lo quiero abrir en el browser" />
+    <MESSAGE value="Revert &quot;Actualice los datos de la base de datos (postgres) Tira error de que no encuentra el archivo Controller.php cuando lo quiero abrir en el browser&quot;&#10;&#10;This reverts commit a9a6a2f3" />
+    <MESSAGE value="Arregle el problema que no tomaba al Controller. Era un tema de version de laravel.&#10;Empece a hacer el view para las locaciones (solo copie el starter template de bootstrap)" />
+    <MESSAGE value="Model y controller de &quot;locaciones&quot; implementados.&#10;View basica de bootstrap para locaciones" />
+    <option name="LAST_COMMIT_MESSAGE" value="Model y controller de &quot;locaciones&quot; implementados.&#10;View basica de bootstrap para locaciones" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
+      <screen x="0" y="23" width="1680" height="966" />
+    </state>
+    <state x="428" y="187" key="#CLI_Interpreters/0.23.1680.966@0.23.1680.966" timestamp="1602373966883" />
+    <state x="508" y="175" key="#PHP" timestamp="1602373695497">
+      <screen x="0" y="23" width="1680" height="966" />
+    </state>
+    <state x="508" y="175" key="#PHP/0.23.1680.966@0.23.1680.966" timestamp="1602373695497" />
+    <state x="544" y="236" key="#Servers" timestamp="1602375351652">
+      <screen x="0" y="23" width="1680" height="966" />
+    </state>
+    <state x="544" y="236" key="#Servers/0.23.1680.966@0.23.1680.966" timestamp="1602375351652" />
+    <state x="428" y="168" key="#Test_Frameworks" timestamp="1602374156074">
+      <screen x="0" y="23" width="1680" height="966" />
+    </state>
+    <state x="428" y="168" key="#Test_Frameworks/0.23.1680.966@0.23.1680.966" timestamp="1602374156074" />
+    <state x="304" y="168" width="1071" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602373696615">
+      <screen x="0" y="23" width="1680" height="966" />
+    </state>
+    <state x="304" y="168" width="1071" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.966@0.23.1680.966" timestamp="1602373696615" />
+    <state x="575" y="315" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602375083154">
+      <screen x="0" y="23" width="1680" height="966" />
+    </state>
+    <state x="575" y="315" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.966@0.23.1680.966" timestamp="1602375083154" />
+    <state x="578" y="260" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602375136816">
+      <screen x="0" y="23" width="1680" height="966" />
+    </state>
+    <state x="578" y="260" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.966@0.23.1680.966" timestamp="1602375136816" />
+    <state x="18" y="79" key="CommitChangelistDialog2" timestamp="1602620187914">
+      <screen x="0" y="23" width="1680" height="967" />
+    </state>
+    <state x="18" y="79" key="CommitChangelistDialog2/0.23.1680.967@0.23.1680.967" timestamp="1602620187914" />
+    <state x="594" y="425" key="ComposerInitDialogKey" timestamp="1602374402115">
+      <screen x="0" y="23" width="1680" height="966" />
+    </state>
+    <state x="594" y="425" key="ComposerInitDialogKey/0.23.1680.966@0.23.1680.966" timestamp="1602374402115" />
+    <state x="168" y="109" key="DiffContextDialog" timestamp="1602619590479">
+      <screen x="0" y="23" width="1680" height="967" />
+    </state>
+    <state x="168" y="109" key="DiffContextDialog/0.23.1680.967@0.23.1680.967" timestamp="1602619590479" />
+    <state width="1638" height="247" key="GridCell.Tab.0.bottom" timestamp="1602633491007">
+      <screen x="0" y="23" width="1680" height="967" />
+    </state>
+    <state width="1638" height="247" key="GridCell.Tab.0.bottom/0.23.1680.966@0.23.1680.966" timestamp="1602375464895" />
+    <state width="1638" height="247" key="GridCell.Tab.0.bottom/0.23.1680.967@0.23.1680.967" timestamp="1602633491007" />
+    <state width="1638" height="247" key="GridCell.Tab.0.center" timestamp="1602633491006">
+      <screen x="0" y="23" width="1680" height="967" />
+    </state>
+    <state width="1638" height="247" key="GridCell.Tab.0.center/0.23.1680.966@0.23.1680.966" timestamp="1602375464894" />
+    <state width="1638" height="247" key="GridCell.Tab.0.center/0.23.1680.967@0.23.1680.967" timestamp="1602633491006" />
+    <state width="1638" height="247" key="GridCell.Tab.0.left" timestamp="1602633491006">
+      <screen x="0" y="23" width="1680" height="967" />
+    </state>
+    <state width="1638" height="247" key="GridCell.Tab.0.left/0.23.1680.966@0.23.1680.966" timestamp="1602375464894" />
+    <state width="1638" height="247" key="GridCell.Tab.0.left/0.23.1680.967@0.23.1680.967" timestamp="1602633491006" />
+    <state width="1638" height="247" key="GridCell.Tab.0.right" timestamp="1602633491007">
+      <screen x="0" y="23" width="1680" height="967" />
+    </state>
+    <state width="1638" height="247" key="GridCell.Tab.0.right/0.23.1680.966@0.23.1680.966" timestamp="1602375464894" />
+    <state width="1638" height="247" key="GridCell.Tab.0.right/0.23.1680.967@0.23.1680.967" timestamp="1602633491007" />
+    <state x="577" y="234" key="RollbackChangesDialog" timestamp="1602619593649">
+      <screen x="0" y="23" width="1680" height="967" />
+    </state>
+    <state x="577" y="234" key="RollbackChangesDialog/0.23.1680.967@0.23.1680.967" timestamp="1602619593649" />
+    <state x="341" y="145" key="SettingsEditor" timestamp="1602375381252">
+      <screen x="0" y="23" width="1680" height="966" />
+    </state>
+    <state x="341" y="145" key="SettingsEditor/0.23.1680.966@0.23.1680.966" timestamp="1602375381252" />
+    <state x="584" y="211" key="VCS.ChangeListViewerDialog" timestamp="1602619926369">
+      <screen x="0" y="23" width="1680" height="967" />
+    </state>
+    <state x="584" y="211" key="VCS.ChangeListViewerDialog/0.23.1680.967@0.23.1680.967" timestamp="1602619926369" />
+    <state x="440" y="246" key="Vcs.Push.Dialog.v2" timestamp="1602633463438">
+      <screen x="0" y="23" width="1680" height="967" />
+    </state>
+    <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.966@0.23.1680.966" timestamp="1602553882633" />
+    <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.967@0.23.1680.967" timestamp="1602633463438" />
+    <state x="638" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602633438449">
+      <screen x="0" y="23" width="1680" height="967" />
+    </state>
+    <state x="638" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1680.967@0.23.1680.967" timestamp="1602633438449" />
+    <state x="538" y="138" width="604" height="735" key="find.popup" timestamp="1602554141977">
+      <screen x="0" y="23" width="1680" height="967" />
+    </state>
+    <state x="538" y="138" width="604" height="735" key="find.popup/0.23.1680.967@0.23.1680.967" timestamp="1602554141977" />
+    <state x="608" y="400" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1602633610249">
+      <screen x="0" y="23" width="1680" height="967" />
+    </state>
+    <state x="608" y="400" key="git4idea.remote.GitConfigureRemotesDialog/0.23.1680.967@0.23.1680.967" timestamp="1602633610249" />
+    <state x="608" y="402" key="git4idea.remote.GitConfigureRemotesDialog/0.23.1680.973@0.23.1680.973" timestamp="1602632911536" />
+    <state x="505" y="235" width="670" height="676" key="search.everywhere.popup" timestamp="1602614335035">
+      <screen x="0" y="23" width="1680" height="967" />
+    </state>
+    <state x="505" y="235" width="670" height="676" key="search.everywhere.popup/0.23.1680.967@0.23.1680.967" timestamp="1602614335035" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/yoEstuveAhi_laravel@yoEstuveAhi_laravel.xml" NAME="yoEstuveAhi-laravel Coverage Results" MODIFIED="1602374624534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/yoEstuveAhi_laravel@phpunit_xml.xml" NAME="phpunit.xml Coverage Results" MODIFIED="1602374704449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
