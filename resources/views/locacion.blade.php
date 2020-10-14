@@ -8,10 +8,70 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.3/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Locaciones</title>
 </head>
 <body>
-<h1>Hello, world!</h1>
+
+@if($layout == 'index')
+    <div class="conteiner-fluid">
+        <div class="row">
+            <section class="col">
+                @include("locacioneslist")
+            </section>
+            <section class="col"></section>
+        </div>
+    </div>
+@elseif($layout == 'create')
+    <div class="conteiner-fluid">
+        <div class="row">
+            <section class="col">
+                @include("locacioneslist")
+            </section>
+            <section class="col">
+                <form action="{{ url('/store') }}" method="post">
+                    @csrf
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input name="Nombre" type="text" class="form-control" placeholder="Ingresar nombre">
+                    </div>
+                    <div class="form-group" hidden>
+                        <label>Capacidad</label>
+                        <input name="Capacidad" type="text" class="form-control" placeholder="Capacidad" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label>CapacidadMax</label>
+                        <input name="CapacidadMax" type="text" class="form-control" placeholder="Ingresar capacidad maxima">
+                    </div>
+                    <div class="form-group">
+                        <label>Geoposicion</label>
+                        <input name="Geoposicion" type="text" class="form-control" placeholder="Ingresar geoposicion">
+                    </div>
+                    <input type="submit" class="btn btn-info" value="Save">
+                    <input type="reset" class="btn btn-warning" value="Reset">
+                </form>
+            </section>
+        </div>
+    </div>
+@elseif($layout == 'show')
+    <div class="conteiner-fluid">
+        <div class="row">
+            <section class="col">
+                @include("locacioneslist")
+            </section>
+            <section class="col"></section>
+        </div>
+    </div>
+@elseif($layout == 'edit')
+    <div class="conteiner-fluid">
+        <div class="row">
+            <section class="col">
+                @include("locacioneslist")
+            </section>
+            <section class="col"></section>
+        </div>
+    </div>
+@endif
+
 
 <!-- Optional JavaScript; choose one of the two! -->
 
