@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Locacion;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class LocacionController extends Controller
 {
@@ -39,9 +40,10 @@ class LocacionController extends Controller
     {
         $locacion = new Locacion();
         $locacion->Nombre = $request->input('Nombre');
-        $locacion->Capacidad = $request->input('Capacidad');
+        $locacion->Capacidad = 0;
         $locacion->CapacidadMax = $request->input('CapacidadMax');
         $locacion->Geoposicion = $request->input('Geoposicion');
+        $locacion->QR = 'https://qrickit.com/api/qr.php?d=EscaneoExitoso&t=j&qrsize=300';
         $locacion->save();
         return redirect('/');
     }

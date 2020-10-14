@@ -9,6 +9,7 @@
                 <th scope="col">Capacidad</th>
                 <th scope="col">CapacidadMax</th>
                 <th scope="col">Geoposicion</th>
+                <th scope="col">QR</th>
 
             </tr>
             </thead>
@@ -19,6 +20,7 @@
                     <td>{{ $locacion->Capacidad }}</td>
                     <td>{{ $locacion->CapacidadMax }}</td>
                     <td>{{ $locacion->Geoposicion }}</td>
+                    <td><a href="{{ $locacion->QR }}">Click para ver QR</a></td>
                     <td>
 
                         <a href="{{ url('/edit/'.$locacion->id) }}" class="btn btn-sm btn-warning">Edit</a>
