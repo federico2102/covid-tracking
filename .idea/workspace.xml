@@ -19,7 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Mejore un poco los views. Todavia no se por que no se ven de la misma forma en que las saco de bootstrap" />
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Mejore un poco los views. Todavia no se por que no se ven de la misma forma en que las saco de bootstrap">
+      <change afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/locacion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/locacion.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/locacioneslist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/locacioneslist.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -200,6 +207,11 @@
       <workItem from="1602379394535" duration="3438000" />
       <workItem from="1602547608483" duration="6225000" />
       <workItem from="1602614645332" duration="18828000" />
+      <workItem from="1602650269443" duration="24000" />
+      <workItem from="1602659074439" duration="1625000" />
+      <workItem from="1602661200601" duration="72000" />
+      <workItem from="1602661276801" duration="26000" />
+      <workItem from="1602661318793" duration="1189000" />
     </task>
     <task id="LOCAL-00001" summary="Cree el modulo de locaciones y su controlador. &#10;Dentro del controlador actualice todos los metodos.&#10;Dentro de la tabla agregue los atributos (falta ver como hacer para que el id sea un QR). &#10;Por ultimo registre todas las rutas dentro de &quot;web.php&quot; para los metodos del controller.&#10;Hay que ver que base de datos usamos asi ya se puede crear la tabla ahi.">
       <created>1602382520538</created>
@@ -347,24 +359,28 @@
       <screen x="0" y="23" width="1680" height="967" />
     </state>
     <state x="168" y="109" key="DiffContextDialog/0.23.1680.967@0.23.1680.967" timestamp="1602619590479" />
-    <state width="1638" height="247" key="GridCell.Tab.0.bottom" timestamp="1602638145567">
-      <screen x="0" y="23" width="1680" height="967" />
+    <state width="1638" height="246" key="GridCell.Tab.0.bottom" timestamp="1602698913677">
+      <screen x="0" y="23" width="1680" height="963" />
     </state>
+    <state width="1638" height="246" key="GridCell.Tab.0.bottom/0.23.1680.963@0.23.1680.963" timestamp="1602698913677" />
     <state width="1638" height="247" key="GridCell.Tab.0.bottom/0.23.1680.966@0.23.1680.966" timestamp="1602375464895" />
     <state width="1638" height="247" key="GridCell.Tab.0.bottom/0.23.1680.967@0.23.1680.967" timestamp="1602638145567" />
-    <state width="1638" height="247" key="GridCell.Tab.0.center" timestamp="1602638145567">
-      <screen x="0" y="23" width="1680" height="967" />
+    <state width="1638" height="246" key="GridCell.Tab.0.center" timestamp="1602698913676">
+      <screen x="0" y="23" width="1680" height="963" />
     </state>
+    <state width="1638" height="246" key="GridCell.Tab.0.center/0.23.1680.963@0.23.1680.963" timestamp="1602698913676" />
     <state width="1638" height="247" key="GridCell.Tab.0.center/0.23.1680.966@0.23.1680.966" timestamp="1602375464894" />
     <state width="1638" height="247" key="GridCell.Tab.0.center/0.23.1680.967@0.23.1680.967" timestamp="1602638145567" />
-    <state width="1638" height="247" key="GridCell.Tab.0.left" timestamp="1602638145566">
-      <screen x="0" y="23" width="1680" height="967" />
+    <state width="1638" height="246" key="GridCell.Tab.0.left" timestamp="1602698913675">
+      <screen x="0" y="23" width="1680" height="963" />
     </state>
+    <state width="1638" height="246" key="GridCell.Tab.0.left/0.23.1680.963@0.23.1680.963" timestamp="1602698913675" />
     <state width="1638" height="247" key="GridCell.Tab.0.left/0.23.1680.966@0.23.1680.966" timestamp="1602375464894" />
     <state width="1638" height="247" key="GridCell.Tab.0.left/0.23.1680.967@0.23.1680.967" timestamp="1602638145566" />
-    <state width="1638" height="247" key="GridCell.Tab.0.right" timestamp="1602638145567">
-      <screen x="0" y="23" width="1680" height="967" />
+    <state width="1638" height="246" key="GridCell.Tab.0.right" timestamp="1602698913676">
+      <screen x="0" y="23" width="1680" height="963" />
     </state>
+    <state width="1638" height="246" key="GridCell.Tab.0.right/0.23.1680.963@0.23.1680.963" timestamp="1602698913676" />
     <state width="1638" height="247" key="GridCell.Tab.0.right/0.23.1680.966@0.23.1680.966" timestamp="1602375464894" />
     <state width="1638" height="247" key="GridCell.Tab.0.right/0.23.1680.967@0.23.1680.967" timestamp="1602638145567" />
     <state x="577" y="234" key="RollbackChangesDialog" timestamp="1602619593649">
