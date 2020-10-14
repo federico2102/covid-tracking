@@ -15,7 +15,7 @@ class LocacionController extends Controller
     public function index()
     {
         $locaciones = Locacion::all();
-        return view('Locacion',['locaciones'=>$locaciones, 'layout'=>'index']);
+        return view('locacion',['locaciones'=>$locaciones, 'layout'=>'index']);
     }
 
     /**
