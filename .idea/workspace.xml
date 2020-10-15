@@ -19,8 +19,65 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Implemento view para editar locacion">
-      <change beforePath="$PROJECT_DIR$/resources/views/locacionform.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/locacionform.blade.php" afterDir="false" />
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Limpio informacion innsecesaria">
+      <change afterPath="$PROJECT_DIR$/app/Actions/Fortify/CreateNewUser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Actions/Fortify/PasswordValidationRules.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Actions/Fortify/ResetUserPassword.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Actions/Fortify/UpdateUserPassword.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Actions/Fortify/UpdateUserProfileInformation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Actions/Jetstream/DeleteUser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Providers/FortifyServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Providers/JetstreamServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/View/Components/AppLayout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/View/Components/GuestLayout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/fortify.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/jetstream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/sanctum.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_200000_add_two_factor_columns_to_users_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_15_004219_create_sessions_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/api/api-token-manager.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/api/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/forgot-password.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/reset-password.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/two-factor-challenge.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/verify-email.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/guest.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/profile/delete-user-form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/profile/logout-other-browser-sessions-form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/profile/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/profile/two-factor-authentication-form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/profile/update-password-form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/profile/update-profile-information-form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/yoEstuveAhi-laravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/yoEstuveAhi-laravel.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_14_215342_add__q_r_to_locacions.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/locacion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/locacion.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <list id="c16eeb1e-2a41-4503-a9b3-45b8020eb448" name="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR) -Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso -Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +93,34 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IlluminatedCloudWorkspaceSettings">
+    <option name="projectWorkspaceSettings">
+      <ProjectWorkspaceSettings>
+        <option name="anonymousApexSettings">
+          <AnonymousApexSettings>
+            <option name="savedDocuments">
+              <list>
+                <AnonymousApexSavedDocument>
+                  <option name="name" value="Anonymous Apex 1" />
+                </AnonymousApexSavedDocument>
+              </list>
+            </option>
+          </AnonymousApexSettings>
+        </option>
+        <option name="soqlQuerySettings">
+          <SoqlQuerySettings>
+            <option name="savedDocuments">
+              <list>
+                <SoqlQuerySavedDocument>
+                  <option name="name" value="SOQL Query 1" />
+                </SoqlQuerySavedDocument>
+              </list>
+            </option>
+          </SoqlQuerySettings>
+        </option>
+      </ProjectWorkspaceSettings>
+    </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3">
     <include_path>
@@ -147,6 +232,17 @@
       <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
       <path value="$PROJECT_DIR$/vendor/scrivo/highlight.php" />
       <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/dasprid/enum" />
+      <path value="$PROJECT_DIR$/vendor/jaybizzle/crawler-detect" />
+      <path value="$PROJECT_DIR$/vendor/bacon/bacon-qr-code" />
+      <path value="$PROJECT_DIR$/vendor/pragmarx/google2fa" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/constant_time_encoding" />
+      <path value="$PROJECT_DIR$/vendor/laravel/fortify" />
+      <path value="$PROJECT_DIR$/vendor/mobiledetect/mobiledetectlib" />
+      <path value="$PROJECT_DIR$/vendor/jenssegers/agent" />
+      <path value="$PROJECT_DIR$/vendor/laravel/jetstream" />
+      <path value="$PROJECT_DIR$/vendor/laravel/sanctum" />
+      <path value="$PROJECT_DIR$/vendor/livewire/livewire" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ihw1usGpmiz6EYgdhhkrhG9OUv" />
@@ -208,7 +304,7 @@
       <workItem from="1602659074439" duration="1625000" />
       <workItem from="1602661200601" duration="72000" />
       <workItem from="1602661276801" duration="26000" />
-      <workItem from="1602661318793" duration="10751000" />
+      <workItem from="1602661318793" duration="11626000" />
     </task>
     <task id="LOCAL-00001" summary="Cree el modulo de locaciones y su controlador. &#10;Dentro del controlador actualice todos los metodos.&#10;Dentro de la tabla agregue los atributos (falta ver como hacer para que el id sea un QR). &#10;Por ultimo registre todas las rutas dentro de &quot;web.php&quot; para los metodos del controller.&#10;Hay que ver que base de datos usamos asi ya se puede crear la tabla ahi.">
       <created>1602382520538</created>
@@ -308,7 +404,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602720715000</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Limpio informacion innsecesaria">
+      <created>1602721117512</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1602721117512</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,7 +455,8 @@
     <MESSAGE value="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR)&#10;-Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso&#10;-Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" />
     <MESSAGE value="-Agregue columna de QR a la base de datos&#10;-El archivo .env tiene comentado el seteo de la base de datos local por si quieren testear ahi antes de subir las cosas a heroku" />
     <MESSAGE value="Implemento view para editar locacion" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemento view para editar locacion" />
+    <MESSAGE value="Limpio informacion innsecesaria" />
+    <option name="LAST_COMMIT_MESSAGE" value="Limpio informacion innsecesaria" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
@@ -395,28 +499,28 @@
       <screen x="0" y="23" width="1680" height="967" />
     </state>
     <state x="168" y="109" key="DiffContextDialog/0.23.1680.967@0.23.1680.967" timestamp="1602619590479" />
-    <state width="1638" height="246" key="GridCell.Tab.0.bottom" timestamp="1602698913677">
+    <state width="1638" height="245" key="GridCell.Tab.0.bottom" timestamp="1602722857850">
       <screen x="0" y="23" width="1680" height="963" />
     </state>
-    <state width="1638" height="246" key="GridCell.Tab.0.bottom/0.23.1680.963@0.23.1680.963" timestamp="1602698913677" />
+    <state width="1638" height="245" key="GridCell.Tab.0.bottom/0.23.1680.963@0.23.1680.963" timestamp="1602722857850" />
     <state width="1638" height="247" key="GridCell.Tab.0.bottom/0.23.1680.966@0.23.1680.966" timestamp="1602375464895" />
     <state width="1638" height="247" key="GridCell.Tab.0.bottom/0.23.1680.967@0.23.1680.967" timestamp="1602638145567" />
-    <state width="1638" height="246" key="GridCell.Tab.0.center" timestamp="1602698913676">
+    <state width="1638" height="245" key="GridCell.Tab.0.center" timestamp="1602722857849">
       <screen x="0" y="23" width="1680" height="963" />
     </state>
-    <state width="1638" height="246" key="GridCell.Tab.0.center/0.23.1680.963@0.23.1680.963" timestamp="1602698913676" />
+    <state width="1638" height="245" key="GridCell.Tab.0.center/0.23.1680.963@0.23.1680.963" timestamp="1602722857849" />
     <state width="1638" height="247" key="GridCell.Tab.0.center/0.23.1680.966@0.23.1680.966" timestamp="1602375464894" />
     <state width="1638" height="247" key="GridCell.Tab.0.center/0.23.1680.967@0.23.1680.967" timestamp="1602638145567" />
-    <state width="1638" height="246" key="GridCell.Tab.0.left" timestamp="1602698913675">
+    <state width="1638" height="245" key="GridCell.Tab.0.left" timestamp="1602722857848">
       <screen x="0" y="23" width="1680" height="963" />
     </state>
-    <state width="1638" height="246" key="GridCell.Tab.0.left/0.23.1680.963@0.23.1680.963" timestamp="1602698913675" />
+    <state width="1638" height="245" key="GridCell.Tab.0.left/0.23.1680.963@0.23.1680.963" timestamp="1602722857848" />
     <state width="1638" height="247" key="GridCell.Tab.0.left/0.23.1680.966@0.23.1680.966" timestamp="1602375464894" />
     <state width="1638" height="247" key="GridCell.Tab.0.left/0.23.1680.967@0.23.1680.967" timestamp="1602638145566" />
-    <state width="1638" height="246" key="GridCell.Tab.0.right" timestamp="1602698913676">
+    <state width="1638" height="245" key="GridCell.Tab.0.right" timestamp="1602722857849">
       <screen x="0" y="23" width="1680" height="963" />
     </state>
-    <state width="1638" height="246" key="GridCell.Tab.0.right/0.23.1680.963@0.23.1680.963" timestamp="1602698913676" />
+    <state width="1638" height="245" key="GridCell.Tab.0.right/0.23.1680.963@0.23.1680.963" timestamp="1602722857849" />
     <state width="1638" height="247" key="GridCell.Tab.0.right/0.23.1680.966@0.23.1680.966" timestamp="1602375464894" />
     <state width="1638" height="247" key="GridCell.Tab.0.right/0.23.1680.967@0.23.1680.967" timestamp="1602638145567" />
     <state x="577" y="234" key="RollbackChangesDialog" timestamp="1602619593649">
