@@ -56,9 +56,9 @@ class LocacionController extends Controller
      */
     public function show($id)
     {
-        $locacion = Locacion::find('id');
+        $locacion = Locacion::find($id);
         $locaciones = Locacion::all();
-        return view('locaciones',['locaciones'=>$locaciones, 'locacion'=>$locacion, 'layout'=>'show']);
+        return view('locacion',['locaciones'=>$locaciones, 'locacion'=>$locacion, 'layout'=>'show']);
     }
 
     /**
@@ -69,9 +69,9 @@ class LocacionController extends Controller
      */
     public function edit($id)
     {
-        $locacion = Locacion::find('id');
+        $locacion = Locacion::find($id);
         $locaciones = Locacion::all();
-        return view('locaciones',['locaciones'=>$locaciones, 'locacion'=>$locacion, 'layout'=>'edit']);
+        return view('locacion',['locaciones'=>$locaciones, 'locacion'=>$locacion, 'layout'=>'edit']);
     }
 
     /**

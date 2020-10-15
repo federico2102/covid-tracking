@@ -14,7 +14,7 @@ class CreateLocacionsTable extends Migration
     public function up()
     {
         Schema::create('locacions', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->string('Nombre');
             $table->integer('Capacidad');
             $table->integer('CapacidadMax');

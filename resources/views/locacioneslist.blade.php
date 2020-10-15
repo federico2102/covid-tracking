@@ -1,6 +1,7 @@
 <div class="card mb-3">
     <div class="card-body">
         <h5 class="card-title">Lista de locaciones</h5>
+        <a href="{{ url('/create/') }}" class="btn btn-sm btn-warning">Nueva locacion</a>
 
         <table class="table">
             <thead class="thead-light">
