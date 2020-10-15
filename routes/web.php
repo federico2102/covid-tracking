@@ -18,7 +18,8 @@ Route::get('/', function () {
 });
 */
 
-Route::get('/',"LocacionController@index");
+Route::get('/',"HomeScreen@index");
+Route::get('/home', "LocacionController@index");
 Route::get('/edit/{id}',"LocacionController@edit");
 Route::get('/show/{id}',"LocacionController@show");
 Route::get('/create',"LocacionController@create");
