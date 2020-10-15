@@ -17,11 +17,11 @@
             <tbody>
             @foreach($locaciones as $locacion)
                 <tr>
-                    <td>{{ $locacion->Nombre }}</td>
-                    <td>{{ $locacion->Capacidad }}</td>
-                    <td>{{ $locacion->CapacidadMax }}</td>
-                    <td>{{ $locacion->Geoposicion }}</td>
-                    <td><a href="{{ $locacion->QR }}">Click para ver QR</a></td>
+                    <td data-label="Nombre:">{{ $locacion->Nombre }}</td>
+                    <td data-label="Capacidad:">{{ $locacion->Capacidad }}</td>
+                    <td data-label="CapacidadMax:">{{ $locacion->CapacidadMax }}</td>
+                    <td data-label="Geoposicion:">{{ $locacion->Geoposicion }}</td>
+                    <td data-label="QR:"><a href="{{ $locacion->QR }}">Click para ver QR</a></td>
                     <td>
 
                         <a href="{{ url('/edit/'.$locacion->id) }}" class="btn btn-sm btn-warning">Edit</a>
