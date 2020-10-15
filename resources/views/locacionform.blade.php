@@ -4,10 +4,6 @@
         <label>Nombre</label>
         <input name="Nombre" type="text" class="form-control" placeholder="Ingresar nombre">
     </div>
-    <div class="form-group" hidden>
-        <label>Capacidad</label>
-        <input name="Capacidad" type="text" class="form-control" placeholder="Capacidad" value="0">
-    </div>
     <div class="form-group">
         <label>CapacidadMax</label>
         <input name="CapacidadMax" type="text" class="form-control" placeholder="Ingresar capacidad maxima">
