@@ -19,15 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Agregue sistema de log in/sign in">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeScreen.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="-El sistema no deja usar la app sin estar registrado.&#10;-Cambie el flujo de las views. Por defecto empieza en la pantalla de log in. Despues de eso se va a la pantalla de locaciones (esto ultimo lo cambiaremos cuando tengamos la pantalla principal)">
       <change beforePath="$PROJECT_DIR$/resources/views/locacion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/locacion.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <list id="c16eeb1e-2a41-4503-a9b3-45b8020eb448" name="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR) -Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso -Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -254,7 +247,7 @@
       <workItem from="1602659074439" duration="1625000" />
       <workItem from="1602661200601" duration="72000" />
       <workItem from="1602661276801" duration="26000" />
-      <workItem from="1602661318793" duration="20248000" />
+      <workItem from="1602661318793" duration="20802000" />
     </task>
     <task id="LOCAL-00001" summary="Cree el modulo de locaciones y su controlador. &#10;Dentro del controlador actualice todos los metodos.&#10;Dentro de la tabla agregue los atributos (falta ver como hacer para que el id sea un QR). &#10;Por ultimo registre todas las rutas dentro de &quot;web.php&quot; para los metodos del controller.&#10;Hay que ver que base de datos usamos asi ya se puede crear la tabla ahi.">
       <created>1602382520538</created>
@@ -368,7 +361,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602722917619</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="-El sistema no deja usar la app sin estar registrado.&#10;-Cambie el flujo de las views. Por defecto empieza en la pantalla de log in. Despues de eso se va a la pantalla de locaciones (esto ultimo lo cambiaremos cuando tengamos la pantalla principal)">
+      <created>1602736325287</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1602736325287</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -414,7 +414,8 @@
     <MESSAGE value="Implemento view para editar locacion" />
     <MESSAGE value="Limpio informacion innsecesaria" />
     <MESSAGE value="Agregue sistema de log in/sign in" />
-    <option name="LAST_COMMIT_MESSAGE" value="Agregue sistema de log in/sign in" />
+    <MESSAGE value="-El sistema no deja usar la app sin estar registrado.&#10;-Cambie el flujo de las views. Por defecto empieza en la pantalla de log in. Despues de eso se va a la pantalla de locaciones (esto ultimo lo cambiaremos cuando tengamos la pantalla principal)" />
+    <option name="LAST_COMMIT_MESSAGE" value="-El sistema no deja usar la app sin estar registrado.&#10;-Cambie el flujo de las views. Por defecto empieza en la pantalla de log in. Despues de eso se va a la pantalla de locaciones (esto ultimo lo cambiaremos cuando tengamos la pantalla principal)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
@@ -497,10 +498,10 @@
       <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state x="691" y="425" key="VCS.ChangelistChooser/0.23.1680.963@0.23.1680.963" timestamp="1602719253619" />
-    <state x="440" y="245" key="Vcs.Push.Dialog.v2" timestamp="1602722942600">
+    <state x="440" y="245" key="Vcs.Push.Dialog.v2" timestamp="1602736344533">
       <screen x="0" y="23" width="1680" height="963" />
     </state>
-    <state x="440" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.963@0.23.1680.963" timestamp="1602722942600" />
+    <state x="440" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.963@0.23.1680.963" timestamp="1602736344533" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.966@0.23.1680.966" timestamp="1602553882633" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.967@0.23.1680.967" timestamp="1602648520626" />
     <state x="638" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602633438449">
