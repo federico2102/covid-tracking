@@ -16,6 +16,7 @@
         <label>Lng</label>
         <input name="coords_lng" type="text" class="form-control" id="lng">
     </div>
+    <input type="text" value="{{ config('localizacion')['location_apikey'] }}" id="key" hidden>
 
     <input type="submit" class="btn btn-info" value="Save">
     <input type="reset" class="btn btn-warning" value="Reset">

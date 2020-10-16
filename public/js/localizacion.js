@@ -19,9 +19,11 @@ function getGeolocation(){
         }
     });
 
+    const apikey = document.getElementById('key').value;
+    console.log(apikey);
     xhr.open("GET", url, true);
     xhr.setRequestHeader("x-rapidapi-host", "trueway-places.p.rapidapi.com");
-    xhr.setRequestHeader("x-rapidapi-key", "f61f5de3f8msh6d6ebe604eb8faap1eac7bjsna21aa969ce0e");
+    xhr.setRequestHeader("x-rapidapi-key", apikey);
 
     xhr.onload = function (){
         if(this.status === 200){
