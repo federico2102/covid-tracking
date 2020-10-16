@@ -20,7 +20,6 @@ function getGeolocation(){
     });
 
     const apikey = document.getElementById('key').value;
-    console.log(apikey);
     xhr.open("GET", url, true);
     xhr.setRequestHeader("x-rapidapi-host", "trueway-places.p.rapidapi.com");
     xhr.setRequestHeader("x-rapidapi-key", apikey);
@@ -28,7 +27,7 @@ function getGeolocation(){
     xhr.onload = function (){
         if(this.status === 200){
             const response = JSON.parse(this.responseText);
-            console.log(response.results[0].location);
+            console.log(response);
             const ubicacion = response.results[0].location;
              document.getElementById('lat').value = ubicacion.lat;
             document.getElementById('lng').value = ubicacion.lng;
