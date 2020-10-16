@@ -19,6 +19,11 @@
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
 
+            <div class="mt-4" hidden >
+                <x-jet-label for="estado" value="{{ __('Estado') }}" />
+                <x-jet-input id="estado" class="block mt-1 w-full" type="string" name="estado" :value="old('estado')" value="Saludable" />
+            </div>
+
             <div class="mt-4">
                 <x-jet-label for="password" value="{{ __('Password') }}" />
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
@@ -30,12 +35,12 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
+                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ url('/') }}">
+                    {{ __('Ya estas registrado?') }}
                 </a>
 
                 <x-jet-button class="ml-4">
-                    {{ __('Register') }}
+                    {{ __('Registrarse') }}
                 </x-jet-button>
             </div>
         </form>

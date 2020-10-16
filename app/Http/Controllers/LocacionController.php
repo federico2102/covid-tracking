@@ -42,10 +42,11 @@ class LocacionController extends Controller
         $locacion->Nombre = $request->input('Nombre');
         $locacion->Capacidad = 0;
         $locacion->CapacidadMax = $request->input('CapacidadMax');
-        $locacion->Geoposicion = $request->input('Geoposicion');
+        $locacion->coords_lat = $request->input('coords_lat');
+        $locacion->coords_lng = $request->input('coords_lng');
         $locacion->QR = 'https://qrickit.com/api/qr.php?d=EscaneoExitoso&t=j&qrsize=300';
         $locacion->save();
-        return redirect('/');
+        return redirect('/home');
     }
 
     /**
@@ -89,7 +90,7 @@ class LocacionController extends Controller
         $locacion->CapacidadMax = $request->input('CapacidadMax');
         $locacion->Geoposicion = $request->input('Geoposicion');
         $locacion->save();
-        return redirect('/');
+        return redirect('/home');
 
     }
 

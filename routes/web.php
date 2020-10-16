@@ -28,7 +28,6 @@ Route::post('/update/{id}',"LocacionController@update");
 
 
 
-
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');

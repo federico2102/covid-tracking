@@ -19,8 +19,26 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Nuevas etiquetas para la tabla formato celular">
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Tabla se adapta a la pantalla del celular">
+      <change afterPath="$PROJECT_DIR$/public/js/localizacion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Actions/Fortify/CreateNewUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Actions/Fortify/CreateNewUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LocacionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LocacionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_11_012556_create_locacions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_11_012556_create_locacions_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/guest.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/guest.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/locacion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/locacion.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/locacioneslist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/locacioneslist.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/locacionform.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/locacionform.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <list id="c16eeb1e-2a41-4503-a9b3-45b8020eb448" name="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR) -Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso -Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +51,13 @@
     <execution>
       <executable path="composer" />
     </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -201,13 +226,14 @@
     <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/vendor" />
     </key>
@@ -247,7 +273,9 @@
       <workItem from="1602659074439" duration="1625000" />
       <workItem from="1602661200601" duration="72000" />
       <workItem from="1602661276801" duration="26000" />
-      <workItem from="1602661318793" duration="22357000" />
+      <workItem from="1602661318793" duration="29525000" />
+      <workItem from="1602783681323" duration="10639000" />
+      <workItem from="1602816903186" duration="14304000" />
     </task>
     <task id="LOCAL-00001" summary="Cree el modulo de locaciones y su controlador. &#10;Dentro del controlador actualice todos los metodos.&#10;Dentro de la tabla agregue los atributos (falta ver como hacer para que el id sea un QR). &#10;Por ultimo registre todas las rutas dentro de &quot;web.php&quot; para los metodos del controller.&#10;Hay que ver que base de datos usamos asi ya se puede crear la tabla ahi.">
       <created>1602382520538</created>
@@ -403,7 +431,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602737947928</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Tabla se adapta a la pantalla del celular">
+      <created>1602738580820</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1602738580820</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -455,7 +490,8 @@
     <MESSAGE value="Mas estilos en el css para la tabla. Para que las tablas se adapten a diferentes pantallas" />
     <MESSAGE value="Corrijo error en el css. Habia etiquetas de ejemplo" />
     <MESSAGE value="Nuevas etiquetas para la tabla formato celular" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nuevas etiquetas para la tabla formato celular" />
+    <MESSAGE value="Tabla se adapta a la pantalla del celular" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tabla se adapta a la pantalla del celular" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
@@ -498,30 +534,34 @@
       <screen x="0" y="23" width="1680" height="967" />
     </state>
     <state x="168" y="109" key="DiffContextDialog/0.23.1680.967@0.23.1680.967" timestamp="1602619590479" />
-    <state width="1638" height="245" key="GridCell.Tab.0.bottom" timestamp="1602722857850">
+    <state width="1638" height="245" key="GridCell.Tab.0.bottom" timestamp="1602782494262">
       <screen x="0" y="23" width="1680" height="963" />
     </state>
-    <state width="1638" height="245" key="GridCell.Tab.0.bottom/0.23.1680.963@0.23.1680.963" timestamp="1602722857850" />
+    <state width="1638" height="245" key="GridCell.Tab.0.bottom/0.23.1680.963@0.23.1680.963" timestamp="1602782494262" />
     <state width="1638" height="247" key="GridCell.Tab.0.bottom/0.23.1680.966@0.23.1680.966" timestamp="1602375464895" />
     <state width="1638" height="247" key="GridCell.Tab.0.bottom/0.23.1680.967@0.23.1680.967" timestamp="1602638145567" />
-    <state width="1638" height="245" key="GridCell.Tab.0.center" timestamp="1602722857849">
+    <state width="1638" height="245" key="GridCell.Tab.0.center" timestamp="1602782494244">
       <screen x="0" y="23" width="1680" height="963" />
     </state>
-    <state width="1638" height="245" key="GridCell.Tab.0.center/0.23.1680.963@0.23.1680.963" timestamp="1602722857849" />
+    <state width="1638" height="245" key="GridCell.Tab.0.center/0.23.1680.963@0.23.1680.963" timestamp="1602782494244" />
     <state width="1638" height="247" key="GridCell.Tab.0.center/0.23.1680.966@0.23.1680.966" timestamp="1602375464894" />
     <state width="1638" height="247" key="GridCell.Tab.0.center/0.23.1680.967@0.23.1680.967" timestamp="1602638145567" />
-    <state width="1638" height="245" key="GridCell.Tab.0.left" timestamp="1602722857848">
+    <state width="1638" height="245" key="GridCell.Tab.0.left" timestamp="1602782494244">
       <screen x="0" y="23" width="1680" height="963" />
     </state>
-    <state width="1638" height="245" key="GridCell.Tab.0.left/0.23.1680.963@0.23.1680.963" timestamp="1602722857848" />
+    <state width="1638" height="245" key="GridCell.Tab.0.left/0.23.1680.963@0.23.1680.963" timestamp="1602782494244" />
     <state width="1638" height="247" key="GridCell.Tab.0.left/0.23.1680.966@0.23.1680.966" timestamp="1602375464894" />
     <state width="1638" height="247" key="GridCell.Tab.0.left/0.23.1680.967@0.23.1680.967" timestamp="1602638145566" />
-    <state width="1638" height="245" key="GridCell.Tab.0.right" timestamp="1602722857849">
+    <state width="1638" height="245" key="GridCell.Tab.0.right" timestamp="1602782494261">
       <screen x="0" y="23" width="1680" height="963" />
     </state>
-    <state width="1638" height="245" key="GridCell.Tab.0.right/0.23.1680.963@0.23.1680.963" timestamp="1602722857849" />
+    <state width="1638" height="245" key="GridCell.Tab.0.right/0.23.1680.963@0.23.1680.963" timestamp="1602782494261" />
     <state width="1638" height="247" key="GridCell.Tab.0.right/0.23.1680.966@0.23.1680.966" timestamp="1602375464894" />
     <state width="1638" height="247" key="GridCell.Tab.0.right/0.23.1680.967@0.23.1680.967" timestamp="1602638145567" />
+    <state x="659" y="436" key="NewPhpFileDialog" timestamp="1602788491610">
+      <screen x="0" y="23" width="1680" height="966" />
+    </state>
+    <state x="659" y="436" key="NewPhpFileDialog/0.23.1680.966@0.23.1680.966" timestamp="1602788491610" />
     <state x="577" y="234" key="RollbackChangesDialog" timestamp="1602619593649">
       <screen x="0" y="23" width="1680" height="967" />
     </state>
@@ -538,10 +578,10 @@
       <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state x="691" y="425" key="VCS.ChangelistChooser/0.23.1680.963@0.23.1680.963" timestamp="1602719253619" />
-    <state x="440" y="245" key="Vcs.Push.Dialog.v2" timestamp="1602737956993">
+    <state x="440" y="245" key="Vcs.Push.Dialog.v2" timestamp="1602738598099">
       <screen x="0" y="23" width="1680" height="963" />
     </state>
-    <state x="440" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.963@0.23.1680.963" timestamp="1602737956993" />
+    <state x="440" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.963@0.23.1680.963" timestamp="1602738598099" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.966@0.23.1680.966" timestamp="1602553882633" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.967@0.23.1680.967" timestamp="1602648520626" />
     <state x="638" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602633438449">

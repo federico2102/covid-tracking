@@ -9,7 +9,8 @@
                 <th scope="col">Nombre</th>
                 <th scope="col">Capacidad</th>
                 <th scope="col">CapacidadMax</th>
-                <th scope="col">Geoposicion</th>
+                <th scope="col">Latitud</th>
+                <th scope="col">Longitud</th>
                 <th scope="col">QR</th>
 
             </tr>
@@ -20,7 +21,8 @@
                     <td data-label="Nombre:">{{ $locacion->Nombre }}</td>
                     <td data-label="Capacidad:">{{ $locacion->Capacidad }}</td>
                     <td data-label="CapacidadMax:">{{ $locacion->CapacidadMax }}</td>
-                    <td data-label="Geoposicion:">{{ $locacion->Geoposicion }}</td>
+                    <td data-label="Latitud:">{{ $locacion->coords_lat }}</td>
+                    <td data-label="Longitud:">{{ $locacion->coords_lng }}</td>
                     <td data-label="QR:"><a href="{{ $locacion->QR }}">Click para ver QR</a></td>
                     <td>
 
@@ -35,4 +37,3 @@
         </table>
     </div>
 </div>
-
