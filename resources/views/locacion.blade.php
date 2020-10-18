@@ -72,7 +72,6 @@
                             <div class="card-body">
                                 <h5 class="card-title">Modificar informacion de locacion</h5>
                                 @include("locacionform")
-                                </form>
                             </div>
                         </div>
 

@@ -9,8 +9,7 @@
                 <th scope="col">Nombre</th>
                 <th scope="col">Capacidad</th>
                 <th scope="col">CapacidadMax</th>
-                <th scope="col">Latitud</th>
-                <th scope="col">Longitud</th>
+                <th scope="col">Geolocalizacion</th>
                 <th scope="col">QR</th>
 
             </tr>
@@ -21,9 +20,8 @@
                     <td data-label="Nombre:">{{ $locacion->Nombre }}</td>
                     <td data-label="Capacidad:">{{ $locacion->Capacidad }}</td>
                     <td data-label="CapacidadMax:">{{ $locacion->CapacidadMax }}</td>
-                    <td data-label="Latitud:">{{ $locacion->coords_lat }}</td>
-                    <td data-label="Longitud:">{{ $locacion->coords_lng }}</td>
-                    <td data-label="QR:"><a href="{{ $locacion->QR }}">Click para ver QR</a></td>
+                    <td data-label="Geolocacion:"><a href="{{ url('/map/'.$locacion->Geolocalizacion) }}" target="_blank">Click para abrir mapa</a></td>
+                    <td data-label="QR:"><a href="{{ $locacion->QR }}" target="_blank">Click para ver QR</a></td>
                     <td>
 
                         <a href="{{ url('/edit/'.$locacion->id) }}" class="btn btn-sm btn-warning">Edit</a>

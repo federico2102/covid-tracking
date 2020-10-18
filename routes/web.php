@@ -25,6 +25,7 @@ Route::get('/show/{id}',"LocacionController@show");
 Route::get('/create',"LocacionController@create");
 Route::post('/store',"LocacionController@store");
 Route::post('/update/{id}',"LocacionController@update");
+Route::get('/map/{Geolocalizacion}', "MapController@show");
 
 
 

@@ -18,8 +18,7 @@ class CreateLocacionsTable extends Migration
             $table->string('Nombre');
             $table->integer('Capacidad');
             $table->integer('CapacidadMax');
-            $table->string('coords_lat');
-            $table->string('coords_lng');
+            $table->string('Geolocalizacion');
             $table->string('QR');
             $table->timestamps();
         });

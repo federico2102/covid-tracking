@@ -19,9 +19,22 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Escondo api key (para que se llame desde el .env y no este directamente en el .js)">
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Subo tareas al README.md">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/MapController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/googlemaps.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/googlemaps.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/map-screenSize.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/map.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/localizacion.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/localizacion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LocacionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LocacionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_11_012556_create_locacions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_11_012556_create_locacions_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/locacion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/locacion.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/locacioneslist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/locacioneslist.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/locacionform.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/locacionform.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <list id="c16eeb1e-2a41-4503-a9b3-45b8020eb448" name="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR) -Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso -Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -209,13 +222,14 @@
     <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Controllers" />
       <recent name="$PROJECT_DIR$/resources/js" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/vendor" />
@@ -259,7 +273,8 @@
       <workItem from="1602661318793" duration="29525000" />
       <workItem from="1602783681323" duration="10639000" />
       <workItem from="1602816903186" duration="18740000" />
-      <workItem from="1602883285101" duration="4090000" />
+      <workItem from="1602883285101" duration="5193000" />
+      <workItem from="1602959726510" duration="18851000" />
     </task>
     <task id="LOCAL-00001" summary="Cree el modulo de locaciones y su controlador. &#10;Dentro del controlador actualice todos los metodos.&#10;Dentro de la tabla agregue los atributos (falta ver como hacer para que el id sea un QR). &#10;Por ultimo registre todas las rutas dentro de &quot;web.php&quot; para los metodos del controller.&#10;Hay que ver que base de datos usamos asi ya se puede crear la tabla ahi.">
       <created>1602382520538</created>
@@ -436,7 +451,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602870754486</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Subo tareas al README.md">
+      <created>1602888356385</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1602888356385</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -466,7 +488,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Cree el modulo de locaciones y su controlador. &#10;Dentro del controlador actualice todos los metodos.&#10;Dentro de la tabla agregue los atributos (falta ver como hacer para que el id sea un QR). &#10;Por ultimo registre todas las rutas dentro de &quot;web.php&quot; para los metodos del controller" />
     <MESSAGE value="Cree el modulo de locaciones y su controlador. &#10;Dentro del controlador actualice todos los metodos.&#10;Dentro de la tabla agregue los atributos (falta ver como hacer para que el id sea un QR). &#10;Por ultimo registre todas las rutas dentro de &quot;web.php&quot; para los metodos del controller.&#10;Hay que ver que base de datos usamos asi ya se puede crear la tabla ahi." />
     <MESSAGE value="Actualice los datos de la base de datos (postgres)&#10;Tira error de que no encuentra el archivo Controller.php cuando lo quiero abrir en el browser" />
     <MESSAGE value="Revert &quot;Actualice los datos de la base de datos (postgres) Tira error de que no encuentra el archivo Controller.php cuando lo quiero abrir en el browser&quot;&#10;&#10;This reverts commit a9a6a2f3" />
@@ -491,7 +512,8 @@
     <MESSAGE value="Tabla se adapta a la pantalla del celular" />
     <MESSAGE value="Nueva forma de ingresar geolocalizacion:&#10;Ahora funciona con una api, que dado un nombre te devuelve la data de ese lugar (entre ellos la latitud y longitud)" />
     <MESSAGE value="Escondo api key (para que se llame desde el .env y no este directamente en el .js)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Escondo api key (para que se llame desde el .env y no este directamente en el .js)" />
+    <MESSAGE value="Subo tareas al README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Subo tareas al README.md" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
@@ -514,9 +536,10 @@
       <screen x="0" y="23" width="1680" height="966" />
     </state>
     <state x="304" y="168" width="1071" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.966@0.23.1680.966" timestamp="1602373696615" />
-    <state x="575" y="315" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602375083154">
-      <screen x="0" y="23" width="1680" height="966" />
+    <state x="575" y="315" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602978119786">
+      <screen x="0" y="23" width="1680" height="965" />
     </state>
+    <state x="575" y="315" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.965@0.23.1680.965" timestamp="1602978119786" />
     <state x="575" y="315" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.966@0.23.1680.966" timestamp="1602375083154" />
     <state x="578" y="260" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602375136816">
       <screen x="0" y="23" width="1680" height="966" />
@@ -558,10 +581,11 @@
     <state width="1638" height="245" key="GridCell.Tab.0.right/0.23.1680.963@0.23.1680.963" timestamp="1602782494261" />
     <state width="1638" height="247" key="GridCell.Tab.0.right/0.23.1680.966@0.23.1680.966" timestamp="1602375464894" />
     <state width="1638" height="247" key="GridCell.Tab.0.right/0.23.1680.967@0.23.1680.967" timestamp="1602638145567" />
-    <state x="659" y="435" key="NewPhpFileDialog" timestamp="1602867607413">
-      <screen x="0" y="23" width="1680" height="963" />
+    <state x="659" y="436" key="NewPhpFileDialog" timestamp="1602962260350">
+      <screen x="0" y="23" width="1680" height="965" />
     </state>
     <state x="659" y="435" key="NewPhpFileDialog/0.23.1680.963@0.23.1680.963" timestamp="1602867607413" />
+    <state x="659" y="436" key="NewPhpFileDialog/0.23.1680.965@0.23.1680.965" timestamp="1602962260350" />
     <state x="659" y="436" key="NewPhpFileDialog/0.23.1680.966@0.23.1680.966" timestamp="1602788491610" />
     <state x="577" y="234" key="RollbackChangesDialog" timestamp="1602619593649">
       <screen x="0" y="23" width="1680" height="967" />
@@ -579,11 +603,11 @@
       <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state x="691" y="425" key="VCS.ChangelistChooser/0.23.1680.963@0.23.1680.963" timestamp="1602719253619" />
-    <state x="440" y="246" key="Vcs.Push.Dialog.v2" timestamp="1602887905049">
+    <state x="440" y="246" key="Vcs.Push.Dialog.v2" timestamp="1602888375395">
       <screen x="0" y="23" width="1680" height="966" />
     </state>
     <state x="440" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.963@0.23.1680.963" timestamp="1602867516896" />
-    <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.966@0.23.1680.966" timestamp="1602887905049" />
+    <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.966@0.23.1680.966" timestamp="1602888375395" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.967@0.23.1680.967" timestamp="1602648520626" />
     <state x="638" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602887933939">
       <screen x="0" y="23" width="1680" height="966" />

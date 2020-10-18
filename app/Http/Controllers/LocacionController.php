@@ -42,8 +42,7 @@ class LocacionController extends Controller
         $locacion->Nombre = $request->input('Nombre');
         $locacion->Capacidad = 0;
         $locacion->CapacidadMax = $request->input('CapacidadMax');
-        $locacion->coords_lat = $request->input('coords_lat');
-        $locacion->coords_lng = $request->input('coords_lng');
+        $locacion->Geolocalizacion = $request->input('Geolocalizacion');
         $locacion->QR = 'https://qrickit.com/api/qr.php?d=EscaneoExitoso&t=j&qrsize=300';
         $locacion->save();
         return redirect('/home');
@@ -84,11 +83,10 @@ class LocacionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $locacion = Locacion::find('id');
+        $locacion = Locacion::find($id);
         $locacion->Nombre = $request->input('Nombre');
-        $locacion->Capacidad = $request->input('Capacidad');
         $locacion->CapacidadMax = $request->input('CapacidadMax');
-        $locacion->Geoposicion = $request->input('Geoposicion');
+        $locacion->Geolocalizacion = $request->input('Geolocalizacion');
         $locacion->save();
         return redirect('/home');
 
@@ -102,8 +100,8 @@ class LocacionController extends Controller
      */
     public function destroy($id)
     {
-        $locacion = Locacion::find('id');
+        $locacion = Locacion::find($id);
         $locacion->delete();
-        return redirect('/');
+        return redirect('/home');
     }
 }

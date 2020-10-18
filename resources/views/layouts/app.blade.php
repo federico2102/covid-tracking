@@ -18,7 +18,6 @@
         <!-- Scripts -->
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.js" defer></script>
 {{--        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>--}}
-{{--        <script src="{{ asset('js/localizacion.js') }}"></script>--}}
 
     </head>
     <body class="font-sans antialiased">
@@ -43,5 +42,5 @@
         @livewireScripts
     </body>
 
-    <script src="{{ asset('js/localizacion.js') }}"></script>
+{{--    <script src="{{ asset('js/localizacion.js') }}"></script>--}}
 </html>
