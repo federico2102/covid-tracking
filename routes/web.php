@@ -19,7 +19,8 @@ Route::get('/', function () {
 */
 
 Route::get('/',"HomeScreen@index");
-Route::get('/home', "LocacionController@index");
+Route::get('/home', "MainController@index");
+Route::get('/location', "LocacionController@index");
 Route::get('/edit/{id}',"LocacionController@edit");
 Route::get('/show/{id}',"LocacionController@show");
 Route::get('/create',"LocacionController@create");
