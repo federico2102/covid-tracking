@@ -20,6 +20,8 @@ class CreateLocacionsTable extends Migration
             $table->integer('CapacidadMax');
             $table->string('Geolocalizacion');
             $table->string('QR');
+            $table->string('Descripcion')->nullable();
+            $table->binary('Imagen')->nullable();
             $table->timestamps();
         });
     }

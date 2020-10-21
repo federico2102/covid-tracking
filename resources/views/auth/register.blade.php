@@ -21,7 +21,7 @@
 
             <div class="mt-4" hidden >
                 <x-jet-label for="estado" value="{{ __('Estado') }}" />
-                <x-jet-input id="estado" class="block mt-1 w-full" type="string" name="estado" :value="old('estado')" value="Saludable" />
+                <x-jet-input id="estado" class="block mt-1 w-full" type="string" name="estado" :value="old('estado')" value="No contagiado" />
             </div>
 
             <div class="mt-4">

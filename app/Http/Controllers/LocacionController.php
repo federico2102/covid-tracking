@@ -44,6 +44,8 @@ class LocacionController extends Controller
         $locacion->CapacidadMax = $request->input('CapacidadMax');
         $locacion->Geolocalizacion = $request->input('Geolocalizacion');
         $locacion->QR = 'https://qrickit.com/api/qr.php?d=EscaneoExitoso&t=j&qrsize=300';
+        $locacion->Descripcion = $request->input('Descrripcion');
+        $locacion->Imagen = $request->input('Imagen');
         $locacion->save();
         return redirect('/home');
     }

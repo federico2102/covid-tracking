@@ -7,10 +7,10 @@
 
 @if($layout == 'create')
     <form action="{{ url('/store') }}" method="post">
-        @elseif($layout == 'edit')
-            <form action="{{ url('/update/'.$locacion->id) }}" method="post">
-                @endif
-        @csrf
+@elseif($layout == 'edit')
+    <form action="{{ url('/update/'.$locacion->id) }}" method="post">
+        @endif
+@csrf
         <div class="form-group">
             <label>Nombre</label>
             <input name="Nombre" type="text" class="form-control" placeholder="Ingresar nombre" id="nombre" required>
@@ -27,6 +27,14 @@
         </div>
         <div class="form-group">
             <input name="Geolocalizacion" type="text" class="form-control"  id="geoloc" hidden required>
+        </div>
+        <div class="form-group">
+            <label>Descripcion</label>
+            <input name="Descripcion" type="text" class="form-control" placeholder="Ingresar descripcion">
+        </div>
+        <div class="form-group">
+            <label>Imagen</label>
+            <input name="Imagen" type="image" class="form-control">
         </div>
     {{--    <input type="text" value="{{ config('localizacion')['location_apikey'] }}" id="key" hidden>--}}
         @if($layout == 'create')
