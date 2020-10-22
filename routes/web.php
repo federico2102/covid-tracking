@@ -28,7 +28,7 @@ Route::post('/store',"LocacionController@store");
 Route::post('/update/{id}',"LocacionController@update");
 Route::get('/map/{Geolocalizacion}', "MapController@show");
 Route::post('/concurrio/Store/{locacionId}/{userId}',"ConcurrioController@store");
-Route::post('/concurrio/{locacionId}',"ConcurrioController@index");
+Route::get('/concurrio/{locacionId}',"ConcurrioController@index");
 
 
 

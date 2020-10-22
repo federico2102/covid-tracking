@@ -19,15 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Inicializo usuarios creados con estado &quot;No contagiado&quot;">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ConcurrioController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/concurrio.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_22_190734_create_concurrios_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/concurrio.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LocacionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LocacionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Genero qr que dirige al view de check-in/check-out&#10;Implemento view de check-in/check-out con la informacion de la locacion en la que se esta por ingresar o salir, y un boton para confirmar" />
     <list id="c16eeb1e-2a41-4503-a9b3-45b8020eb448" name="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR) -Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso -Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,7 +265,7 @@
       <workItem from="1602959726510" duration="21475000" />
       <workItem from="1603150547871" duration="2617000" />
       <workItem from="1603331112565" duration="1087000" />
-      <workItem from="1603391653692" duration="7378000" />
+      <workItem from="1603391653692" duration="7491000" />
     </task>
     <task id="LOCAL-00001" summary="Cree el modulo de locaciones y su controlador. &#10;Dentro del controlador actualice todos los metodos.&#10;Dentro de la tabla agregue los atributos (falta ver como hacer para que el id sea un QR). &#10;Por ultimo registre todas las rutas dentro de &quot;web.php&quot; para los metodos del controller.&#10;Hay que ver que base de datos usamos asi ya se puede crear la tabla ahi.">
       <created>1602382520538</created>
@@ -471,7 +463,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603240920610</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Genero qr que dirige al view de check-in/check-out&#10;Implemento view de check-in/check-out con la informacion de la locacion en la que se esta por ingresar o salir, y un boton para confirmar">
+      <created>1603408664801</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1603408664801</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,7 +500,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Revert &quot;Actualice los datos de la base de datos (postgres) Tira error de que no encuentra el archivo Controller.php cuando lo quiero abrir en el browser&quot;&#10;&#10;This reverts commit a9a6a2f3" />
     <MESSAGE value="Arregle el problema que no tomaba al Controller. Era un tema de version de laravel.&#10;Empece a hacer el view para las locaciones (solo copie el starter template de bootstrap)" />
     <MESSAGE value="Model y controller de &quot;locaciones&quot; implementados.&#10;View basica de bootstrap para locaciones" />
     <MESSAGE value="Arreglo nombre de una view para ver si me lo toma Heroku" />
@@ -526,13 +524,18 @@
     <MESSAGE value="Subo tareas al README.md" />
     <MESSAGE value="Implemente uso de api de google maps para marcar geolocalizacion (Martin me confirmo que tenia que ser de esa forma).&#10;-Ahora el usuario debe hacer click en el mapa donde esta la nueva ubicacion.&#10;-En la tabla de localizaciones hay un link para ver la localizacion en el mapa" />
     <MESSAGE value="Inicializo usuarios creados con estado &quot;No contagiado&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inicializo usuarios creados con estado &quot;No contagiado&quot;" />
+    <MESSAGE value="Genero qr que dirige al view de check-in/check-out&#10;Implemento view de check-in/check-out con la informacion de la locacion en la que se esta por ingresar o salir, y un boton para confirmar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Genero qr que dirige al view de check-in/check-out&#10;Implemento view de check-in/check-out con la informacion de la locacion en la que se esta por ingresar o salir, y un boton para confirmar" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
       <screen x="0" y="23" width="1680" height="966" />
     </state>
     <state x="428" y="187" key="#CLI_Interpreters/0.23.1680.966@0.23.1680.966" timestamp="1602373966883" />
+    <state x="537" y="-698" key="#Notifications" timestamp="1603408705842">
+      <screen x="-154" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="537" y="-698" key="#Notifications/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603408705842" />
     <state x="508" y="175" key="#PHP" timestamp="1602373695497">
       <screen x="0" y="23" width="1680" height="966" />
     </state>
@@ -620,11 +623,12 @@
       <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state x="691" y="425" key="VCS.ChangelistChooser/0.23.1680.963@0.23.1680.963" timestamp="1602719253619" />
-    <state x="440" y="246" key="Vcs.Push.Dialog.v2" timestamp="1603240943604">
-      <screen x="0" y="23" width="1680" height="967" />
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1603408669442">
+      <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="440" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.963@0.23.1680.963" timestamp="1602867516896" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.965@0.23.1680.965" timestamp="1602983009206" />
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603408669442" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.966@0.23.1680.966" timestamp="1602888375395" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.967@0.23.1680.967" timestamp="1603240943604" />
     <state x="638" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603150575452">
