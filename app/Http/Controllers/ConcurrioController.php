@@ -13,10 +13,10 @@ class concurrioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($locacionId)
+    public function index($id)
     {
-        $locacion = Locacion::find($locacionId);
-        return view('concurrio',['locacion' => $locacion]);
+        $locacion = Locacion::find($id);
+        return view('concurrio',['locacion'=>$locacion]);
     }
 
     /**

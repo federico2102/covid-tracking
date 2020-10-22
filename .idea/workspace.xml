@@ -19,7 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Genero qr que dirige al view de check-in/check-out&#10;Implemento view de check-in/check-out con la informacion de la locacion en la que se esta por ingresar o salir, y un boton para confirmar" />
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Cambio metodo post por get cuando me dirijo a la vista de check-in/check-out">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ConcurrioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ConcurrioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MapController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MapController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/concurrio.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/concurrio.blade.php" afterDir="false" />
+    </list>
     <list id="c16eeb1e-2a41-4503-a9b3-45b8020eb448" name="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR) -Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso -Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,7 +270,7 @@
       <workItem from="1602959726510" duration="21475000" />
       <workItem from="1603150547871" duration="2617000" />
       <workItem from="1603331112565" duration="1087000" />
-      <workItem from="1603391653692" duration="7491000" />
+      <workItem from="1603391653692" duration="9219000" />
     </task>
     <task id="LOCAL-00001" summary="Cree el modulo de locaciones y su controlador. &#10;Dentro del controlador actualice todos los metodos.&#10;Dentro de la tabla agregue los atributos (falta ver como hacer para que el id sea un QR). &#10;Por ultimo registre todas las rutas dentro de &quot;web.php&quot; para los metodos del controller.&#10;Hay que ver que base de datos usamos asi ya se puede crear la tabla ahi.">
       <created>1602382520538</created>
@@ -470,7 +475,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603408664801</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Cambio metodo post por get cuando me dirijo a la vista de check-in/check-out">
+      <created>1603408964747</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1603408964747</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,7 +512,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Arregle el problema que no tomaba al Controller. Era un tema de version de laravel.&#10;Empece a hacer el view para las locaciones (solo copie el starter template de bootstrap)" />
     <MESSAGE value="Model y controller de &quot;locaciones&quot; implementados.&#10;View basica de bootstrap para locaciones" />
     <MESSAGE value="Arreglo nombre de una view para ver si me lo toma Heroku" />
     <MESSAGE value="-Vista para lista de locaciones (super basica)&#10;-Formulario para crear locaciones con botones save y reset (ya funciona cargar locaciones)&#10;-Habria que hacer que las vistas sean mas lindas. No se por que la tabla y el formulario no me quedaron como lo que saque de bootstrap" />
@@ -525,7 +536,8 @@
     <MESSAGE value="Implemente uso de api de google maps para marcar geolocalizacion (Martin me confirmo que tenia que ser de esa forma).&#10;-Ahora el usuario debe hacer click en el mapa donde esta la nueva ubicacion.&#10;-En la tabla de localizaciones hay un link para ver la localizacion en el mapa" />
     <MESSAGE value="Inicializo usuarios creados con estado &quot;No contagiado&quot;" />
     <MESSAGE value="Genero qr que dirige al view de check-in/check-out&#10;Implemento view de check-in/check-out con la informacion de la locacion en la que se esta por ingresar o salir, y un boton para confirmar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Genero qr que dirige al view de check-in/check-out&#10;Implemento view de check-in/check-out con la informacion de la locacion en la que se esta por ingresar o salir, y un boton para confirmar" />
+    <MESSAGE value="Cambio metodo post por get cuando me dirijo a la vista de check-in/check-out" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambio metodo post por get cuando me dirijo a la vista de check-in/check-out" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
@@ -623,12 +635,12 @@
       <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state x="691" y="425" key="VCS.ChangelistChooser/0.23.1680.963@0.23.1680.963" timestamp="1602719253619" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1603408669442">
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1603408973145">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="440" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.963@0.23.1680.963" timestamp="1602867516896" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.965@0.23.1680.965" timestamp="1602983009206" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603408669442" />
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603408973145" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.966@0.23.1680.966" timestamp="1602888375395" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.967@0.23.1680.967" timestamp="1603240943604" />
     <state x="638" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603150575452">
@@ -640,9 +652,10 @@
       <screen x="0" y="23" width="1680" height="967" />
     </state>
     <state x="538" y="138" width="604" height="735" key="find.popup/0.23.1680.967@0.23.1680.967" timestamp="1602554141977" />
-    <state x="608" y="400" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1602887766466">
-      <screen x="0" y="23" width="1680" height="966" />
+    <state x="541" y="-644" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1603408780088">
+      <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
+    <state x="541" y="-644" key="git4idea.remote.GitConfigureRemotesDialog/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603408780088" />
     <state x="608" y="400" key="git4idea.remote.GitConfigureRemotesDialog/0.23.1680.966@0.23.1680.966" timestamp="1602887766466" />
     <state x="608" y="400" key="git4idea.remote.GitConfigureRemotesDialog/0.23.1680.967@0.23.1680.967" timestamp="1602633610249" />
     <state x="608" y="402" key="git4idea.remote.GitConfigureRemotesDialog/0.23.1680.973@0.23.1680.973" timestamp="1602632911536" />

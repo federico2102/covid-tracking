@@ -14,7 +14,7 @@ class MapController extends Controller
      */
     public function show($geolocalizacion)
     {
-        return view('map',['geolocalizacion'=>$geolocalizacion, 'layout'=>'map']);
+        return view('map',['geolocalizacion'=>$geolocalizacion, 'layout'=>'show']);
     }
 
 }
