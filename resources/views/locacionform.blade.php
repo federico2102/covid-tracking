@@ -40,8 +40,8 @@
             <input type="submit" class="btn btn-info"
                @if($layout == 'create')
                    value="Save">
-                @else($layout == 'edit')
-                    value="Update">
+            @else($layout == 'edit')
+                        value="Update">
             @endif
         <input type="reset" class="btn btn-warning" value="Reset">
     </form>

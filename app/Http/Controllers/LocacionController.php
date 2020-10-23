@@ -48,7 +48,7 @@ class LocacionController extends Controller
         $locacion->Capacidad = 0;
         $locacion->CapacidadMax = $request->input('CapacidadMax');
         $locacion->Geolocalizacion = $request->input('Geolocalizacion');
-        $locacion->QR = 'https://qrickit.com/api/qr.php?d=https://yo-estuve-ahi.herokuapp.com/concurrio/';
+        $locacion->QR = 'https://qrickit.com/api/qr.php?d=https://yo-estuve-ahi.herokuapp.com/concurrio/'; //
         $locacion->Descripcion = $request->input('Descrripcion');
         $locacion->Imagen = $request->input('Imagen');
         $locacion->save();

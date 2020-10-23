@@ -24,8 +24,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Subo nueva tabla a base de datos (tabla &quot;concurrios&quot;)&#10;Ahora cuando se confirma el check in se deberia generar una entrada en esa tabla">
-      <change beforePath="$PROJECT_DIR$/app/Models/concurrio.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Concurrio.php" afterDir="false" />
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Corrijo creacion de tabla concurrio en archivo &quot;ConcurrioController&quot;">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ConcurrioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ConcurrioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LocacionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LocacionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_22_190734_create_concurrios_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_22_190734_create_concurrios_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/concurrio.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/concurrio.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/locacionform.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/locacionform.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <list id="c16eeb1e-2a41-4503-a9b3-45b8020eb448" name="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR) -Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso -Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -273,7 +280,7 @@
       <workItem from="1603150547871" duration="2617000" />
       <workItem from="1603331112565" duration="1087000" />
       <workItem from="1603391653692" duration="12759000" />
-      <workItem from="1603434763216" duration="1850000" />
+      <workItem from="1603434763216" duration="11631000" />
     </task>
     <task id="LOCAL-00001" summary="Cree el modulo de locaciones y su controlador. &#10;Dentro del controlador actualice todos los metodos.&#10;Dentro de la tabla agregue los atributos (falta ver como hacer para que el id sea un QR). &#10;Por ultimo registre todas las rutas dentro de &quot;web.php&quot; para los metodos del controller.&#10;Hay que ver que base de datos usamos asi ya se puede crear la tabla ahi.">
       <created>1602382520538</created>
@@ -527,7 +534,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603436355671</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Corrijo creacion de tabla concurrio en archivo &quot;ConcurrioController&quot;">
+      <created>1603436668484</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1603436668484</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -557,7 +571,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR)&#10;-Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso&#10;-Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" />
     <MESSAGE value="-Agregue columna de QR a la base de datos&#10;-El archivo .env tiene comentado el seteo de la base de datos local por si quieren testear ahi antes de subir las cosas a heroku" />
     <MESSAGE value="Implemento view para editar locacion" />
     <MESSAGE value="Limpio informacion innsecesaria" />
@@ -582,7 +595,8 @@
     <MESSAGE value="Nuevo intento de adaptacion a la pantalla del celu" />
     <MESSAGE value="Agrego nuevo formato de titulo en view de check in" />
     <MESSAGE value="Subo nueva tabla a base de datos (tabla &quot;concurrios&quot;)&#10;Ahora cuando se confirma el check in se deberia generar una entrada en esa tabla" />
-    <option name="LAST_COMMIT_MESSAGE" value="Subo nueva tabla a base de datos (tabla &quot;concurrios&quot;)&#10;Ahora cuando se confirma el check in se deberia generar una entrada en esa tabla" />
+    <MESSAGE value="Corrijo creacion de tabla concurrio en archivo &quot;ConcurrioController&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrijo creacion de tabla concurrio en archivo &quot;ConcurrioController&quot;" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
@@ -681,9 +695,10 @@
       <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state x="691" y="425" key="VCS.ChangelistChooser/0.23.1680.963@0.23.1680.963" timestamp="1602719253619" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1603418756589">
-      <screen x="-154" y="-1057" width="1920" height="1057" />
+    <state x="349" y="-828" key="Vcs.Push.Dialog.v2" timestamp="1603436673775">
+      <screen x="-154" y="-1057" width="1920" height="991" />
     </state>
+    <state x="349" y="-828" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-154.-1057.1920.991@-154.-1057.1920.991" timestamp="1603436673775" />
     <state x="440" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.963@0.23.1680.963" timestamp="1602867516896" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.965@0.23.1680.965" timestamp="1602983009206" />
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603410636228" />

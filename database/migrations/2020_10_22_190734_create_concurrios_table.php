@@ -14,10 +14,13 @@ class CreateConcurriosTable extends Migration
     public function up()
     {
         Schema::create('concurrios', function (Blueprint $table) {
-            $table->timestamp('entrada')->primary();
+            $table->bigIncrements('id');
+            $table->timestamp('entrada');
             $table->timestamp('salida')->nullable();
             $table->foreignId('userId')->references('id')->on('users');
             $table->foreignId('locacionId')->references('id')->on('locacions');
+            $table->timestamp('updated_at');
+            $table->timestamp('created_at');
         });
     }
 

@@ -48,7 +48,8 @@
             </table>
         </div>
 
-        <form action="{{ url('/concurrio/Store/'.$locacion->id.'/'.Auth::user()->id) }}" method="post">
+        <form action="{{ url('/concurrio/store/'.$locacion->id.'/'.Auth::user()->id) }}" method="post">
+            @csrf
             <input type="submit" class="btn btn-info" value="Confirmar">
         </form>
         </body>

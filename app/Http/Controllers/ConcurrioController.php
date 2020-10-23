@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Concurrio;
 use App\Models\Locacion;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class concurrioController extends Controller
 {
@@ -33,14 +34,28 @@ class concurrioController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function store($locacionId, $userId)
     {
-        $concurrio = new Concurrio();
-        $concurrio->userId = $userId;
-        $concurrio->locacionId = $locacionId;
-        $concurrio->save();
+        $locacion = Locacion::find($locacionId);
+        $entrada = DB::table('concurrios')->where('locacionId', '=', $locacionId)->where('userId','=', $userId)->orderBy('id','desc')->first();
+        error_log($entrada->entrada.' gatoooooo');
+        if($entrada == null or $entrada->salida <> null) {
+            $entrada = new Concurrio();
+            $entrada->entrada = date("Y-m-d h:i:sa");
+            $entrada->userId = $userId;
+            $entrada->locacionId = $locacionId;
+            $entrada->save();
+            $locacion->Capacidad += 1;
+        } else {
+            $concurrio = Concurrio::find($entrada->id);
+            $concurrio->salida = date("Y-m-d h:i:sa");
+            $concurrio->save();
+            $locacion->Capacidad -= 1;
+        }
+        $locacion->save();
         return redirect('/home');
     }
 
