@@ -69,7 +69,7 @@
         </table>
 
         <div class="card-body">
-            <button type="button" class="btn btn-lg btn-block btn-primary"><a href="{{ url('/concurrio/Store/'.$locacion->id.'/'.$this->user->id) }}"></a>Confirmar</button>
+            <button type="button" class="btn btn-lg btn-block btn-primary"><a href="{{ url('/concurrio/Store/'.$locacion->id.'/'.Auth::user()->id) }}"></a>Confirmar</button>
         </div>
 
         </body>
