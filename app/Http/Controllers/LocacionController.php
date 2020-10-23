@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\Http;
 
 class LocacionController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
