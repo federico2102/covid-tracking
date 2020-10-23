@@ -23,27 +23,30 @@
                 <h1>Check-in/Check-out</h1>
             </div>
         </div>
-        <table class="table">
-            <thead class="thead-light">
-            <tr>
-                <th scope="col">Nombre</th>
-                <th scope="col">Capacidad</th>
-                <th scope="col">CapacidadMax</th>
-                <th scope="col">Geolocalizacion</th>
-                <th scope="col">QR</th>
-
-            </tr>
-            </thead>
-            <tbody>
+        <div class="card-body">
+            <h5 class="card-title">Locación a ingresar</h5>
+            <table class="table">
+                <thead class="thead-light">
                 <tr>
-                    <td data-label="Nombre:">{{ $locacion->Nombre }}</td>
-                    <td data-label="Capacidad:">{{ $locacion->Capacidad }}</td>
-                    <td data-label="CapacidadMax:">{{ $locacion->CapacidadMax }}</td>
-                    <td data-label="Geolocacion:"><a href="{{ url('/map/'.$locacion->Geolocalizacion) }}" target="_blank">Click para abrir mapa</a></td>
-                    <td data-label="QR:"><a href="{{ $locacion->QR }}" target="_blank">Click para ver QR</a></td>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Capacidad</th>
+                    <th scope="col">CapacidadMax</th>
+                    <th scope="col">Geolocalizacion</th>
+                    <th scope="col">QR</th>
+
                 </tr>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Nombre:">{{ $locacion->Nombre }}</td>
+                        <td data-label="Capacidad:">{{ $locacion->Capacidad }}</td>
+                        <td data-label="CapacidadMax:">{{ $locacion->CapacidadMax }}</td>
+                        <td data-label="Geolocacion:"><a href="{{ url('/map/'.$locacion->Geolocalizacion) }}" target="_blank">Click para abrir mapa</a></td>
+                        <td data-label="QR:"><a href="{{ $locacion->QR }}" target="_blank">Click para ver QR</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
         <div class="card-body">
             <button type="button" class="btn btn-lg btn-block btn-primary"><a href="{{ url('/concurrio/Store/'.$locacion->id.'/'.Auth::user()->id) }}"></a>Confirmar</button>

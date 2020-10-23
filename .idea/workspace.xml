@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Arreglo error en el view de check-in">
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Modifico el view para adaptarlo a la pantalla del celu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/concurrio.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/concurrio.blade.php" afterDir="false" />
     </list>
@@ -268,7 +268,7 @@
       <workItem from="1602959726510" duration="21475000" />
       <workItem from="1603150547871" duration="2617000" />
       <workItem from="1603331112565" duration="1087000" />
-      <workItem from="1603391653692" duration="10212000" />
+      <workItem from="1603391653692" duration="11077000" />
     </task>
     <task id="LOCAL-00001" summary="Cree el modulo de locaciones y su controlador. &#10;Dentro del controlador actualice todos los metodos.&#10;Dentro de la tabla agregue los atributos (falta ver como hacer para que el id sea un QR). &#10;Por ultimo registre todas las rutas dentro de &quot;web.php&quot; para los metodos del controller.&#10;Hay que ver que base de datos usamos asi ya se puede crear la tabla ahi.">
       <created>1602382520538</created>
@@ -487,7 +487,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603410623438</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Arreglo en view de check-in.. lo subo para testearlo en heroku">
+      <created>1603414854440</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1603414854440</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Modifico el view para adaptarlo a la pantalla del celu">
+      <created>1603415115932</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1603415115932</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -517,8 +531,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Arreglo nombre de una view para ver si me lo toma Heroku" />
-    <MESSAGE value="-Vista para lista de locaciones (super basica)&#10;-Formulario para crear locaciones con botones save y reset (ya funciona cargar locaciones)&#10;-Habria que hacer que las vistas sean mas lindas. No se por que la tabla y el formulario no me quedaron como lo que saque de bootstrap" />
     <MESSAGE value="Corrijo detalle para que ande &quot;create&quot; en heroku" />
     <MESSAGE value="Mejore un poco los views. Todavia no se por que no se ven de la misma forma en que las saco de bootstrap" />
     <MESSAGE value="-Logre solucionar lo del formato del html. Para eso cree archivos .css en la carpeta public y los asocie al html.&#10;-Sientanse libres de cambiar el estilo de la pagina como mas les guste. Yo solo puse el de ahora a modo de prueba." />
@@ -542,7 +554,9 @@
     <MESSAGE value="Genero qr que dirige al view de check-in/check-out&#10;Implemento view de check-in/check-out con la informacion de la locacion en la que se esta por ingresar o salir, y un boton para confirmar" />
     <MESSAGE value="Cambio metodo post por get cuando me dirijo a la vista de check-in/check-out" />
     <MESSAGE value="Arreglo error en el view de check-in" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arreglo error en el view de check-in" />
+    <MESSAGE value="Arreglo en view de check-in.. lo subo para testearlo en heroku" />
+    <MESSAGE value="Modifico el view para adaptarlo a la pantalla del celu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modifico el view para adaptarlo a la pantalla del celu" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
@@ -640,13 +654,14 @@
       <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state x="691" y="425" key="VCS.ChangelistChooser/0.23.1680.963@0.23.1680.963" timestamp="1602719253619" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1603410636228">
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1603415147000">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="440" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.963@0.23.1680.963" timestamp="1602867516896" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.965@0.23.1680.965" timestamp="1602983009206" />
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603410636228" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.966@0.23.1680.966" timestamp="1602888375395" />
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603415147000" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.967@0.23.1680.967" timestamp="1603240943604" />
     <state x="575" y="-615" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603414432757">
       <screen x="-154" y="-1057" width="1920" height="1057" />
