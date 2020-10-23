@@ -24,8 +24,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Nuevo intento de adaptacion a la pantalla del celu">
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Agrego nuevo formato de titulo en view de check in">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_22_190734_create_concurrios_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_22_190734_create_concurrios_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/concurrio.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/concurrio.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/locacionform.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/locacionform.blade.php" afterDir="false" />
     </list>
     <list id="c16eeb1e-2a41-4503-a9b3-45b8020eb448" name="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR) -Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso -Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -272,7 +276,8 @@
       <workItem from="1602959726510" duration="21475000" />
       <workItem from="1603150547871" duration="2617000" />
       <workItem from="1603331112565" duration="1087000" />
-      <workItem from="1603391653692" duration="12343000" />
+      <workItem from="1603391653692" duration="12759000" />
+      <workItem from="1603434763216" duration="1365000" />
     </task>
     <task id="LOCAL-00001" summary="Cree el modulo de locaciones y su controlador. &#10;Dentro del controlador actualice todos los metodos.&#10;Dentro de la tabla agregue los atributos (falta ver como hacer para que el id sea un QR). &#10;Por ultimo registre todas las rutas dentro de &quot;web.php&quot; para los metodos del controller.&#10;Hay que ver que base de datos usamos asi ya se puede crear la tabla ahi.">
       <created>1602382520538</created>
@@ -512,7 +517,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603416179460</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Agrego nuevo formato de titulo en view de check in">
+      <created>1603418744532</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1603418744532</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -542,7 +554,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Mejore un poco los views. Todavia no se por que no se ven de la misma forma en que las saco de bootstrap" />
     <MESSAGE value="-Logre solucionar lo del formato del html. Para eso cree archivos .css en la carpeta public y los asocie al html.&#10;-Sientanse libres de cambiar el estilo de la pagina como mas les guste. Yo solo puse el de ahora a modo de prueba." />
     <MESSAGE value="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR)&#10;-Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso&#10;-Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" />
     <MESSAGE value="-Agregue columna de QR a la base de datos&#10;-El archivo .env tiene comentado el seteo de la base de datos local por si quieren testear ahi antes de subir las cosas a heroku" />
@@ -567,7 +578,8 @@
     <MESSAGE value="Arreglo en view de check-in.. lo subo para testearlo en heroku" />
     <MESSAGE value="Modifico el view para adaptarlo a la pantalla del celu" />
     <MESSAGE value="Nuevo intento de adaptacion a la pantalla del celu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nuevo intento de adaptacion a la pantalla del celu" />
+    <MESSAGE value="Agrego nuevo formato de titulo en view de check in" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agrego nuevo formato de titulo en view de check in" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
@@ -666,14 +678,14 @@
       <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state x="691" y="425" key="VCS.ChangelistChooser/0.23.1680.963@0.23.1680.963" timestamp="1602719253619" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1603416185133">
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1603418756589">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="440" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.963@0.23.1680.963" timestamp="1602867516896" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.965@0.23.1680.965" timestamp="1602983009206" />
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603410636228" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.966@0.23.1680.966" timestamp="1602888375395" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603416185133" />
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603418756589" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.967@0.23.1680.967" timestamp="1603240943604" />
     <state x="575" y="-615" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603414432757">
       <screen x="-154" y="-1057" width="1920" height="1057" />

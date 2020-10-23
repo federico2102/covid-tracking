@@ -48,10 +48,9 @@
             </table>
         </div>
 
-        <div class="card-body">
-            <button type="button" class="btn btn-lg btn-block btn-primary"><a href="{{ url('/concurrio/Store/'.$locacion->id.'/'.Auth::user()->id) }}"></a>Confirmar</button>
-        </div>
-
+        <form action="{{ url('/concurrio/Store/'.$locacion->id.'/'.Auth::user()->id) }}" method="post">
+            <input type="submit" class="btn btn-info" value="Confirmar">
+        </form>
         </body>
     </x-slot>
     </html>

@@ -16,8 +16,8 @@ class CreateConcurriosTable extends Migration
         Schema::create('concurrios', function (Blueprint $table) {
             $table->timestamp('entrada')->primary();
             $table->timestamp('salida')->nullable();
-            $table->foreign('userId')->references('id')->on('users');
-            $table->foreign('locacionId')->references('id')->on('locacions');
+            $table->foreignId('userId')->references('id')->on('users');
+            $table->foreignId('locacionId')->references('id')->on('locacions');
         });
     }
 

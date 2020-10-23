@@ -5,10 +5,10 @@
     defer
 ></script>
 
-@if($layout == 'create')
-    <form action="{{ url('/store') }}" method="post">
-@elseif($layout == 'edit')
-    <form action="{{ url('/update/'.$locacion->id) }}" method="post">
+    <form @if($layout == 'create')
+        action="{{ url('/store') }}" method="post">
+        @else($layout == 'edit')
+            action="{{ url('/update/'.$locacion->id) }}" method="post">
         @endif
 @csrf
         <div class="form-group">
@@ -37,10 +37,11 @@
             <input name="Imagen" type="image" class="form-control">
         </div>
     {{--    <input type="text" value="{{ config('localizacion')['location_apikey'] }}" id="key" hidden>--}}
-        @if($layout == 'create')
-            <input type="submit" class="btn btn-info" value="Save">
-        @elseif($layout == 'edit')
-            <input type="submit" class="btn btn-info" value="Update">
-        @endif
+            <input type="submit" class="btn btn-info"
+               @if($layout == 'create')
+                   value="Save">
+                @else($layout == 'edit')
+                    value="Update">
+            @endif
         <input type="reset" class="btn btn-warning" value="Reset">
     </form>
