@@ -47,7 +47,6 @@ class concurrioController extends Controller
     {
         $locacion = Locacion::find($locacionId);
         $entrada = DB::table('concurrios')->where('locacionId', '=', $locacionId)->where('userId','=', $userId)->orderBy('id','desc')->first();
-        error_log($entrada->entrada.' gatoooooo');
         if($entrada == null or $entrada->salida <> null) {
             $entrada = new Concurrio();
             $entrada->entrada = date("Y-m-d h:i:sa");
