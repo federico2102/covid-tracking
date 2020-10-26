@@ -24,8 +24,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Implemento check in y check out. Se va a la pagina desde confirmacion a traves del QR de la locacion y detecta solo si es check in o check out. Si es check in, suma una nueva entrada en la tabla &quot;concurrios&quot; y suma uno en la capacidad de la locacion. Si es check out, agrega la fecha y hora de salida y resta uno en la capacidad de la locacion.">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Vuelvo a dejar como base de datos la de heroku e hice un migrate:refresh para borrar datos agregados antes de la ultima modificacion.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ConcurrioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ConcurrioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/concurrio.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/concurrio.blade.php" afterDir="false" />
     </list>
     <list id="c16eeb1e-2a41-4503-a9b3-45b8020eb448" name="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR) -Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso -Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -273,7 +275,8 @@
       <workItem from="1603150547871" duration="2617000" />
       <workItem from="1603331112565" duration="1087000" />
       <workItem from="1603391653692" duration="12759000" />
-      <workItem from="1603434763216" duration="12021000" />
+      <workItem from="1603434763216" duration="12303000" />
+      <workItem from="1603698926149" duration="909000" />
     </task>
     <task id="LOCAL-00001" summary="Cree el modulo de locaciones y su controlador. &#10;Dentro del controlador actualice todos los metodos.&#10;Dentro de la tabla agregue los atributos (falta ver como hacer para que el id sea un QR). &#10;Por ultimo registre todas las rutas dentro de &quot;web.php&quot; para los metodos del controller.&#10;Hay que ver que base de datos usamos asi ya se puede crear la tabla ahi.">
       <created>1602382520538</created>
@@ -541,7 +544,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603479506349</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Vuelvo a dejar como base de datos la de heroku e hice un migrate:refresh para borrar datos agregados antes de la ultima modificacion.">
+      <created>1603479629976</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1603479629976</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -571,7 +581,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Implemento view para editar locacion" />
     <MESSAGE value="Limpio informacion innsecesaria" />
     <MESSAGE value="Agregue sistema de log in/sign in" />
     <MESSAGE value="-El sistema no deja usar la app sin estar registrado.&#10;-Cambie el flujo de las views. Por defecto empieza en la pantalla de log in. Despues de eso se va a la pantalla de locaciones (esto ultimo lo cambiaremos cuando tengamos la pantalla principal)" />
@@ -596,7 +605,8 @@
     <MESSAGE value="Subo nueva tabla a base de datos (tabla &quot;concurrios&quot;)&#10;Ahora cuando se confirma el check in se deberia generar una entrada en esa tabla" />
     <MESSAGE value="Corrijo creacion de tabla concurrio en archivo &quot;ConcurrioController&quot;" />
     <MESSAGE value="Implemento check in y check out. Se va a la pagina desde confirmacion a traves del QR de la locacion y detecta solo si es check in o check out. Si es check in, suma una nueva entrada en la tabla &quot;concurrios&quot; y suma uno en la capacidad de la locacion. Si es check out, agrega la fecha y hora de salida y resta uno en la capacidad de la locacion." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemento check in y check out. Se va a la pagina desde confirmacion a traves del QR de la locacion y detecta solo si es check in o check out. Si es check in, suma una nueva entrada en la tabla &quot;concurrios&quot; y suma uno en la capacidad de la locacion. Si es check out, agrega la fecha y hora de salida y resta uno en la capacidad de la locacion." />
+    <MESSAGE value="Vuelvo a dejar como base de datos la de heroku e hice un migrate:refresh para borrar datos agregados antes de la ultima modificacion." />
+    <option name="LAST_COMMIT_MESSAGE" value="Vuelvo a dejar como base de datos la de heroku e hice un migrate:refresh para borrar datos agregados antes de la ultima modificacion." />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
@@ -695,19 +705,20 @@
       <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state x="691" y="425" key="VCS.ChangelistChooser/0.23.1680.963@0.23.1680.963" timestamp="1602719253619" />
-    <state x="349" y="-828" key="Vcs.Push.Dialog.v2" timestamp="1603436673775">
-      <screen x="-154" y="-1057" width="1920" height="991" />
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1603699821759">
+      <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="349" y="-828" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-154.-1057.1920.991@-154.-1057.1920.991" timestamp="1603436673775" />
     <state x="440" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.963@0.23.1680.963" timestamp="1602867516896" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.965@0.23.1680.965" timestamp="1602983009206" />
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603410636228" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.966@0.23.1680.966" timestamp="1602888375395" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603418756589" />
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603699821759" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.967@0.23.1680.967" timestamp="1603240943604" />
-    <state x="575" y="-615" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603414432757">
+    <state x="575" y="-615" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603698939707">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
+    <state x="575" y="-615" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603698939707" />
     <state x="638" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1680.966@0.23.1680.966" timestamp="1602887933939" />
     <state x="575" y="-615" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603414432757" />
     <state x="638" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1680.967@0.23.1680.967" timestamp="1603150575452" />
