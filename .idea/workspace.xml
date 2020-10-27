@@ -24,10 +24,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Arreglo funcion para agregar nueva entrada a una locacion">
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Agrego chequeos de que el usuario pueda ingresar solo si esta en estado &quot;no contagiado&quot; y la locacion no esta llena. Caso contrario, se le informara al usuario la razon por la cual no puede ingresar.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ConcurrioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ConcurrioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/concurrio.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/concurrio.blade.php" afterDir="false" />
     </list>
     <list id="c16eeb1e-2a41-4503-a9b3-45b8020eb448" name="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR) -Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso -Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -277,7 +275,7 @@
       <workItem from="1603391653692" duration="12759000" />
       <workItem from="1603434763216" duration="12303000" />
       <workItem from="1603698926149" duration="2496000" />
-      <workItem from="1603835144216" duration="2256000" />
+      <workItem from="1603835144216" duration="2534000" />
     </task>
     <task id="LOCAL-00001" summary="Cree el modulo de locaciones y su controlador. &#10;Dentro del controlador actualice todos los metodos.&#10;Dentro de la tabla agregue los atributos (falta ver como hacer para que el id sea un QR). &#10;Por ultimo registre todas las rutas dentro de &quot;web.php&quot; para los metodos del controller.&#10;Hay que ver que base de datos usamos asi ya se puede crear la tabla ahi.">
       <created>1602382520538</created>
@@ -566,7 +564,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603700043664</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Agrego chequeos de que el usuario pueda ingresar solo si esta en estado &quot;no contagiado&quot; y la locacion no esta llena. Caso contrario, se le informara al usuario la razon por la cual no puede ingresar.">
+      <created>1603837710509</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1603837710509</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -596,7 +601,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="-El sistema no deja usar la app sin estar registrado.&#10;-Cambie el flujo de las views. Por defecto empieza en la pantalla de log in. Despues de eso se va a la pantalla de locaciones (esto ultimo lo cambiaremos cuando tengamos la pantalla principal)" />
     <MESSAGE value="Cambio detalle para ver si se adapta mejor a la pantalla del celu" />
     <MESSAGE value="Mas estilos en el css para la tabla" />
     <MESSAGE value="Mas estilos en el css para la tabla. Para que las tablas se adapten a diferentes pantallas" />
@@ -621,7 +625,8 @@
     <MESSAGE value="Vuelvo a dejar como base de datos la de heroku e hice un migrate:refresh para borrar datos agregados antes de la ultima modificacion." />
     <MESSAGE value="Agrego redireccionar a log in cuando alguien entra directamente por QR" />
     <MESSAGE value="Arreglo funcion para agregar nueva entrada a una locacion" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arreglo funcion para agregar nueva entrada a una locacion" />
+    <MESSAGE value="Agrego chequeos de que el usuario pueda ingresar solo si esta en estado &quot;no contagiado&quot; y la locacion no esta llena. Caso contrario, se le informara al usuario la razon por la cual no puede ingresar." />
+    <option name="LAST_COMMIT_MESSAGE" value="Agrego chequeos de que el usuario pueda ingresar solo si esta en estado &quot;no contagiado&quot; y la locacion no esta llena. Caso contrario, se le informara al usuario la razon por la cual no puede ingresar." />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
@@ -720,13 +725,13 @@
       <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state x="691" y="425" key="VCS.ChangelistChooser/0.23.1680.963@0.23.1680.963" timestamp="1602719253619" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1603700049129">
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1603837731881">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="349" y="-828" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-154.-1057.1920.991@-154.-1057.1920.991" timestamp="1603436673775" />
     <state x="440" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.963@0.23.1680.963" timestamp="1602867516896" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.965@0.23.1680.965" timestamp="1602983009206" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603410636228" />
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603837731881" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.966@0.23.1680.966" timestamp="1602888375395" />
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603700049129" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.967@0.23.1680.967" timestamp="1603240943604" />
