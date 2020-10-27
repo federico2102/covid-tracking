@@ -56,6 +56,11 @@
             @csrf
             <input type="submit" class="btn btn-info" value="Confirmar">
         </form>
+            @if($isFull)
+                <a style="color:red"> La locación a la que intenta ingresar se encuentra completa. Vuelva a intentar mas tarde </a>
+            @elseif($contagido)
+                <a style="color:red"> No podra ingresar a ninguna locación hasta que su estado sea "No contagiado" </a>
+            @endif
         </body>
     </x-slot>
     </html>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Concurrio;
 use App\Models\Locacion;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class concurrioController extends Controller
@@ -23,7 +24,9 @@ class concurrioController extends Controller
     public function index($id)
     {
         $locacion = Locacion::find($id);
-        return view('concurrio',['locacion'=>$locacion]);
+        $isFull = false;
+        $contagiado = false;
+        return view('concurrio',['locacion'=>$locacion, 'isFull'=>$isFull, 'contagiado'=>$contagiado]);
     }
 
     /**
@@ -46,14 +49,25 @@ class concurrioController extends Controller
     public function store($locacionId, $userId)
     {
         $locacion = Locacion::find($locacionId);
+        $user = Auth::user();
         $entrada = DB::table('concurrios')->where('locacionId', '=', $locacionId)->where('userId','=', $userId)->orderBy('id','desc')->first();
         if($entrada == null or $entrada->salida <> null) {
-            $entrada = new Concurrio();
-            $entrada->entrada = date("Y-m-d h:i:sa");
-            $entrada->userId = $userId;
-            $entrada->locacionId = $locacionId;
-            $entrada->save();
-            $locacion->Capacidad += 1;
+            if($locacion->Capacidad <> $locacion->CapacidadMax and $user->estado == 'No contagiado') {
+                $entrada = new Concurrio();
+                $entrada->entrada = date("Y-m-d h:i:sa");
+                $entrada->userId = $userId;
+                $entrada->locacionId = $locacionId;
+                $entrada->save();
+                $locacion->Capacidad += 1;
+            } elseif ($locacion->Capacidad == $locacion->CapacidadMax) {
+                $isFull = true;
+                $contagiado = false;
+                return view('concurrio', ['locacion'=>$locacion, 'isFull'=>$isFull, 'contagiado'=>$contagiado]);
+            } else {
+                $isFull = false;
+                $contagiado = true;
+                return view('concurrio', ['locacion'=>$locacion, 'isFull'=>$isFull, 'contagiado'=>$contagiado]);
+            }
         } else {
             $concurrio = Concurrio::find($entrada->id);
             $concurrio->salida = date("Y-m-d h:i:sa");
