@@ -59,13 +59,13 @@ class concurrioController extends Controller
                 $entrada->locacionId = $locacionId;
                 $entrada->save();
                 $locacion->Capacidad += 1;
-            } elseif ($locacion->Capacidad == $locacion->CapacidadMax) {
-                $isFull = true;
-                $contagiado = false;
-                return view('concurrio', ['locacion'=>$locacion, 'isFull'=>$isFull, 'contagiado'=>$contagiado]);
-            } else {
+            } elseif ($user->estado <> 'No contagiado') {
                 $isFull = false;
                 $contagiado = true;
+                return view('concurrio', ['locacion'=>$locacion, 'isFull'=>$isFull, 'contagiado'=>$contagiado]);
+            } else {
+                $isFull = true;
+                $contagiado = false;
                 return view('concurrio', ['locacion'=>$locacion, 'isFull'=>$isFull, 'contagiado'=>$contagiado]);
             }
         } else {
