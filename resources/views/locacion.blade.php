@@ -14,9 +14,16 @@
             <link rel="stylesheet" href="{{asset('css/style.css')}}">
             <title>Locaciones</title>
 
+            <script src="{{ asset('js/map-screenSize.js') }}"></script>
+            <script
+                src="https://maps.googleapis.com/maps/api/js?key={{ config('googlemaps')['googlemaps_apikey'] }}&region=AR&language=es&callback=initMap&libraries=&v=weekly"
+                defer
+            ></script>
+
         </head>
 
         <body>
+        <input value="{{ $locaciones }}" id="locaciones" hidden>
 
         <div class="row header-container justify-content-center">
             <div class="header">
@@ -30,6 +37,7 @@
                     <div class="row justify-content-center">
                         <section class="col-md-8">
                             @include("locacioneslist")
+                            <div id="map"></div>
                         </section>
                     </div>
                 </div>

@@ -24,9 +24,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Corrijo eror de tipeo en el nombre de una variable">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ConcurrioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ConcurrioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/concurrio.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/concurrio.blade.php" afterDir="false" />
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Cambio el orden de los chequeos para el check in. Ahora, en caso de que el lugar este lleno, y ademas el usuario no este en estado &quot;no contagiado&quot; se informara que debe estar en estado &quot;no contagiado&quot; para ingresar. (Antes, en ese caso solo se informaba que la locacion estaba llena)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/map-screenSize.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/map-screenSize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/locacion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/locacion.blade.php" afterDir="false" />
     </list>
     <list id="c16eeb1e-2a41-4503-a9b3-45b8020eb448" name="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR) -Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso -Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -276,7 +277,7 @@
       <workItem from="1603391653692" duration="12759000" />
       <workItem from="1603434763216" duration="12303000" />
       <workItem from="1603698926149" duration="2496000" />
-      <workItem from="1603835144216" duration="2894000" />
+      <workItem from="1603835144216" duration="8240000" />
     </task>
     <task id="LOCAL-00001" summary="Cree el modulo de locaciones y su controlador. &#10;Dentro del controlador actualice todos los metodos.&#10;Dentro de la tabla agregue los atributos (falta ver como hacer para que el id sea un QR). &#10;Por ultimo registre todas las rutas dentro de &quot;web.php&quot; para los metodos del controller.&#10;Hay que ver que base de datos usamos asi ya se puede crear la tabla ahi.">
       <created>1602382520538</created>
@@ -579,7 +580,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603838193592</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Cambio el orden de los chequeos para el check in. Ahora, en caso de que el lugar este lleno, y ademas el usuario no este en estado &quot;no contagiado&quot; se informara que debe estar en estado &quot;no contagiado&quot; para ingresar. (Antes, en ese caso solo se informaba que la locacion estaba llena)">
+      <created>1603838617530</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1603838617530</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -609,7 +617,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Mas estilos en el css para la tabla" />
     <MESSAGE value="Mas estilos en el css para la tabla. Para que las tablas se adapten a diferentes pantallas" />
     <MESSAGE value="Corrijo error en el css. Habia etiquetas de ejemplo" />
     <MESSAGE value="Nuevas etiquetas para la tabla formato celular" />
@@ -634,7 +641,8 @@
     <MESSAGE value="Arreglo funcion para agregar nueva entrada a una locacion" />
     <MESSAGE value="Agrego chequeos de que el usuario pueda ingresar solo si esta en estado &quot;no contagiado&quot; y la locacion no esta llena. Caso contrario, se le informara al usuario la razon por la cual no puede ingresar." />
     <MESSAGE value="Corrijo eror de tipeo en el nombre de una variable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrijo eror de tipeo en el nombre de una variable" />
+    <MESSAGE value="Cambio el orden de los chequeos para el check in. Ahora, en caso de que el lugar este lleno, y ademas el usuario no este en estado &quot;no contagiado&quot; se informara que debe estar en estado &quot;no contagiado&quot; para ingresar. (Antes, en ese caso solo se informaba que la locacion estaba llena)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambio el orden de los chequeos para el check in. Ahora, en caso de que el lugar este lleno, y ademas el usuario no este en estado &quot;no contagiado&quot; se informara que debe estar en estado &quot;no contagiado&quot; para ingresar. (Antes, en ese caso solo se informaba que la locacion estaba llena)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
@@ -733,13 +741,13 @@
       <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state x="691" y="425" key="VCS.ChangelistChooser/0.23.1680.963@0.23.1680.963" timestamp="1602719253619" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1603838206053">
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1603838627709">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="349" y="-828" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-154.-1057.1920.991@-154.-1057.1920.991" timestamp="1603436673775" />
     <state x="440" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.963@0.23.1680.963" timestamp="1602867516896" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.965@0.23.1680.965" timestamp="1602983009206" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603838206053" />
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603838627709" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.966@0.23.1680.966" timestamp="1602888375395" />
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603700049129" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.967@0.23.1680.967" timestamp="1603240943604" />
