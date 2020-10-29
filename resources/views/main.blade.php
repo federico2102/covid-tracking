@@ -46,7 +46,7 @@
       <h1 class="display-4">YoEstuveAhi</h1>
       <p class="lead">Apps de trazabilidad ante contagios COVID</p>
     </div>
-    
+
     <div class="container">
       <div class="card-deck mb-3 text-center">
       <div class="row">
@@ -72,7 +72,7 @@
             <ul class="list-unstyled mt-3 mb-4">
               <li>Realizar CheckIn</li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary">CheckIn</button>
+            <button type="button" class="btn btn-lg btn-block btn-primary"><input type="file" accept="image/*;capture=camera">CheckIn</button>
           </div>
           </div>
         </div>
@@ -106,7 +106,7 @@
       </div>
     </div>
     </div>
-    
+
     <div class="card-footer">
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
       <h5 class="my-0 mr-md-auto font-weight-normal">YoEstuveAhi</h5>
