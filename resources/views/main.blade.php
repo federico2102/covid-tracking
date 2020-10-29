@@ -59,7 +59,7 @@
             <ul class="list-unstyled mt-3 mb-4">
               <li>Registrar locacion</li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-outline-primary"><a href="location"> Locacion </a></button>
+            <button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="location.href='location'">Locacion</button>
           </div>
           </div>
         </div>
