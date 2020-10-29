@@ -24,24 +24,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Agrego mapa con todas las locaciones en view de locaciones">
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Restartie la base de datos ya que cambie el formato de la columna &quot;imagen&quot;, y vuelvo a setear la base de datos de heroku en el .env">
       <change afterPath="$PROJECT_DIR$/public/uploads/locaciones/1603944067.jpeg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/uploads/locaciones/1603944261.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/galeria.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/yoEstuveAhi-laravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/yoEstuveAhi-laravel.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LocacionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LocacionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Locacion.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Locacion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_11_012556_create_locacions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_11_012556_create_locacions_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/locacion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/locacion.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/locacioneslist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/locacioneslist.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/locacionform.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/locacionform.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <list id="c16eeb1e-2a41-4503-a9b3-45b8020eb448" name="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR) -Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso -Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -294,7 +280,7 @@
       <workItem from="1603698926149" duration="2496000" />
       <workItem from="1603835144216" duration="8522000" />
       <workItem from="1603917590376" duration="4200000" />
-      <workItem from="1603922322534" duration="16189000" />
+      <workItem from="1603922322534" duration="16838000" />
     </task>
     <task id="LOCAL-00001" summary="Cree el modulo de locaciones y su controlador. &#10;Dentro del controlador actualice todos los metodos.&#10;Dentro de la tabla agregue los atributos (falta ver como hacer para que el id sea un QR). &#10;Por ultimo registre todas las rutas dentro de &quot;web.php&quot; para los metodos del controller.&#10;Hay que ver que base de datos usamos asi ya se puede crear la tabla ahi.">
       <created>1602382520538</created>
@@ -611,7 +597,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603913087428</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Ya se puede subir una imagen por locacion. Quizas haga falta hacer una nueva tabla solo para imagenes, asi puede haber mas de una imagen por locacion.">
+      <created>1603944526338</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1603944526338</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Restartie la base de datos ya que cambie el formato de la columna &quot;imagen&quot;, y vuelvo a setear la base de datos de heroku en el .env">
+      <created>1603944626975</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1603944626975</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -641,8 +641,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Corrijo error en el css. Habia etiquetas de ejemplo" />
-    <MESSAGE value="Nuevas etiquetas para la tabla formato celular" />
     <MESSAGE value="Tabla se adapta a la pantalla del celular" />
     <MESSAGE value="Nueva forma de ingresar geolocalizacion:&#10;Ahora funciona con una api, que dado un nombre te devuelve la data de ese lugar (entre ellos la latitud y longitud)" />
     <MESSAGE value="Escondo api key (para que se llame desde el .env y no este directamente en el .js)" />
@@ -666,7 +664,9 @@
     <MESSAGE value="Corrijo eror de tipeo en el nombre de una variable" />
     <MESSAGE value="Cambio el orden de los chequeos para el check in. Ahora, en caso de que el lugar este lleno, y ademas el usuario no este en estado &quot;no contagiado&quot; se informara que debe estar en estado &quot;no contagiado&quot; para ingresar. (Antes, en ese caso solo se informaba que la locacion estaba llena)" />
     <MESSAGE value="Agrego mapa con todas las locaciones en view de locaciones" />
-    <option name="LAST_COMMIT_MESSAGE" value="Agrego mapa con todas las locaciones en view de locaciones" />
+    <MESSAGE value="Ya se puede subir una imagen por locacion. Quizas haga falta hacer una nueva tabla solo para imagenes, asi puede haber mas de una imagen por locacion." />
+    <MESSAGE value="Restartie la base de datos ya que cambie el formato de la columna &quot;imagen&quot;, y vuelvo a setear la base de datos de heroku en el .env" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restartie la base de datos ya que cambie el formato de la columna &quot;imagen&quot;, y vuelvo a setear la base de datos de heroku en el .env" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
@@ -774,7 +774,7 @@
       <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state x="691" y="425" key="VCS.ChangelistChooser/0.23.1680.963@0.23.1680.963" timestamp="1602719253619" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1603913096595">
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1603944637492">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="349" y="-828" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-154.-1057.1920.991@-154.-1057.1920.991" timestamp="1603436673775" />
@@ -785,6 +785,7 @@
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.966@0.23.1680.966" timestamp="1602888375395" />
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603700049129" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.967@0.23.1680.967" timestamp="1603240943604" />
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.972/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603944637492" />
     <state x="575" y="-615" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603698939707">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
