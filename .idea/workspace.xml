@@ -27,8 +27,6 @@
     <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Primeras pruebas de abrir la camara del celu haciendo click en check-in">
       <change afterPath="$PROJECT_DIR$/public/uploads/locaciones/1603944067.jpeg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/uploads/locaciones/1603944261.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/main.blade.php" afterDir="false" />
     </list>
     <list id="c16eeb1e-2a41-4503-a9b3-45b8020eb448" name="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR) -Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso -Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -281,14 +279,7 @@
       <workItem from="1603698926149" duration="2496000" />
       <workItem from="1603835144216" duration="8522000" />
       <workItem from="1603917590376" duration="4200000" />
-      <workItem from="1603922322534" duration="21449000" />
-    </task>
-    <task id="LOCAL-00004" summary="Arregle el problema que no tomaba al Controller. Era un tema de version de laravel.&#10;Empece a hacer el view para las locaciones (solo copie el starter template de bootstrap)">
-      <created>1602620677492</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1602620677492</updated>
+      <workItem from="1603922322534" duration="22015000" />
     </task>
     <task id="LOCAL-00005" summary="Model y controller de &quot;locaciones&quot; implementados.&#10;View basica de bootstrap para locaciones">
       <created>1602633785439</created>
@@ -626,7 +617,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603952332552</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Primeras pruebas de abrir la camara del celu haciendo click en check-in">
+      <created>1603953783371</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1603953783371</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -789,7 +787,7 @@
       <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state x="691" y="425" key="VCS.ChangelistChooser/0.23.1680.963@0.23.1680.963" timestamp="1602719253619" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1603952336914">
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1603953788068">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="349" y="-828" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-154.-1057.1920.991@-154.-1057.1920.991" timestamp="1603436673775" />
@@ -800,7 +798,7 @@
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.966@0.23.1680.966" timestamp="1602888375395" />
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603700049129" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.967@0.23.1680.967" timestamp="1603240943604" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.972/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603952336914" />
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.972/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603953788068" />
     <state x="575" y="-615" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603698939707">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
