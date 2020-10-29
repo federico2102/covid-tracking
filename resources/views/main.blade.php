@@ -73,6 +73,7 @@
               <li>Realizar CheckIn</li>
             </ul>
             <button type="button" class="btn btn-lg btn-block btn-primary" onclick="abrirCamara()" id="check">CheckIn</button>
+              <script src="{{ asset('js/camara.js') }}"></script>
           </div>
           </div>
         </div>
