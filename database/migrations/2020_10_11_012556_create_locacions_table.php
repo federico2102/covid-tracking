@@ -21,7 +21,7 @@ class CreateLocacionsTable extends Migration
             $table->string('Geolocalizacion');
             $table->string('QR');
             $table->string('Descripcion')->nullable();
-            $table->binary('Imagen')->nullable();
+            $table->mediumText('Imagen')->nullable();
             $table->timestamps();
         });
     }

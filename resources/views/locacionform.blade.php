@@ -5,7 +5,7 @@
     defer
 ></script>
 
-    <form @if($layout == 'create')
+    <form enctype="multipart/form-data" @if($layout == 'create')
         action="{{ url('/store') }}" method="post">
         @else($layout == 'edit')
             action="{{ url('/update/'.$locacion->id) }}" method="post">
@@ -34,11 +34,11 @@
         </div>
         <div class="form-group">
             <label>Imagen</label>
-            <input name="Imagen" type="image" class="form-control">
+            <input name="Imagen" type="file" id="Imagen" class="form-control-file">
         </div>
     {{--    <input type="text" value="{{ config('localizacion')['location_apikey'] }}" id="key" hidden>--}}
             <input type="submit" class="btn btn-info"
-               @if($layout == 'create')
+            @if($layout == 'create')
                    value="Save">
             @else($layout == 'edit')
                         value="Update">

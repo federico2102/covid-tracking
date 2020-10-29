@@ -29,7 +29,7 @@ Route::post('/update/{id}',"LocacionController@update");
 Route::get('/map/{Geolocalizacion}', "MapController@show");
 Route::get('/concurrio/{locacionId}',"ConcurrioController@index");
 Route::post('/concurrio/store/{locacionId}/{userId}',"ConcurrioController@store");
-
+Route::get('/galeria/{id}',"LocacionController@getImages");
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

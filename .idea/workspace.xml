@@ -24,10 +24,24 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Cambio el orden de los chequeos para el check in. Ahora, en caso de que el lugar este lleno, y ademas el usuario no este en estado &quot;no contagiado&quot; se informara que debe estar en estado &quot;no contagiado&quot; para ingresar. (Antes, en ese caso solo se informaba que la locacion estaba llena)">
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Agrego mapa con todas las locaciones en view de locaciones">
+      <change afterPath="$PROJECT_DIR$/public/uploads/locaciones/1603944067.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/locaciones/1603944261.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/galeria.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/map-screenSize.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/map-screenSize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/yoEstuveAhi-laravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/yoEstuveAhi-laravel.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LocacionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LocacionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Locacion.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Locacion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_11_012556_create_locacions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_11_012556_create_locacions_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/locacion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/locacion.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/locacioneslist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/locacioneslist.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/locacionform.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/locacionform.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <list id="c16eeb1e-2a41-4503-a9b3-45b8020eb448" name="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR) -Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso -Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +61,9 @@
         <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="BRANCH" value="main" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -116,7 +133,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
       <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
@@ -132,7 +148,6 @@
       <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
       <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
       <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
-      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
       <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
       <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
       <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
@@ -187,7 +202,6 @@
       <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
       <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
       <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
-      <path value="$PROJECT_DIR$/vendor/scrivo/highlight.php" />
       <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
       <path value="$PROJECT_DIR$/vendor/dasprid/enum" />
       <path value="$PROJECT_DIR$/vendor/jaybizzle/crawler-detect" />
@@ -200,6 +214,7 @@
       <path value="$PROJECT_DIR$/vendor/laravel/jetstream" />
       <path value="$PROJECT_DIR$/vendor/laravel/sanctum" />
       <path value="$PROJECT_DIR$/vendor/livewire/livewire" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ihw1usGpmiz6EYgdhhkrhG9OUv" />
@@ -277,7 +292,9 @@
       <workItem from="1603391653692" duration="12759000" />
       <workItem from="1603434763216" duration="12303000" />
       <workItem from="1603698926149" duration="2496000" />
-      <workItem from="1603835144216" duration="8240000" />
+      <workItem from="1603835144216" duration="8522000" />
+      <workItem from="1603917590376" duration="4200000" />
+      <workItem from="1603922322534" duration="16189000" />
     </task>
     <task id="LOCAL-00001" summary="Cree el modulo de locaciones y su controlador. &#10;Dentro del controlador actualice todos los metodos.&#10;Dentro de la tabla agregue los atributos (falta ver como hacer para que el id sea un QR). &#10;Por ultimo registre todas las rutas dentro de &quot;web.php&quot; para los metodos del controller.&#10;Hay que ver que base de datos usamos asi ya se puede crear la tabla ahi.">
       <created>1602382520538</created>
@@ -587,7 +604,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603838617530</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Agrego mapa con todas las locaciones en view de locaciones">
+      <created>1603913087428</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1603913087428</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -617,7 +641,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Mas estilos en el css para la tabla. Para que las tablas se adapten a diferentes pantallas" />
     <MESSAGE value="Corrijo error en el css. Habia etiquetas de ejemplo" />
     <MESSAGE value="Nuevas etiquetas para la tabla formato celular" />
     <MESSAGE value="Tabla se adapta a la pantalla del celular" />
@@ -642,7 +665,8 @@
     <MESSAGE value="Agrego chequeos de que el usuario pueda ingresar solo si esta en estado &quot;no contagiado&quot; y la locacion no esta llena. Caso contrario, se le informara al usuario la razon por la cual no puede ingresar." />
     <MESSAGE value="Corrijo eror de tipeo en el nombre de una variable" />
     <MESSAGE value="Cambio el orden de los chequeos para el check in. Ahora, en caso de que el lugar este lleno, y ademas el usuario no este en estado &quot;no contagiado&quot; se informara que debe estar en estado &quot;no contagiado&quot; para ingresar. (Antes, en ese caso solo se informaba que la locacion estaba llena)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambio el orden de los chequeos para el check in. Ahora, en caso de que el lugar este lleno, y ademas el usuario no este en estado &quot;no contagiado&quot; se informara que debe estar en estado &quot;no contagiado&quot; para ingresar. (Antes, en ese caso solo se informaba que la locacion estaba llena)" />
+    <MESSAGE value="Agrego mapa con todas las locaciones en view de locaciones" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agrego mapa con todas las locaciones en view de locaciones" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
@@ -674,6 +698,10 @@
     </state>
     <state x="575" y="315" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.965@0.23.1680.965" timestamp="1602978119786" />
     <state x="575" y="315" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.966@0.23.1680.966" timestamp="1602375083154" />
+    <state x="494" y="-786" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1603922283021">
+      <screen x="-154" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="494" y="-786" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1680.963/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603922283021" />
     <state x="578" y="260" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602375136816">
       <screen x="0" y="23" width="1680" height="966" />
     </state>
@@ -690,11 +718,12 @@
       <screen x="0" y="23" width="1680" height="966" />
     </state>
     <state x="594" y="425" key="ComposerInitDialogKey/0.23.1680.966@0.23.1680.966" timestamp="1602374402115" />
-    <state x="38" y="-963" width="1344" height="773" key="DiffContextDialog" timestamp="1603418121699">
+    <state x="38" y="-963" width="1344" height="773" key="DiffContextDialog" timestamp="1603936398810">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="38" y="-963" width="1344" height="773" key="DiffContextDialog/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603418121699" />
     <state x="168" y="109" key="DiffContextDialog/0.23.1680.967@0.23.1680.967" timestamp="1602619590479" />
+    <state x="38" y="-963" width="1344" height="773" key="DiffContextDialog/0.23.1680.972/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603936398810" />
     <state width="1638" height="245" key="GridCell.Tab.0.bottom" timestamp="1602782494262">
       <screen x="0" y="23" width="1680" height="963" />
     </state>
@@ -733,6 +762,10 @@
       <screen x="0" y="23" width="1680" height="966" />
     </state>
     <state x="341" y="145" key="SettingsEditor/0.23.1680.966@0.23.1680.966" timestamp="1602375381252" />
+    <state x="-54" y="-957" width="1720" height="857" key="ShowDiffWithBranchDialog" timestamp="1603936398811">
+      <screen x="-154" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="-54" y="-957" width="1720" height="857" key="ShowDiffWithBranchDialog/0.23.1680.972/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603936398811" />
     <state x="584" y="211" key="VCS.ChangeListViewerDialog" timestamp="1602619926369">
       <screen x="0" y="23" width="1680" height="967" />
     </state>
@@ -741,10 +774,11 @@
       <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state x="691" y="425" key="VCS.ChangelistChooser/0.23.1680.963@0.23.1680.963" timestamp="1602719253619" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1603838627709">
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1603913096595">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="349" y="-828" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-154.-1057.1920.991@-154.-1057.1920.991" timestamp="1603436673775" />
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.956/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603913096595" />
     <state x="440" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.963@0.23.1680.963" timestamp="1602867516896" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.965@0.23.1680.965" timestamp="1602983009206" />
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603838627709" />

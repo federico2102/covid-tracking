@@ -14,11 +14,13 @@
             <link rel="stylesheet" href="{{asset('css/style.css')}}">
             <title>Locaciones</title>
 
-            <script src="{{ asset('js/map-screenSize.js') }}"></script>
-            <script
-                src="https://maps.googleapis.com/maps/api/js?key={{ config('googlemaps')['googlemaps_apikey'] }}&region=AR&language=es&callback=initMap&libraries=&v=weekly"
-                defer
-            ></script>
+            @if($layout == 'index')
+                <script src="{{ asset('js/map-screenSize.js') }}"></script>
+                <script
+                    src="https://maps.googleapis.com/maps/api/js?key={{ config('googlemaps')['googlemaps_apikey'] }}&region=AR&language=es&callback=initMap&libraries=&v=weekly"
+                    defer
+                ></script>
+            @endif
 
         </head>
 
