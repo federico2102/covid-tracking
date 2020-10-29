@@ -24,7 +24,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="actualizo gitIgnore">
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Primeras pruebas de abrir la camara del celu haciendo click en check-in">
+      <change afterPath="$PROJECT_DIR$/public/js/camara.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/uploads/locaciones/1603944067.jpeg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/uploads/locaciones/1603944261.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -281,7 +282,7 @@
       <workItem from="1603698926149" duration="2496000" />
       <workItem from="1603835144216" duration="8522000" />
       <workItem from="1603917590376" duration="4200000" />
-      <workItem from="1603922322534" duration="17397000" />
+      <workItem from="1603922322534" duration="18943000" />
     </task>
     <task id="LOCAL-00001" summary="Cree el modulo de locaciones y su controlador. &#10;Dentro del controlador actualice todos los metodos.&#10;Dentro de la tabla agregue los atributos (falta ver como hacer para que el id sea un QR). &#10;Por ultimo registre todas las rutas dentro de &quot;web.php&quot; para los metodos del controller.&#10;Hay que ver que base de datos usamos asi ya se puede crear la tabla ahi.">
       <created>1602382520538</created>
@@ -619,7 +620,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603945170241</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Primeras pruebas de abrir la camara del celu haciendo click en check-in">
+      <created>1603948981904</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1603948981904</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -649,7 +657,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Nueva forma de ingresar geolocalizacion:&#10;Ahora funciona con una api, que dado un nombre te devuelve la data de ese lugar (entre ellos la latitud y longitud)" />
     <MESSAGE value="Escondo api key (para que se llame desde el .env y no este directamente en el .js)" />
     <MESSAGE value="Subo tareas al README.md" />
     <MESSAGE value="Implemente uso de api de google maps para marcar geolocalizacion (Martin me confirmo que tenia que ser de esa forma).&#10;-Ahora el usuario debe hacer click en el mapa donde esta la nueva ubicacion.&#10;-En la tabla de localizaciones hay un link para ver la localizacion en el mapa" />
@@ -674,7 +681,8 @@
     <MESSAGE value="Ya se puede subir una imagen por locacion. Quizas haga falta hacer una nueva tabla solo para imagenes, asi puede haber mas de una imagen por locacion." />
     <MESSAGE value="Restartie la base de datos ya que cambie el formato de la columna &quot;imagen&quot;, y vuelvo a setear la base de datos de heroku en el .env" />
     <MESSAGE value="actualizo gitIgnore" />
-    <option name="LAST_COMMIT_MESSAGE" value="actualizo gitIgnore" />
+    <MESSAGE value="Primeras pruebas de abrir la camara del celu haciendo click en check-in" />
+    <option name="LAST_COMMIT_MESSAGE" value="Primeras pruebas de abrir la camara del celu haciendo click en check-in" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
@@ -782,7 +790,7 @@
       <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state x="691" y="425" key="VCS.ChangelistChooser/0.23.1680.963@0.23.1680.963" timestamp="1602719253619" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1603945180237">
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1603948988237">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="349" y="-828" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-154.-1057.1920.991@-154.-1057.1920.991" timestamp="1603436673775" />
@@ -793,7 +801,7 @@
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.966@0.23.1680.966" timestamp="1602888375395" />
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603700049129" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.967@0.23.1680.967" timestamp="1603240943604" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.972/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603945180237" />
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.972/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603948988237" />
     <state x="575" y="-615" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603698939707">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>

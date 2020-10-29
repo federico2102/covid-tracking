@@ -72,7 +72,7 @@
             <ul class="list-unstyled mt-3 mb-4">
               <li>Realizar CheckIn</li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary"><input type="file" accept="image/*;capture=camera">CheckIn</button>
+            <button type="button" class="btn btn-lg btn-block btn-primary" accept="image/*" capture id="check">CheckIn</button>
           </div>
           </div>
         </div>
