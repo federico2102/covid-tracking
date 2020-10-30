@@ -60,6 +60,8 @@
                 <a style="color:red"> No podra ingresar a ninguna locación hasta que su estado sea "No contagiado" </a>
             @elseif($isFull)
                 <a style="color:red"> La locación a la que intenta ingresar se encuentra completa. Vuelva a intentar mas tarde </a>
+            @elseif($salidaAbierta)
+                <a style="color:red"> No puede ingresar a dos lugares al mismo tiempo </a>
             @endif
         </body>
     </x-slot>

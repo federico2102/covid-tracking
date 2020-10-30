@@ -24,12 +24,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Refactors">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MailController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContagiosController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/main.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Agrego opcion de testeo negativo cuando el usuario esta en riesgo o contagiado">
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ConcurrioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ConcurrioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/concurrio.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/concurrio.blade.php" afterDir="false" />
     </list>
     <list id="c16eeb1e-2a41-4503-a9b3-45b8020eb448" name="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR) -Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso -Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -285,14 +282,7 @@
       <workItem from="1603922322534" duration="22837000" />
       <workItem from="1604016103307" duration="4628000" />
       <workItem from="1604027779454" duration="12007000" />
-      <workItem from="1604092798823" duration="1060000" />
-    </task>
-    <task id="LOCAL-00008" summary="Corrijo detalle para que ande &quot;create&quot; en heroku">
-      <created>1602639204336</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1602639204336</updated>
+      <workItem from="1604092798823" duration="2171000" />
     </task>
     <task id="LOCAL-00009" summary="Mejore un poco los views. Todavia no se por que no se ven de la misma forma en que las saco de bootstrap">
       <created>1602648504841</created>
@@ -630,7 +620,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604040039205</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Agrego opcion de testeo negativo cuando el usuario esta en riesgo o contagiado">
+      <created>1604094946050</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1604094946051</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -660,7 +657,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Implemente uso de api de google maps para marcar geolocalizacion (Martin me confirmo que tenia que ser de esa forma).&#10;-Ahora el usuario debe hacer click en el mapa donde esta la nueva ubicacion.&#10;-En la tabla de localizaciones hay un link para ver la localizacion en el mapa" />
     <MESSAGE value="Inicializo usuarios creados con estado &quot;No contagiado&quot;" />
     <MESSAGE value="Genero qr que dirige al view de check-in/check-out&#10;Implemento view de check-in/check-out con la informacion de la locacion en la que se esta por ingresar o salir, y un boton para confirmar" />
     <MESSAGE value="Cambio metodo post por get cuando me dirijo a la vista de check-in/check-out" />
@@ -685,7 +681,8 @@
     <MESSAGE value="Primeras pruebas de abrir la camara del celu haciendo click en check-in" />
     <MESSAGE value="Implemento envio de mail a gente que compartio locacion con quien informa contagio" />
     <MESSAGE value="Refactors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactors" />
+    <MESSAGE value="Agrego opcion de testeo negativo cuando el usuario esta en riesgo o contagiado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agrego opcion de testeo negativo cuando el usuario esta en riesgo o contagiado" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
@@ -797,9 +794,10 @@
       <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state x="691" y="425" key="VCS.ChangelistChooser/0.23.1680.963@0.23.1680.963" timestamp="1602719253619" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1604040050472">
-      <screen x="-154" y="-1057" width="1920" height="1057" />
+    <state x="349" y="-829" key="Vcs.Push.Dialog.v2" timestamp="1604094964355">
+      <screen x="-154" y="-1057" width="1920" height="986" />
     </state>
+    <state x="349" y="-829" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-154.-1057.1920.986@-154.-1057.1920.986" timestamp="1604094964355" />
     <state x="349" y="-828" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-154.-1057.1920.991@-154.-1057.1920.991" timestamp="1603436673775" />
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.956/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603913096595" />
     <state x="440" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.963@0.23.1680.963" timestamp="1602867516896" />

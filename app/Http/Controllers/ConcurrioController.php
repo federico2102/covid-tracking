@@ -53,7 +53,11 @@ class concurrioController extends Controller
         $entrada = DB::table('concurrios')->where('locacionId', '=', $locacionId)
             ->where('userId','=', $userId)
             ->orderBy('id','desc')->first();
-        if($entrada == null or $entrada->salida <> null) {
+        $entrada_otra_locacion = DB::table('concurrios')->where('userId'. '='. $userId)
+            ->where('locacionId', '<>', $locacionId)
+            ->where('entrada', '<>', null)
+            ->where('salida', '=', null);
+        if(($entrada == null or $entrada->salida <> null) and $entrada_otra_locacion == null) {
             if($locacion->Capacidad <> $locacion->CapacidadMax and $user->estado == 'No contagiado') {
                 $entrada = new Concurrio();
                 $entrada->entrada = date("Y-m-d h:i:sa");
@@ -64,12 +68,19 @@ class concurrioController extends Controller
             } elseif ($user->estado <> 'No contagiado') {
                 $isFull = false;
                 $contagiado = true;
-                return view('concurrio', ['locacion'=>$locacion, 'isFull'=>$isFull, 'contagiado'=>$contagiado]);
+                $salidaAbierta = false;
+                return view('concurrio', ['locacion'=>$locacion, 'isFull'=>$isFull, 'contagiado'=>$contagiado, 'salidaAbierta'=>$salidaAbierta]);
             } else {
                 $isFull = true;
                 $contagiado = false;
-                return view('concurrio', ['locacion'=>$locacion, 'isFull'=>$isFull, 'contagiado'=>$contagiado]);
+                $salidaAbierta = false;
+                return view('concurrio', ['locacion'=>$locacion, 'isFull'=>$isFull, 'contagiado'=>$contagiado, 'salidaAbierta'=>$salidaAbierta]);
             }
+        } elseif ($entrada_otra_locacion <> null) {
+            $isFull = false;
+            $contagiado = false;
+            $salidaAbierta = true;
+            return view('concurrio', ['locacion' => $locacion, 'isFull' => $isFull, 'contagiado' => $contagiado, 'salidaAbierta'=>$salidaAbierta]);
         } else {
             $concurrio = Concurrio::find($entrada->id);
             $concurrio->salida = date("Y-m-d h:i:sa");
