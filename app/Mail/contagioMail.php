@@ -11,15 +11,14 @@ class contagioMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $details;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($details)
+    public function __construct()
     {
-        $this->details = $details;
+        //
     }
 
     /**
@@ -29,6 +28,6 @@ class contagioMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Estas contagiado de COVID')->view('enRiesgo');
+        return $this->subject('Estas contagiado de COVID')->view('cuerpoMail');
     }
 }
