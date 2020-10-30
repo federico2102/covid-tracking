@@ -50,7 +50,9 @@ class concurrioController extends Controller
     {
         $locacion = Locacion::find($locacionId);
         $user = Auth::user();
-        $entrada = DB::table('concurrios')->where('locacionId', '=', $locacionId)->where('userId','=', $userId)->orderBy('id','desc')->first();
+        $entrada = DB::table('concurrios')->where('locacionId', '=', $locacionId)
+            ->where('userId','=', $userId)
+            ->orderBy('id','desc')->first();
         if($entrada == null or $entrada->salida <> null) {
             if($locacion->Capacidad <> $locacion->CapacidadMax and $user->estado == 'No contagiado') {
                 $entrada = new Concurrio();

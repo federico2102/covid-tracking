@@ -99,7 +99,7 @@
             <ul class="list-unstyled mt-3 mb-4">
               <li>Avisar estas contagiado</li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary">Contagiado</button>
+            <button type="button" class="btn btn-lg btn-block btn-primary" onclick="location.href='informarcontagio/{{ Auth::user()->id }}'">Contagiado</button>
           </div>
         </div>
         </div>
@@ -114,7 +114,7 @@
       <nav class="my-2 my-md-0 mr-md-3">
         <h5 class="my-0 mr-md-auto font-weight-normal">Estado: </h5>
       </nav>
-      <a class="button b" href="#">No contagiado</a>
+      <a class="button b" href="#">{{ Auth::user()->estado }}</a>
     </div>
     </div>
 </body>

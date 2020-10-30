@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Locacion;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Response;
-use Intervention\Image\Facades\Image;
 
 class LocacionController extends Controller
 {
