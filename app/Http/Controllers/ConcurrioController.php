@@ -26,7 +26,8 @@ class concurrioController extends Controller
         $locacion = Locacion::find($id);
         $isFull = false;
         $contagiado = false;
-        return view('concurrio',['locacion'=>$locacion, 'isFull'=>$isFull, 'contagiado'=>$contagiado]);
+        $salidaAbierta = false;
+        return view('concurrio',['locacion'=>$locacion, 'isFull'=>$isFull, 'contagiado'=>$contagiado, 'salidaAbierta'=>$salidaAbierta]);
     }
 
     /**
