@@ -24,11 +24,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Implemento envio de mail a gente que compartio locacion con quien informa contagio">
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Refactors">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MailController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MailController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Mail/contagioMail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mail/contagioMail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/enRiesgo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cuerpoMail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MailController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContagiosController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <list id="c16eeb1e-2a41-4503-a9b3-45b8020eb448" name="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR) -Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso -Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -283,14 +284,8 @@
       <workItem from="1603917590376" duration="4200000" />
       <workItem from="1603922322534" duration="22837000" />
       <workItem from="1604016103307" duration="4628000" />
-      <workItem from="1604027779454" duration="11843000" />
-    </task>
-    <task id="LOCAL-00007" summary="-Vista para lista de locaciones (super basica)&#10;-Formulario para crear locaciones con botones save y reset (ya funciona cargar locaciones)&#10;-Habria que hacer que las vistas sean mas lindas. No se por que la tabla y el formulario no me quedaron como lo que saque de bootstrap">
-      <created>1602639040619</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1602639040619</updated>
+      <workItem from="1604027779454" duration="12007000" />
+      <workItem from="1604092798823" duration="1060000" />
     </task>
     <task id="LOCAL-00008" summary="Corrijo detalle para que ande &quot;create&quot; en heroku">
       <created>1602639204336</created>
@@ -628,7 +623,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604039185818</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Refactors">
+      <created>1604040039204</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1604040039205</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -658,7 +660,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Subo tareas al README.md" />
     <MESSAGE value="Implemente uso de api de google maps para marcar geolocalizacion (Martin me confirmo que tenia que ser de esa forma).&#10;-Ahora el usuario debe hacer click en el mapa donde esta la nueva ubicacion.&#10;-En la tabla de localizaciones hay un link para ver la localizacion en el mapa" />
     <MESSAGE value="Inicializo usuarios creados con estado &quot;No contagiado&quot;" />
     <MESSAGE value="Genero qr que dirige al view de check-in/check-out&#10;Implemento view de check-in/check-out con la informacion de la locacion en la que se esta por ingresar o salir, y un boton para confirmar" />
@@ -683,7 +684,8 @@
     <MESSAGE value="actualizo gitIgnore" />
     <MESSAGE value="Primeras pruebas de abrir la camara del celu haciendo click en check-in" />
     <MESSAGE value="Implemento envio de mail a gente que compartio locacion con quien informa contagio" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemento envio de mail a gente que compartio locacion con quien informa contagio" />
+    <MESSAGE value="Refactors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactors" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
@@ -719,6 +721,10 @@
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="494" y="-786" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1680.963/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603922283021" />
+    <state x="323" y="-1057" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604094378210">
+      <screen x="-154" y="-1057" width="1920" height="986" />
+    </state>
+    <state x="323" y="-1057" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1680.1027/-154.-1057.1920.986@-154.-1057.1920.986" timestamp="1604094378210" />
     <state x="578" y="260" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602375136816">
       <screen x="0" y="23" width="1680" height="966" />
     </state>
@@ -791,14 +797,14 @@
       <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state x="691" y="425" key="VCS.ChangelistChooser/0.23.1680.963@0.23.1680.963" timestamp="1602719253619" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1604039196604">
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1604040050472">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="349" y="-828" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-154.-1057.1920.991@-154.-1057.1920.991" timestamp="1603436673775" />
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.956/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603913096595" />
     <state x="440" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.963@0.23.1680.963" timestamp="1602867516896" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.965@0.23.1680.965" timestamp="1602983009206" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604039196604" />
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604040050472" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.966@0.23.1680.966" timestamp="1602888375395" />
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603700049129" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.967@0.23.1680.967" timestamp="1603240943604" />

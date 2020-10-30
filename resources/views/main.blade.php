@@ -93,14 +93,25 @@
         <div class="col-lg-3">
         <div class="card mb-4 shadow-sm">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Contagiado</h4>
-          </div>
-          <div class="card-body">
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>Avisar estas contagiado</li>
-            </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary" onclick="location.href='informarcontagio/{{ Auth::user()->id }}'">Contagiado</button>
-          </div>
+              @if(Auth::user()->estado == 'No contagiado')
+                    <h4 class="my-0 font-weight-normal">Contagiado</h4>
+                  </div>
+                  <div class="card-body">
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Avisar estas contagiado</li>
+                    </ul>
+                    <button type="button" class="btn btn-lg btn-block btn-primary" onclick="location.href='informarcontagio/{{ Auth::user()->id }}'">Contagiado</button>
+                  </div>
+              @else
+                    <h4 class="my-0 font-weight-normal">Testeo negativo</h4>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Avisar que tu test dio negativo</li>
+                     </ul>
+                    <button type="button" class="btn btn-lg btn-block btn-primary" onclick="location.href='informartest/{{ Auth::user()->id }}'">Test negativo</button>
+                </div>
+              @endif
         </div>
         </div>
       </div>

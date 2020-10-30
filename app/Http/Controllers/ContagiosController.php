@@ -8,9 +8,9 @@ use Illuminate\Support\Facades\Mail;
 use App\Models\Concurrio;
 use Illuminate\Support\Facades\DB;
 
-class MailController extends Controller
+class ContagiosController extends Controller
 {
-    public function sendEmail($id)
+    public function informarContagio($id)
     {
         $fecha_actual = date('Y-m-d h:i:sa'); //Fecha de hoy
         $fecha_minima = date('Y-m-d h:i:sa', strtotime($fecha_actual."- 7 days")); //Fecha configurable
@@ -55,4 +55,12 @@ class MailController extends Controller
 
         return redirect("/home");
     }
+
+    public function testNegativo($id)
+    {
+        DB::table('users')->where('id', '=', $id)
+            ->update(['estado'=>'No contagiado']);
+        return redirect("home");
+    }
 }
+
