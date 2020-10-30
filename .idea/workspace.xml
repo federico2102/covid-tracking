@@ -24,7 +24,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Agrego restriccion para que un usuario no pueda estar en dos locaciones al mismo tiempo">
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Agrego variable faltante en index de concurrioController">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ConcurrioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ConcurrioController.php" afterDir="false" />
     </list>
     <list id="c16eeb1e-2a41-4503-a9b3-45b8020eb448" name="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR) -Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso -Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" comment="" />
@@ -281,14 +283,7 @@
       <workItem from="1603922322534" duration="22837000" />
       <workItem from="1604016103307" duration="4628000" />
       <workItem from="1604027779454" duration="12007000" />
-      <workItem from="1604092798823" duration="2594000" />
-    </task>
-    <task id="LOCAL-00010" summary="-Logre solucionar lo del formato del html. Para eso cree archivos .css en la carpeta public y los asocie al html.&#10;-Sientanse libres de cambiar el estilo de la pagina como mas les guste. Yo solo puse el de ahora a modo de prueba.">
-      <created>1602699761307</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1602699761307</updated>
+      <workItem from="1604092798823" duration="3865000" />
     </task>
     <task id="LOCAL-00011" summary="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR)&#10;-Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso&#10;-Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles">
       <created>1602718835108</created>
@@ -626,7 +621,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604096279439</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Agrego variable faltante en index de concurrioController">
+      <created>1604096514522</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1604096514522</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -656,7 +658,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Genero qr que dirige al view de check-in/check-out&#10;Implemento view de check-in/check-out con la informacion de la locacion en la que se esta por ingresar o salir, y un boton para confirmar" />
     <MESSAGE value="Cambio metodo post por get cuando me dirijo a la vista de check-in/check-out" />
     <MESSAGE value="Arreglo error en el view de check-in" />
     <MESSAGE value="Arreglo en view de check-in.. lo subo para testearlo en heroku" />
@@ -681,7 +682,8 @@
     <MESSAGE value="Refactors" />
     <MESSAGE value="Agrego opcion de testeo negativo cuando el usuario esta en riesgo o contagiado" />
     <MESSAGE value="Agrego restriccion para que un usuario no pueda estar en dos locaciones al mismo tiempo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Agrego restriccion para que un usuario no pueda estar en dos locaciones al mismo tiempo" />
+    <MESSAGE value="Agrego variable faltante en index de concurrioController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agrego variable faltante en index de concurrioController" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
@@ -793,10 +795,10 @@
       <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state x="691" y="425" key="VCS.ChangelistChooser/0.23.1680.963@0.23.1680.963" timestamp="1602719253619" />
-    <state x="349" y="-829" key="Vcs.Push.Dialog.v2" timestamp="1604096287728">
+    <state x="349" y="-829" key="Vcs.Push.Dialog.v2" timestamp="1604096523129">
       <screen x="-154" y="-1057" width="1920" height="986" />
     </state>
-    <state x="349" y="-829" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-154.-1057.1920.986@-154.-1057.1920.986" timestamp="1604096287728" />
+    <state x="349" y="-829" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-154.-1057.1920.986@-154.-1057.1920.986" timestamp="1604096523129" />
     <state x="349" y="-828" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-154.-1057.1920.991@-154.-1057.1920.991" timestamp="1603436673775" />
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.956/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603913096595" />
     <state x="440" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.963@0.23.1680.963" timestamp="1602867516896" />

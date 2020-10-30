@@ -54,11 +54,12 @@ class concurrioController extends Controller
         $entrada = DB::table('concurrios')->where('locacionId', '=', $locacionId)
             ->where('userId','=', $userId)
             ->orderBy('id','desc')->first();
-        $entrada_otra_locacion = DB::table('concurrios')->where('userId'. '='. $userId)
-            ->where('locacionId', '<>', $locacionId)
-            ->where('entrada', '<>', null)
-            ->where('salida', '=', null);
-        if(($entrada == null or $entrada->salida <> null) and $entrada_otra_locacion == null) {
+        $entrada_otra_locacion = DB::table('concurrios')->where('userId','=', $userId)
+            ->where('locacionId','<>', $locacionId)
+            ->whereNotNull('entrada')
+            ->whereNull('salida');
+
+        if(($entrada == null or $entrada->salida <> null) and $entrada_otra_locacion->first() == null) {
             if($locacion->Capacidad <> $locacion->CapacidadMax and $user->estado == 'No contagiado') {
                 $entrada = new Concurrio();
                 $entrada->entrada = date("Y-m-d h:i:sa");
@@ -77,7 +78,7 @@ class concurrioController extends Controller
                 $salidaAbierta = false;
                 return view('concurrio', ['locacion'=>$locacion, 'isFull'=>$isFull, 'contagiado'=>$contagiado, 'salidaAbierta'=>$salidaAbierta]);
             }
-        } elseif ($entrada_otra_locacion <> null) {
+        } elseif ($entrada_otra_locacion->first() <> null) {
             $isFull = false;
             $contagiado = false;
             $salidaAbierta = true;
