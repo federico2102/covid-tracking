@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\contagioMail;
-use App\Models\contagios;
+use App\Models\Contagio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
@@ -51,7 +51,7 @@ class ContagiosController extends Controller
             ->update(['estado'=>'En riesgo']); //cambio el estado de los usuarios en riesgo
 
         foreach ($victimas as $victima){
-            $contagios = new Contagios();
+            $contagios = new Contagio();
             $contagios->userId = $victima->id;
             $contagios->estado = 'En riesgo';
             $contagios->fecha = $fecha_actual;
@@ -63,7 +63,7 @@ class ContagiosController extends Controller
             ->update(['estado'=>'Contagiado']); //actualizo estado del usuario contagiado
 
         if (Auth::user()->estado == 'No contagiado') {
-            $contagios = new Contagios();
+            $contagios = new Contagio();
             $contagios->userId = $id;
             $contagios->estado = 'Contagiado';
             $contagios->fecha = $fecha_diagnostico;
@@ -71,7 +71,7 @@ class ContagiosController extends Controller
         } else {
             $contagioId = DB::table('contagios')->where('userId', '=', $id)->orderBy('id','desc')
                 ->first()->id;
-            $contagio = Contagios::find($contagioId);
+            $contagio = Contagio::find($contagioId);
             $contagio->fechaAlta = $fecha_diagnostico;
             $contagio->save();
         }
@@ -88,7 +88,7 @@ class ContagiosController extends Controller
         $fecha_diagnostico = date("Y-m-d" ,strtotime($request->input('fecha'))); //Fecha de hoy
         $contagioId = DB::table('contagios')->where('userId', '=', $id)->orderBy('id','desc')
             ->first()->id;
-        $contagio = Contagios::find($contagioId);
+        $contagio = Contagio::find($contagioId);
         $contagio->fechaAlta = $fecha_diagnostico;
         $contagio->save();
         return redirect("home");
