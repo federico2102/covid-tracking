@@ -140,7 +140,11 @@
       <nav class="my-2 my-md-0 mr-md-3">
         <h5 class="my-0 mr-md-auto font-weight-normal">Estado: </h5>
       </nav>
-      <a class="button b" href="#">{{ Auth::user()->estado }}</a>
+      @if(Auth::user()->estado == 'No contagiado')
+        <a class="btn btn-success" href="#">{{ Auth::user()->estado }}</a>              
+      @elseif(Auth::user()->estado == 'Contagiado')
+        <a class="btn btn-danger" href="#">{{ Auth::user()->estado }}</a> 
+      @endif
     </div>
     </div>
 </body>
