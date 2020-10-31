@@ -24,16 +24,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Agrego atriburo &quot;Creador&quot; a las locaciones, asi ahora solo puede editar las locaciones quien las haya creado (mas adelante tambien lo va a poder hacer quien tenga rol de admin)">
-      <change afterPath="$PROJECT_DIR$/app/Models/Contagios.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_31_052841_create_contagios_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/checkResultado.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContagiosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContagiosController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/main.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="-Ya implemente la fecha para informar contagio o alta de contagio.&#10;-Cree una nueva tabla donde se guarda cada persona que estuvo contagiada, o en riesgo, con su fecha de alta en caso de que ya la tenga (va a servir para el dashboard)" />
     <list id="c16eeb1e-2a41-4503-a9b3-45b8020eb448" name="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR) -Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso -Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,14 +279,7 @@
       <workItem from="1603922322534" duration="22837000" />
       <workItem from="1604016103307" duration="4628000" />
       <workItem from="1604027779454" duration="12007000" />
-      <workItem from="1604092798823" duration="32892000" />
-    </task>
-    <task id="LOCAL-00017" summary="-El sistema no deja usar la app sin estar registrado.&#10;-Cambie el flujo de las views. Por defecto empieza en la pantalla de log in. Despues de eso se va a la pantalla de locaciones (esto ultimo lo cambiaremos cuando tengamos la pantalla principal)">
-      <created>1602736325287</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1602736325287</updated>
+      <workItem from="1604092798823" duration="33435000" />
     </task>
     <task id="LOCAL-00018" summary="Cambio detalle para ver si se adapta mejor a la pantalla del celu">
       <created>1602736787001</created>
@@ -633,7 +617,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604119344879</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="-Ya implemente la fecha para informar contagio o alta de contagio.&#10;-Cree una nueva tabla donde se guarda cada persona que estuvo contagiada, o en riesgo, con su fecha de alta en caso de que ya la tenga (va a servir para el dashboard)">
+      <created>1604136513337</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1604136513337</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,7 +654,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Agrego nuevo formato de titulo en view de check in" />
     <MESSAGE value="Subo nueva tabla a base de datos (tabla &quot;concurrios&quot;)&#10;Ahora cuando se confirma el check in se deberia generar una entrada en esa tabla" />
     <MESSAGE value="Corrijo creacion de tabla concurrio en archivo &quot;ConcurrioController&quot;" />
     <MESSAGE value="Implemento check in y check out. Se va a la pagina desde confirmacion a traves del QR de la locacion y detecta solo si es check in o check out. Si es check in, suma una nueva entrada en la tabla &quot;concurrios&quot; y suma uno en la capacidad de la locacion. Si es check out, agrega la fecha y hora de salida y resta uno en la capacidad de la locacion." />
@@ -688,7 +678,8 @@
     <MESSAGE value="codifico parametros que se pasan por url" />
     <MESSAGE value="Corrijo errores del ultimo cambio" />
     <MESSAGE value="Agrego atriburo &quot;Creador&quot; a las locaciones, asi ahora solo puede editar las locaciones quien las haya creado (mas adelante tambien lo va a poder hacer quien tenga rol de admin)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Agrego atriburo &quot;Creador&quot; a las locaciones, asi ahora solo puede editar las locaciones quien las haya creado (mas adelante tambien lo va a poder hacer quien tenga rol de admin)" />
+    <MESSAGE value="-Ya implemente la fecha para informar contagio o alta de contagio.&#10;-Cree una nueva tabla donde se guarda cada persona que estuvo contagiada, o en riesgo, con su fecha de alta en caso de que ya la tenga (va a servir para el dashboard)" />
+    <option name="LAST_COMMIT_MESSAGE" value="-Ya implemente la fecha para informar contagio o alta de contagio.&#10;-Cree una nueva tabla donde se guarda cada persona que estuvo contagiada, o en riesgo, con su fecha de alta en caso de que ya la tenga (va a servir para el dashboard)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
@@ -774,6 +765,14 @@
     <state width="1638" height="245" key="GridCell.Tab.0.right/0.23.1680.963@0.23.1680.963" timestamp="1602782494261" />
     <state width="1638" height="247" key="GridCell.Tab.0.right/0.23.1680.966@0.23.1680.966" timestamp="1602375464894" />
     <state width="1638" height="247" key="GridCell.Tab.0.right/0.23.1680.967@0.23.1680.967" timestamp="1602638145567" />
+    <state x="134" y="-925" key="MergeDialog" timestamp="1604136935627">
+      <screen x="-154" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="134" y="-925" key="MergeDialog/0.23.1680.965/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604136935627" />
+    <state x="447" y="-760" key="MultipleFileMergeDialog" timestamp="1604136935674">
+      <screen x="-154" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="447" y="-760" key="MultipleFileMergeDialog/0.23.1680.965/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604136935674" />
     <state x="659" y="436" key="NewPhpFileDialog" timestamp="1602962260350">
       <screen x="0" y="23" width="1680" height="965" />
     </state>
@@ -800,14 +799,18 @@
       <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state x="691" y="425" key="VCS.ChangelistChooser/0.23.1680.963@0.23.1680.963" timestamp="1602719253619" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1604119355996">
+    <state x="506" y="-763" key="Vcs.Multiple.Commit.Info.Dialog.Key" timestamp="1604136918977">
+      <screen x="-154" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="506" y="-763" key="Vcs.Multiple.Commit.Info.Dialog.Key/0.23.1680.965/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604136918977" />
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1604136973208">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="349" y="-829" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-154.-1057.1920.986@-154.-1057.1920.986" timestamp="1604098725927" />
     <state x="349" y="-828" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-154.-1057.1920.991@-154.-1057.1920.991" timestamp="1603436673775" />
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.956/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603913096595" />
     <state x="440" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.963@0.23.1680.963" timestamp="1602867516896" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.965/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604119355996" />
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.965/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604136973208" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.965@0.23.1680.965" timestamp="1602983009206" />
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604040050472" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.966@0.23.1680.966" timestamp="1602888375395" />
