@@ -79,12 +79,16 @@ class concurrioController extends Controller
                 $isFull = false;
                 $contagiado = true;
                 $salidaAbierta = false;
-                return redirect('/concurrio/'.$locacionId, ['locacion'=>$locacion, 'isFull'=>$isFull, 'contagiado'=>$contagiado, 'salidaAbierta'=>$salidaAbierta]);
+                $param = serialize([$locacionId, $isFull, $contagiado, $salidaAbierta]);
+                $parametros = base64_encode($param);
+                return redirect('/concurrio/'.$parametros);
             } else {
                 $isFull = true;
                 $contagiado = false;
                 $salidaAbierta = false;
-                return redirect('/concurrio/'.$locacionId, ['locacion'=>$locacion, 'isFull'=>$isFull, 'contagiado'=>$contagiado, 'salidaAbierta'=>$salidaAbierta]);
+                $param = serialize([$locacionId, $isFull, $contagiado, $salidaAbierta]);
+                $parametros = base64_encode($param);
+                return redirect('/concurrio/'.$parametros);
             }
         } elseif (Auth::user()->locacion <> $locacionId) {
             $isFull = false;
