@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Locacion;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class LocacionController extends Controller
@@ -18,7 +19,7 @@ class LocacionController extends Controller
      */
     public function index()
     {
-        $locaciones = Locacion::all(['id','Nombre','Capacidad','CapacidadMax','Geolocalizacion','QR','Descripcion']);
+        $locaciones = Locacion::all(['id','Nombre','Capacidad','CapacidadMax','Geolocalizacion','QR','Descripcion', 'Creador']);
         return view('locacion', ['locaciones'=>$locaciones, 'layout'=>'index']);
     }
 
@@ -28,7 +29,7 @@ class LocacionController extends Controller
      */
     public function create()
     {
-        $locaciones = Locacion::all(['id','Nombre','Capacidad','CapacidadMax','Geolocalizacion','QR','Descripcion']);
+        $locaciones = Locacion::all(['id','Nombre','Capacidad','CapacidadMax','Geolocalizacion','QR','Descripcion', 'Creador']);
         return view('locacion',['locaciones'=>$locaciones, 'layout'=>'create']);
     }
 
@@ -53,6 +54,7 @@ class LocacionController extends Controller
             $image_file->move('uploads/locaciones', $imagen_nombre);
             $locacion->Imagen = $imagen_nombre;
         }
+        $locacion->Creador = Auth::user()->id;
         $locacion->save();
         $locacionId = serialize($locacion->id);
         $locacionId_encoded = base64_encode($locacionId);
@@ -69,7 +71,7 @@ class LocacionController extends Controller
     public function show($id)
     {
         $locacion = Locacion::find($id);
-        $locaciones = Locacion::all(['id','Nombre','Capacidad','CapacidadMax','Geolocalizacion','QR','Descripcion']);
+        $locaciones = Locacion::all(['id','Nombre','Capacidad','CapacidadMax','Geolocalizacion','QR','Descripcion', 'Creador']);
         return view('locacion',['locaciones'=>$locaciones, 'locacion'=>$locacion, 'layout'=>'show']);
     }
 
@@ -81,7 +83,7 @@ class LocacionController extends Controller
     public function edit($id)
     {
         $locacion = Locacion::find($id);
-        $locaciones = Locacion::all(['id','Nombre','Capacidad','CapacidadMax','Geolocalizacion','QR','Descripcion']);
+        $locaciones = Locacion::all(['id','Nombre','Capacidad','CapacidadMax','Geolocalizacion','QR','Descripcion', 'Creador']);
         return view('locacion',['locaciones'=>$locaciones, 'locacion'=>$locacion, 'layout'=>'edit']);
     }
 

@@ -14,6 +14,7 @@ class Locacion extends Model
         'CapacidadMax',
         'QR',
         'Descripcion',
-        'Imagen'
+        'Imagen',
+        'Creador'
     ];
 }

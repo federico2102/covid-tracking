@@ -22,6 +22,7 @@ class CreateLocacionsTable extends Migration
             $table->string('QR');
             $table->string('Descripcion')->nullable();
             $table->mediumText('Imagen')->nullable();
+            $table->foreignId('Creador')->references('id')->on('users');
             $table->timestamps();
         });
     }
