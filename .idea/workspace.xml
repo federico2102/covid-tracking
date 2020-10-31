@@ -24,13 +24,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Corrijo errores del ultimo cambio">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Agrego atriburo &quot;Creador&quot; a las locaciones, asi ahora solo puede editar las locaciones quien las haya creado (mas adelante tambien lo va a poder hacer quien tenga rol de admin)">
+      <change afterPath="$PROJECT_DIR$/app/Models/Contagios.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_31_052841_create_contagios_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/checkResultado.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LocacionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LocacionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Locacion.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Locacion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_11_012556_create_locacions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_11_012556_create_locacions_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/locacioneslist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/locacioneslist.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContagiosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContagiosController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <list id="c16eeb1e-2a41-4503-a9b3-45b8020eb448" name="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR) -Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso -Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -286,14 +288,7 @@
       <workItem from="1603922322534" duration="22837000" />
       <workItem from="1604016103307" duration="4628000" />
       <workItem from="1604027779454" duration="12007000" />
-      <workItem from="1604092798823" duration="18412000" />
-    </task>
-    <task id="LOCAL-00016" summary="Agregue sistema de log in/sign in">
-      <created>1602722917619</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1602722917619</updated>
+      <workItem from="1604092798823" duration="32892000" />
     </task>
     <task id="LOCAL-00017" summary="-El sistema no deja usar la app sin estar registrado.&#10;-Cambie el flujo de las views. Por defecto empieza en la pantalla de log in. Despues de eso se va a la pantalla de locaciones (esto ultimo lo cambiaremos cuando tengamos la pantalla principal)">
       <created>1602736325287</created>
@@ -631,7 +626,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604117118707</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Agrego atriburo &quot;Creador&quot; a las locaciones, asi ahora solo puede editar las locaciones quien las haya creado (mas adelante tambien lo va a poder hacer quien tenga rol de admin)">
+      <created>1604119344879</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1604119344879</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -661,7 +663,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Nuevo intento de adaptacion a la pantalla del celu" />
     <MESSAGE value="Agrego nuevo formato de titulo en view de check in" />
     <MESSAGE value="Subo nueva tabla a base de datos (tabla &quot;concurrios&quot;)&#10;Ahora cuando se confirma el check in se deberia generar una entrada en esa tabla" />
     <MESSAGE value="Corrijo creacion de tabla concurrio en archivo &quot;ConcurrioController&quot;" />
@@ -686,7 +687,8 @@
     <MESSAGE value="Actualizo readme con lo que esta hecho y lo que falta hacer" />
     <MESSAGE value="codifico parametros que se pasan por url" />
     <MESSAGE value="Corrijo errores del ultimo cambio" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrijo errores del ultimo cambio" />
+    <MESSAGE value="Agrego atriburo &quot;Creador&quot; a las locaciones, asi ahora solo puede editar las locaciones quien las haya creado (mas adelante tambien lo va a poder hacer quien tenga rol de admin)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agrego atriburo &quot;Creador&quot; a las locaciones, asi ahora solo puede editar las locaciones quien las haya creado (mas adelante tambien lo va a poder hacer quien tenga rol de admin)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
@@ -798,14 +800,14 @@
       <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state x="691" y="425" key="VCS.ChangelistChooser/0.23.1680.963@0.23.1680.963" timestamp="1602719253619" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1604117142012">
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1604119355996">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="349" y="-829" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-154.-1057.1920.986@-154.-1057.1920.986" timestamp="1604098725927" />
     <state x="349" y="-828" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-154.-1057.1920.991@-154.-1057.1920.991" timestamp="1603436673775" />
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.956/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603913096595" />
     <state x="440" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.963@0.23.1680.963" timestamp="1602867516896" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.965/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604117142012" />
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.965/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604119355996" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.965@0.23.1680.965" timestamp="1602983009206" />
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604040050472" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.966@0.23.1680.966" timestamp="1602888375395" />

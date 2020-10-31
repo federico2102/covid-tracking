@@ -3,17 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Mail\contagioMail;
+use App\Models\contagios;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use App\Models\Concurrio;
 use Illuminate\Support\Facades\DB;
 
 class ContagiosController extends Controller
 {
-    public function informarContagio($id)
+    public function informarContagio(Request $request)
     {
+        $id = Auth::user()->id;
         $fecha_actual = date('Y-m-d h:i:sa'); //Fecha de hoy
-        $fecha_minima = date('Y-m-d h:i:sa', strtotime($fecha_actual."- 7 days")); //Fecha configurable
+        $fecha_diagnostico = date("Y-m-d" ,strtotime($request->input('fecha')));
+        $fecha_minima = date('Y-m-d h:i:sa', strtotime($fecha_diagnostico." - 7 days")); //Fecha configurable
         $locaciones = DB::table('concurrios')->select('locacionId', 'entrada', 'salida')
             ->distinct('locacionId')->where('entrada', '>=', $fecha_minima)
             ->where('userId', '=', $id)
@@ -39,7 +43,7 @@ class ContagiosController extends Controller
 
         array_unique($victimas_id);
 
-        $victimas = DB::table('users')->select('email')->whereIn('id', $victimas_id)
+        $victimas = DB::table('users')->select('email','id')->whereIn('id', $victimas_id)
             ->where('estado', '=', 'No contagiado')->get(); //mail de los usuarios en riesgo
 
         DB::table('users')->select('email')->whereIn('id', $victimas_id)
@@ -47,19 +51,46 @@ class ContagiosController extends Controller
             ->update(['estado'=>'En riesgo']); //cambio el estado de los usuarios en riesgo
 
         foreach ($victimas as $victima){
+            $contagios = new Contagios();
+            $contagios->userId = $victima->id;
+            $contagios->estado = 'En riesgo';
+            $contagios->fecha = $fecha_actual;
+            $contagios->save();
             Mail::to($victima->email)->send(new contagioMail());
         } //envio de mail a usuarios en riesgo
 
         DB::table('users')->where('id', '=',$id)
             ->update(['estado'=>'Contagiado']); //actualizo estado del usuario contagiado
 
+        if (Auth::user()->estado == 'No contagiado') {
+            $contagios = new Contagios();
+            $contagios->userId = $id;
+            $contagios->estado = 'Contagiado';
+            $contagios->fecha = $fecha_diagnostico;
+            $contagios->save();
+        } else {
+            $contagioId = DB::table('contagios')->where('userId', '=', $id)->orderBy('id','desc')
+                ->first()->id;
+            $contagio = Contagios::find($contagioId);
+            $contagio->fechaAlta = $fecha_diagnostico;
+            $contagio->save();
+        }
+
         return redirect("/home");
     }
 
-    public function testNegativo($id)
+    public function testNegativo(Request $request)
     {
+        $id = Auth::user()->id;
         DB::table('users')->where('id', '=', $id)
             ->update(['estado'=>'No contagiado']);
+
+        $fecha_diagnostico = date("Y-m-d" ,strtotime($request->input('fecha'))); //Fecha de hoy
+        $contagioId = DB::table('contagios')->where('userId', '=', $id)->orderBy('id','desc')
+            ->first()->id;
+        $contagio = Contagios::find($contagioId);
+        $contagio->fechaAlta = $fecha_diagnostico;
+        $contagio->save();
         return redirect("home");
     }
 }

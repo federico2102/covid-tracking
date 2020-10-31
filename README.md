@@ -11,8 +11,8 @@
     o Indicar que han salido de una locación, leyendo el código QR de la misma. (LISTO) 
     o Consultar en todo momento el estado de una locación en cuanto a su capacidad máxima y cantidad de personas dentro. (LISTO)
  Permitir que los usuarios puedan informar su contagio y su alta:
-    o Los usuarios podrán informar que se han contagiado de CODIV, informando la fecha del diagnóstico. (FALTA INFORMAR FECHA)
-    o Los usuarios podrán informar que se han sido dados de alta, informando la fecha del resultado. (FALTA INFORMAR FECHA)
+    o Los usuarios podrán informar que se han contagiado de CODIV, informando la fecha del diagnóstico. (LISTO)
+    o Los usuarios podrán informar que se han sido dados de alta, informando la fecha del resultado. (LISTO)
     o Los usuarios que estén en estado contagiado, no podrán ingresar a ninguna locación. (LISTO)
  Riesgo de contagio
     o El sistema deberá notificar mediante un mensaje en la pantalla y mediante correo electrónico a todos aquellos 
@@ -29,7 +29,7 @@ Importantes
  Que el propietario pueda asociarle a la locación, además de su nombre y descripción: Imágenes (POR AHORA SOLO SE PUEDE UNA IMAGEN)
  Que los usuarios con riesgo de contagio, reciban una advertencia antes de realizar un checkin. (RECIBEN MAIL)
  Que los usuarios con riesgo de contagio, puedan regresar a tu estado normal mediante la opción de “Testeo Negativo” 
-(es decir, estando en riesgo de contagio, se hizo el test correspondiente y dio negativo). (FALTA PONER FECHA DE TESTEO)
+(es decir, estando en riesgo de contagio, se hizo el test correspondiente y dio negativo). (LISTO)
  Pasado un tiempo configurable, los usuarios con riesgo de contagio automáticamente pasen a estado normal. (FALTA IMPLEMENTAR)
 
 Deseables

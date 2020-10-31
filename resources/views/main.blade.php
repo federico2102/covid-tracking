@@ -94,23 +94,47 @@
           <div class="card-header">
               @if(Auth::user()->estado == 'No contagiado')
                     <h4 class="my-0 font-weight-normal">Contagiado</h4>
+              @elseif(Auth::user()->estado == 'En riesgo')
+                  <h4 class="my-0 font-weight-normal">Resultado del test</h4>
+              @else
+                  <h4 class="my-0 font-weight-normal">Testeo negativo</h4>
+              @endif
                   </div>
                   <div class="card-body">
                     <ul class="list-unstyled mt-3 mb-4">
+                    @if(Auth::user()->estado == 'No contagiado')
                       <li>Avisar estas contagiado</li>
-                    </ul>
-                    <button type="button" class="btn btn-lg btn-block btn-primary" onclick="location.href='informarcontagio/{{ Auth::user()->id }}'">Contagiado</button>
-                  </div>
-              @else
-                    <h4 class="my-0 font-weight-normal">Testeo negativo</h4>
-                </div>
-                <div class="card-body">
-                    <ul class="list-unstyled mt-3 mb-4">
-                        <li>Avisar que tu test dio negativo</li>
-                     </ul>
-                    <button type="button" class="btn btn-lg btn-block btn-primary" onclick="location.href='informartest/{{ Auth::user()->id }}'">Test negativo</button>
-                </div>
-              @endif
+                    @elseif(Auth::user()->estado == 'Contagiado')
+                            <li>Avisar que tu test dio negativo</li>
+                    @endif
+                        </ul>
+                      @if(Auth::user()->estado == 'No contagiado')
+                        <form action="{{ url('/informarcontagio') }}" method="get">
+                      @elseif(Auth::user()->estado == 'Contagiado')
+                        <form action="{{ url('/informartest') }}" method="get">
+                      @else
+                                <div id="formAction"></div>
+                        <script src="{{ asset('js/checkResultado.js') }}"></script>
+                        <label>Seleccionar resultado</label>
+                        <select name="resultado" id="resultado" style="color: #8ebc42">
+                            <option value=""></option>
+                            <option value="Positivo">Positivo</option>
+                            <option value="Negativo">Negativo</option>
+                        </select>
+                      @endif
+                          <div class="form-group">
+                              <label>Fecha del diagnostico</label>
+                              <input id='fecha' name="fecha" type="date" class="form-control" required>
+                          </div>
+                      @if(Auth::user()->estado == 'No contagiado')
+                        <input type="submit" class="btn btn-lg btn-block btn-primary" value="Contagiado">
+                      @elseif(Auth::user()->estado == 'Contagiado')
+                          <input type="submit" class="btn btn-lg btn-block btn-primary" value="Test negativo">
+                      @else
+                          <input type="submit" class="btn btn-lg btn-block btn-primary" onclick="checkResultado();" value="Informar">
+                      @endif
+                        </form>
+        </div>
         </div>
         </div>
       </div>

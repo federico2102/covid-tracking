@@ -30,8 +30,8 @@ Route::get('/map/{Geolocalizacion}', "MapController@show");
 Route::get('/concurrio/{locacionId}',"ConcurrioController@index");
 Route::post('/concurrio/store/{locacionId}/{userId}',"ConcurrioController@store");
 Route::get('/galeria/{id}',"LocacionController@getImages");
-Route::get('/informarcontagio/{id}',"ContagiosController@informarContagio");
-Route::get('/informartest/{id}',"ContagiosController@testNegativo");
+Route::get('/informarcontagio',"ContagiosController@informarContagio");
+Route::get('/informartest',"ContagiosController@testNegativo");
 
 
 
