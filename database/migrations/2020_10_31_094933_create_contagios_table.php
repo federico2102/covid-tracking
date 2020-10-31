@@ -20,7 +20,6 @@ class CreateContagiosTable extends Migration
             $table->timestamp('fecha');
             $table->timestamp('fechaAlta')->nullable();
             $table->timestamps();
-
         });
     }
 
