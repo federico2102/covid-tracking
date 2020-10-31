@@ -66,29 +66,28 @@
         <div class="col-lg-3">
         <div class="card mb-4 shadow-sm">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal">CheckIn</h4>
+            @if(Auth::user()->locacion == 0)
+                <h4 class="my-0 font-weight-normal">CheckIn</h4>
+            @else
+                <h4 class="my-0 font-weight-normal">CheckOut</h4>
+            @endif
           </div>
           <div class="card-body">
             <ul class="list-unstyled mt-3 mb-4">
-              <li>Realizar CheckIn</li>
+                @if(Auth::user()->locacion == 0)
+                    <li>Realizar CheckIn</li>
+                @else
+                    <li>Realizar CheckOut</li>
+                @endif
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary" onclick="abrirCamara()" id="check">CheckIn</button>
+              @if(Auth::user()->locacion == 0)
+                <button type="button" class="btn btn-lg btn-block btn-primary" onclick="abrirCamara()" id="check">CheckIn</button>
+              @else
+                  <button type="button" class="btn btn-lg btn-block btn-primary" onclick="abrirCamara()" id="check">CheckOut</button>
+              @endif
               <script src="{{ asset('js/camara.js') }}"></script>
           </div>
           </div>
-        </div>
-        <div class="col-lg-3">
-        <div class="card mb-4 shadow-sm">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">CheckOut</h4>
-          </div>
-          <div class="card-body">
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>Realizar CheckOut</li>
-            </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary">CheckOut</button>
-          </div>
-        </div>
       </div>
         <div class="col-lg-3">
         <div class="card mb-4 shadow-sm">

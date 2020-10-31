@@ -21,12 +21,22 @@ class concurrioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+    public function index($parametros)
     {
-        $locacion = Locacion::find($id);
-        $isFull = false;
-        $contagiado = false;
-        $salidaAbierta = false;
+        $param = base64_decode($parametros);
+        $array = unserialize($param);
+        if (is_array($array))
+        {
+            $locacion = Locacion::find($array[0]);
+            $isFull = $array[1];
+            $contagiado = $array[2];
+            $salidaAbierta = $array[3];
+        } else {
+            $locacion = Locacion::find($array);
+            $isFull = false;
+            $contagiado = false;
+            $salidaAbierta = false;
+        }
         return view('concurrio',['locacion'=>$locacion, 'isFull'=>$isFull, 'contagiado'=>$contagiado, 'salidaAbierta'=>$salidaAbierta]);
     }
 
@@ -54,12 +64,8 @@ class concurrioController extends Controller
         $entrada = DB::table('concurrios')->where('locacionId', '=', $locacionId)
             ->where('userId','=', $userId)
             ->orderBy('id','desc')->first();
-        $entrada_otra_locacion = DB::table('concurrios')->where('userId','=', $userId)
-            ->where('locacionId','<>', $locacionId)
-            ->whereNotNull('entrada')
-            ->whereNull('salida');
 
-        if(($entrada == null or $entrada->salida <> null) and $entrada_otra_locacion->first() == null) {
+        if(($entrada == null or $entrada->salida <> null) and Auth::user()->locacion == 0) {
             if($locacion->Capacidad <> $locacion->CapacidadMax and $user->estado == 'No contagiado') {
                 $entrada = new Concurrio();
                 $entrada->entrada = date("Y-m-d h:i:sa");
@@ -67,27 +73,33 @@ class concurrioController extends Controller
                 $entrada->locacionId = $locacionId;
                 $entrada->save();
                 $locacion->Capacidad += 1;
+                DB::table('users')->where('id','=', Auth::user()->id)
+                    ->update(['locacion'=>$locacionId]);
             } elseif ($user->estado <> 'No contagiado') {
                 $isFull = false;
                 $contagiado = true;
                 $salidaAbierta = false;
-                return view('concurrio', ['locacion'=>$locacion, 'isFull'=>$isFull, 'contagiado'=>$contagiado, 'salidaAbierta'=>$salidaAbierta]);
+                return redirect('/concurrio/'.$locacionId, ['locacion'=>$locacion, 'isFull'=>$isFull, 'contagiado'=>$contagiado, 'salidaAbierta'=>$salidaAbierta]);
             } else {
                 $isFull = true;
                 $contagiado = false;
                 $salidaAbierta = false;
-                return view('concurrio', ['locacion'=>$locacion, 'isFull'=>$isFull, 'contagiado'=>$contagiado, 'salidaAbierta'=>$salidaAbierta]);
+                return redirect('/concurrio/'.$locacionId, ['locacion'=>$locacion, 'isFull'=>$isFull, 'contagiado'=>$contagiado, 'salidaAbierta'=>$salidaAbierta]);
             }
-        } elseif ($entrada_otra_locacion->first() <> null) {
+        } elseif (Auth::user()->locacion <> $locacionId) {
             $isFull = false;
             $contagiado = false;
             $salidaAbierta = true;
-            return view('concurrio', ['locacion' => $locacion, 'isFull' => $isFull, 'contagiado' => $contagiado, 'salidaAbierta'=>$salidaAbierta]);
+            $param = serialize([$locacionId, $isFull, $contagiado, $salidaAbierta]);
+            $parametros = base64_encode($param);
+            return redirect('/concurrio/'.$parametros);
         } else {
             $concurrio = Concurrio::find($entrada->id);
             $concurrio->salida = date("Y-m-d h:i:sa");
             $concurrio->save();
             $locacion->Capacidad -= 1;
+            DB::table('users')->where('id','=', Auth::user()->id)
+                ->update(['locacion'=>0]);
         }
         $locacion->save();
         return redirect('/home');

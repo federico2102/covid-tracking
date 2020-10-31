@@ -54,7 +54,9 @@ class LocacionController extends Controller
             $locacion->Imagen = $imagen_nombre;
         }
         $locacion->save();
-        $locacion->QR = $locacion->QR.$locacion->id.'&t=j&qrsize=300';
+        $locacionId = serialize($locacion->id);
+        $locacionId_encoded = base64_encode($locacionId);
+        $locacion->QR = $locacion->QR.$locacionId_encoded.'&t=j&qrsize=300';
         $locacion->save();
         return redirect('/home');
     }
