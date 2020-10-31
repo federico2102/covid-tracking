@@ -49,8 +49,6 @@
 
     <div class="container">
       <div class="card-deck mb-3 text-center">
-      <div class="row">
-          <div class="col-lg-3">
         <div class="card mb-4 shadow-sm">
           <div class="card-header">
             <h4 class="my-0 font-weight-normal">Locacion</h4>
@@ -62,8 +60,6 @@
             <button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="location.href='location'">Locacion</button>
           </div>
           </div>
-        </div>
-        <div class="col-lg-3">
         <div class="card mb-4 shadow-sm">
           <div class="card-header">
             @if(Auth::user()->locacion == 0)
@@ -88,8 +84,6 @@
               <script src="{{ asset('js/camara.js') }}"></script>
           </div>
           </div>
-      </div>
-        <div class="col-lg-3">
         <div class="card mb-4 shadow-sm">
           <div class="card-header">
               @if(Auth::user()->estado == 'No contagiado')
@@ -99,6 +93,8 @@
                     <ul class="list-unstyled mt-3 mb-4">
                       <li>Avisar estas contagiado</li>
                     </ul>
+                    <label for="inputFecha" class="sr-only">Fecha contagio</label>
+                    <input type="date" id="inputFecha" class="form-control" placeholder="Fecha contagio" required autofocus>
                     <button type="button" class="btn btn-lg btn-block btn-primary" onclick="location.href='informarcontagio/{{ Auth::user()->id }}'">Contagiado</button>
                   </div>
               @else
@@ -112,10 +108,8 @@
                 </div>
               @endif
         </div>
-        </div>
       </div>
       </div>
-    </div>
     </div>
 
     <div class="card-footer">
