@@ -42,7 +42,7 @@ class Locacion extends Model
         $this->Capacidad += 1;
         $this->save();
 
-        return $ingreso;
+        return redirect('home');
     }
 
     public function registrarSalida($user_id)
@@ -57,5 +57,7 @@ class Locacion extends Model
 
         $this->Capacidad -= 1;
         $this->save();
+
+        return redirect('home');
     }
 }

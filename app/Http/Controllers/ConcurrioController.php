@@ -19,7 +19,7 @@ class concurrioController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
     public function index($parametros)
     {
@@ -54,42 +54,36 @@ class concurrioController extends Controller
      *
      * @param \Illuminate\Http\Request $request
      * @param int $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Http\Response|\Illuminate\Routing\Redirector
      */
     public function store($locacionId, $userId)
     {
         $locacion = Locacion::find($locacionId);
         $user = Auth::user();
-        $entrada = $locacion->buscarEntrada($userId);
+        $entrada = $locacion->buscarEntrada($userId); // Me fijo si hay una entrada abierta en esta locacion y la traigo
 
         if ($entrada == null and $user->locacion == 0) {
             if ($locacion->Capacidad <> $locacion->CapacidadMax and $user->estado == 'No contagiado') {
-                $locacion->ingresarUsuario($userId);
+                return $locacion->ingresarUsuario($userId);
             } elseif ($user->estado <> 'No contagiado') {
-                $isFull = false;
-                $contagiado = true;
-                $salidaAbierta = false;
-                $param = serialize([$locacionId, $isFull, $contagiado, $salidaAbierta]);
-                $parametros = base64_encode($param);
-                return redirect('/concurrio/' . $parametros);
+                return $this->mostrarError($locacionId, false, true, false); // No puede ingresar porque esta contagiado
             } else {
-                $isFull = true;
-                $contagiado = false;
-                $salidaAbierta = false;
-                $param = serialize([$locacionId, $isFull, $contagiado, $salidaAbierta]);
-                $parametros = base64_encode($param);
-                return redirect('/concurrio/' . $parametros);
+                return $this->mostrarError($locacionId, true, false, false); // No puede ingresar porque la locacion esta llena
             }
         }  elseIf($locacionId == $user->locacion) {
-            $locacion->registrarSalida($userId);
+            return $locacion->registrarSalida($userId);
             } else {
-                $isFull = false;
-                $contagiado = false;
-                $salidaAbierta = true;
-                $param = serialize([$locacionId, $isFull, $contagiado, $salidaAbierta]);
-                $parametros = base64_encode($param);
-                return redirect('/concurrio/' . $parametros);
+            return $this->mostrarError($locacionId, false, false, true); // No puede ingresar a dos locaciones al mismo tiempo
         }
-        return redirect('/home');
+    }
+
+    public function mostrarError($locacion_id, $isFull, $contagiado, $salidaAbierta)
+    {
+        $param = serialize([$locacion_id, $isFull, $contagiado, $salidaAbierta]);
+        $parametros = base64_encode($param);
+
+        return redirect('/concurrio/'.$parametros);
     }
 }
+
+

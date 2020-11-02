@@ -18,24 +18,24 @@ class ContagiosController extends Controller
         $fecha_actual = date('Y-m-d h:i:sa'); //Fecha de hoy
         $fecha_diagnostico = date("Y-m-d" ,strtotime($request->input('fecha')));
         $fecha_minima = date('Y-m-d h:i:sa', strtotime($fecha_diagnostico." - 7 days")); //Fecha configurable
-        $locaciones = DB::table('concurrios')->select('locacionId', 'entrada', 'salida')
-            ->distinct('locacionId')->where('entrada', '>=', $fecha_minima)
-            ->where('userId', '=', $id)
+        $locaciones = DB::table('concurrios')->select('locacion_id', 'entrada', 'salida')
+            ->distinct('locacion_id')->where('entrada', '>=', $fecha_minima)
+            ->where('user_id', '=', $id)
             ->get(); //locaciones por las que paso el usuario contagiado en las fechas dadas
 
-        $victimas = DB::Table('concurrios')->select('userId', 'locacionId', 'entrada', 'salida')
+        $victimas = DB::Table('concurrios')->select('user_id', 'locacion_id', 'entrada', 'salida')
             ->where('entrada', '>=', $fecha_minima)
-            ->where('userId','<>', $id)
+            ->where('user_id','<>', $id)
             ->get(); //usuarios que estuvieron en locaciones en las fechas dadas
 
         $victimas_id = array();
         foreach ($victimas as $victima) {
             foreach ($locaciones as $locacion) {
-                if ($locacion->locacionId == $victima->locacionId) {
+                if ($locacion->locacion_id == $victima->locacion_id) {
                     if ($victima->entrada >= $locacion->entrada and $victima->entrada <= $locacion->salida) {
                         array_push($victimas_id, $victima->userId);
                     } elseif ($victima->salida >= $locacion->entrada and $victima->salida <= $locacion->salida) {
-                        array_push($victimas_id, $victima->userId);
+                        array_push($victimas_id, $victima->user_id);
                     }
                 }
             }
