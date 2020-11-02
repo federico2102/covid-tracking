@@ -15,10 +15,10 @@ class CreateContagiosTable extends Migration
     {
         Schema::create('contagios', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->foreignId('userId')->references('id')->on('users');
+            $table->foreignId('user_id')->references('id')->on('users');
             $table->string('estado');
             $table->timestamp('fecha');
-            $table->timestamp('fechaAlta')->nullable();
+            $table->timestamp('fecha_alta')->nullable();
             $table->timestamps();
         });
     }

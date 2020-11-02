@@ -33,11 +33,10 @@ class Locacion extends Model
 
     public function ingresarUsuario($user_id)
     {
-        $ingreso = $this->ingresos()->create(['user_id'=>$user_id, 'locacion_id'=>$this->id, 'entrada'=>date("Y-m-d h:i:sa")]);
+        $this->ingresos()->create(['user_id'=>$user_id, 'locacion_id'=>$this->id, 'entrada'=>date("Y-m-d h:i:sa")]);
 
         $user = User::find($user_id);
-        $user->locacion = $this->id;
-        $user->save();
+        $user->sumarVisita($this->id);
 
         $this->Capacidad += 1;
         $this->save();
@@ -59,5 +58,22 @@ class Locacion extends Model
         $this->save();
 
         return redirect('home');
+    }
+
+    public function estuvieronJuntos($user_id, $date)
+    {
+        $entradas_usuario = $this->ingresos()->where('user_id', '=', $user_id);
+
+        $estuvieron = array();
+        foreach ($this->ingresos()->where('user_id', '<>', $user_id) as $victima){
+            foreach ($entradas_usuario as $usuario){
+                if ($victima->entrada >= $usuario->entrada and $victima->entrada <= $usuario->salida){
+                    array_push($estuvieron, $victima->user_id);
+                } elseif ($victima->salida >= $usuario->entrada and $victima->salida <= $usuario->salida) {
+                    array_push($estuvieron, $victima->user_id);
+                }
+            }
+        }
+        return array_unique($estuvieron);
     }
 }
