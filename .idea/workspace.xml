@@ -24,8 +24,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Corrijo problemas con tablas">
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Corrijo errores de tipeo">
+      <change afterPath="$PROJECT_DIR$/database/factories/LocacionFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/LocacionesTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ConcurrioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ConcurrioController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContagiosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContagiosController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Concurrio.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Concurrio.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Locacion.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Locacion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_22_190734_create_concurrios_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_22_190734_create_concurrios_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" />
     </list>
     <list id="c16eeb1e-2a41-4503-a9b3-45b8020eb448" name="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR) -Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso -Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -231,7 +243,11 @@
       <recent name="$PROJECT_DIR$/vendor" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.phpunit.xml">
+  <component name="RunManager" selected="PHPUnit.LocacionesTest.usuario_puede_ingresar_a_locacion">
+    <configuration name="LocacionesTest.usuario_puede_ingresar_a_locacion" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\LocacionesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/LocacionesTest.php" method="usuario_puede_ingresar_a_locacion" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" scope="XML" />
       <method v="2" />
@@ -242,6 +258,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.LocacionesTest.usuario_puede_ingresar_a_locacion" />
         <item itemvalue="PHPUnit.yoEstuveAhi-laravel" />
       </list>
     </recent_temporary>
@@ -281,14 +298,10 @@
       <workItem from="1603922322534" duration="22837000" />
       <workItem from="1604016103307" duration="4628000" />
       <workItem from="1604027779454" duration="12007000" />
-      <workItem from="1604092798823" duration="35021000" />
-    </task>
-    <task id="LOCAL-00020" summary="Mas estilos en el css para la tabla. Para que las tablas se adapten a diferentes pantallas">
-      <created>1602737596163</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1602737596163</updated>
+      <workItem from="1604092798823" duration="36571000" />
+      <workItem from="1604223273512" duration="294000" />
+      <workItem from="1604261016475" duration="8000" />
+      <workItem from="1604305865244" duration="12386000" />
     </task>
     <task id="LOCAL-00021" summary="Corrijo error en el css. Habia etiquetas de ejemplo">
       <created>1602737723576</created>
@@ -626,7 +639,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604138375872</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="Corrijo errores de tipeo">
+      <created>1604138692046</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1604138692046</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -656,7 +676,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Corrijo creacion de tabla concurrio en archivo &quot;ConcurrioController&quot;" />
     <MESSAGE value="Implemento check in y check out. Se va a la pagina desde confirmacion a traves del QR de la locacion y detecta solo si es check in o check out. Si es check in, suma una nueva entrada en la tabla &quot;concurrios&quot; y suma uno en la capacidad de la locacion. Si es check out, agrega la fecha y hora de salida y resta uno en la capacidad de la locacion." />
     <MESSAGE value="Vuelvo a dejar como base de datos la de heroku e hice un migrate:refresh para borrar datos agregados antes de la ultima modificacion." />
     <MESSAGE value="Agrego redireccionar a log in cuando alguien entra directamente por QR" />
@@ -681,7 +700,8 @@
     <MESSAGE value="Agrego atriburo &quot;Creador&quot; a las locaciones, asi ahora solo puede editar las locaciones quien las haya creado (mas adelante tambien lo va a poder hacer quien tenga rol de admin)" />
     <MESSAGE value="-Ya implemente la fecha para informar contagio o alta de contagio.&#10;-Cree una nueva tabla donde se guarda cada persona que estuvo contagiada, o en riesgo, con su fecha de alta en caso de que ya la tenga (va a servir para el dashboard)" />
     <MESSAGE value="Corrijo problemas con tablas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrijo problemas con tablas" />
+    <MESSAGE value="Corrijo errores de tipeo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrijo errores de tipeo" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
@@ -725,10 +745,10 @@
       <screen x="0" y="23" width="1680" height="966" />
     </state>
     <state x="578" y="260" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.966@0.23.1680.966" timestamp="1602375136816" />
-    <state x="544" y="-767" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603408422834">
+    <state x="544" y="-767" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604313534206">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
-    <state x="544" y="-767" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603408422834" />
+    <state x="544" y="-767" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604313534206" />
     <state x="18" y="79" key="CommitChangelistDialog2" timestamp="1602620187914">
       <screen x="0" y="23" width="1680" height="967" />
     </state>
@@ -743,28 +763,32 @@
     <state x="38" y="-963" width="1344" height="773" key="DiffContextDialog/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603418121699" />
     <state x="168" y="109" key="DiffContextDialog/0.23.1680.967@0.23.1680.967" timestamp="1602619590479" />
     <state x="38" y="-963" width="1344" height="773" key="DiffContextDialog/0.23.1680.972/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603936398810" />
-    <state width="1638" height="245" key="GridCell.Tab.0.bottom" timestamp="1602782494262">
-      <screen x="0" y="23" width="1680" height="963" />
+    <state width="1878" height="274" key="GridCell.Tab.0.bottom" timestamp="1604314616880">
+      <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state width="1638" height="245" key="GridCell.Tab.0.bottom/0.23.1680.963@0.23.1680.963" timestamp="1602782494262" />
+    <state width="1878" height="274" key="GridCell.Tab.0.bottom/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604314616880" />
     <state width="1638" height="247" key="GridCell.Tab.0.bottom/0.23.1680.966@0.23.1680.966" timestamp="1602375464895" />
     <state width="1638" height="247" key="GridCell.Tab.0.bottom/0.23.1680.967@0.23.1680.967" timestamp="1602638145567" />
-    <state width="1638" height="245" key="GridCell.Tab.0.center" timestamp="1602782494244">
-      <screen x="0" y="23" width="1680" height="963" />
+    <state width="1878" height="274" key="GridCell.Tab.0.center" timestamp="1604314616879">
+      <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state width="1638" height="245" key="GridCell.Tab.0.center/0.23.1680.963@0.23.1680.963" timestamp="1602782494244" />
+    <state width="1878" height="274" key="GridCell.Tab.0.center/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604314616879" />
     <state width="1638" height="247" key="GridCell.Tab.0.center/0.23.1680.966@0.23.1680.966" timestamp="1602375464894" />
     <state width="1638" height="247" key="GridCell.Tab.0.center/0.23.1680.967@0.23.1680.967" timestamp="1602638145567" />
-    <state width="1638" height="245" key="GridCell.Tab.0.left" timestamp="1602782494244">
-      <screen x="0" y="23" width="1680" height="963" />
+    <state width="1878" height="274" key="GridCell.Tab.0.left" timestamp="1604314616879">
+      <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state width="1638" height="245" key="GridCell.Tab.0.left/0.23.1680.963@0.23.1680.963" timestamp="1602782494244" />
+    <state width="1878" height="274" key="GridCell.Tab.0.left/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604314616879" />
     <state width="1638" height="247" key="GridCell.Tab.0.left/0.23.1680.966@0.23.1680.966" timestamp="1602375464894" />
     <state width="1638" height="247" key="GridCell.Tab.0.left/0.23.1680.967@0.23.1680.967" timestamp="1602638145566" />
-    <state width="1638" height="245" key="GridCell.Tab.0.right" timestamp="1602782494261">
-      <screen x="0" y="23" width="1680" height="963" />
+    <state width="1878" height="274" key="GridCell.Tab.0.right" timestamp="1604314616880">
+      <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state width="1638" height="245" key="GridCell.Tab.0.right/0.23.1680.963@0.23.1680.963" timestamp="1602782494261" />
+    <state width="1878" height="274" key="GridCell.Tab.0.right/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604314616880" />
     <state width="1638" height="247" key="GridCell.Tab.0.right/0.23.1680.966@0.23.1680.966" timestamp="1602375464894" />
     <state width="1638" height="247" key="GridCell.Tab.0.right/0.23.1680.967@0.23.1680.967" timestamp="1602638145567" />
     <state x="134" y="-925" key="MergeDialog" timestamp="1604136935627">
@@ -805,14 +829,14 @@
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="506" y="-763" key="Vcs.Multiple.Commit.Info.Dialog.Key/0.23.1680.965/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604136918977" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1604138385065">
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1604138702853">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="349" y="-829" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-154.-1057.1920.986@-154.-1057.1920.986" timestamp="1604098725927" />
     <state x="349" y="-828" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-154.-1057.1920.991@-154.-1057.1920.991" timestamp="1603436673775" />
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.956/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603913096595" />
     <state x="440" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.963@0.23.1680.963" timestamp="1602867516896" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.965/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604138385065" />
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.965/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604138702853" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.965@0.23.1680.965" timestamp="1602983009206" />
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604040050472" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.966@0.23.1680.966" timestamp="1602888375395" />
@@ -845,10 +869,11 @@
       <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state x="559" y="410" key="git4idea.ui.GitStashDialog/0.23.1680.963@0.23.1680.963" timestamp="1602719222330" />
-    <state x="423" y="-825" width="766" height="739" key="search.everywhere.popup" timestamp="1604118633072">
+    <state x="423" y="-825" width="766" height="739" key="search.everywhere.popup" timestamp="1604314350319">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="423" y="-825" width="766" height="739" key="search.everywhere.popup/0.23.1680.965/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604118633072" />
+    <state x="423" y="-825" width="766" height="739" key="search.everywhere.popup/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604314350319" />
     <state x="505" y="235" width="670" height="676" key="search.everywhere.popup/0.23.1680.967@0.23.1680.967" timestamp="1602614335035" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">

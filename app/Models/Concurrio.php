@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Concurrio extends Model
 {
     use HasFactory;
+
+    protected $guarded = [];
+
 }

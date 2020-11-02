@@ -17,8 +17,8 @@ class CreateConcurriosTable extends Migration
             $table->bigIncrements('id');
             $table->timestamp('entrada');
             $table->timestamp('salida')->nullable();
-            $table->foreignId('userId')->references('id')->on('users');
-            $table->foreignId('locacionId')->references('id')->on('locacions');
+            $table->foreignId('user_id')->references('id')->on('users');
+            $table->foreignId('locacion_id')->references('id')->on('locacions');
             $table->timestamp('updated_at');
             $table->timestamp('created_at');
         });

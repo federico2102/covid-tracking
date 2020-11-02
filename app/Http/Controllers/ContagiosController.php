@@ -57,7 +57,7 @@ class ContagiosController extends Controller
             $contagios->fecha = $fecha_actual;
             $contagios->save();
             Mail::to($victima->email)->send(new contagioMail());
-        } //envio de mail a usuarios en riesgo
+        } //creo entrada en la tabla de contagios y envio de mail a usuarios en riesgo
 
         DB::table('users')->where('id', '=',$id)
             ->update(['estado'=>'Contagiado']); //actualizo estado del usuario contagiado
