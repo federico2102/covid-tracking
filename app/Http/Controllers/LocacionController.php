@@ -19,7 +19,7 @@ class LocacionController extends Controller
      */
     public function index()
     {
-        $locaciones = Locacion::all(['id','Nombre','Capacidad','CapacidadMax','Geolocalizacion','QR','Descripcion', 'Creador']);
+        $locaciones = Locacion::all(['id','Nombre','Capacidad','CapacidadMax','Geolocalizacion','QR','Descripcion', 'user_id']);
         return view('locacion', ['locaciones'=>$locaciones, 'layout'=>'index']);
     }
 
@@ -29,7 +29,7 @@ class LocacionController extends Controller
      */
     public function create()
     {
-        $locaciones = Locacion::all(['id','Nombre','Capacidad','CapacidadMax','Geolocalizacion','QR','Descripcion', 'Creador']);
+        $locaciones = Locacion::all(['id','Nombre','Capacidad','CapacidadMax','Geolocalizacion','QR','Descripcion', 'user_id']);
         return view('locacion',['locaciones'=>$locaciones, 'layout'=>'create']);
     }
 
@@ -40,26 +40,7 @@ class LocacionController extends Controller
      */
     public function store(Request $request)
     {
-        $locacion = new Locacion();
-        $locacion->Nombre = $request->input('Nombre');
-        $locacion->Capacidad = 0;
-        $locacion->CapacidadMax = $request->input('CapacidadMax');
-        $locacion->Geolocalizacion = $request->input('Geolocalizacion');
-        $locacion->QR = 'https://qrickit.com/api/qr.php?d=https://yo-estuve-ahi.herokuapp.com/concurrio/'; //
-        $locacion->Descripcion = $request->input('Descripcion');
-        $image_file = $request->file('Imagen');
-        if($image_file <> null) {
-            $extension = $image_file->getClientOriginalExtension();
-            $imagen_nombre = time().'.'.$extension;
-            $image_file->move('uploads/locaciones', $imagen_nombre);
-            $locacion->Imagen = $imagen_nombre;
-        }
-        $locacion->Creador = Auth::user()->id;
-        $locacion->save();
-        $locacionId = serialize($locacion->id);
-        $locacionId_encoded = base64_encode($locacionId);
-        $locacion->QR = $locacion->QR.$locacionId_encoded.'&t=j&qrsize=300';
-        $locacion->save();
+        Auth::user()->crearLocacion($request);
         return redirect('/home');
     }
 
@@ -71,7 +52,7 @@ class LocacionController extends Controller
     public function show($id)
     {
         $locacion = Locacion::find($id);
-        $locaciones = Locacion::all(['id','Nombre','Capacidad','CapacidadMax','Geolocalizacion','QR','Descripcion', 'Creador']);
+        $locaciones = Locacion::all(['id','Nombre','Capacidad','CapacidadMax','Geolocalizacion','QR','Descripcion', 'user_id']);
         return view('locacion',['locaciones'=>$locaciones, 'locacion'=>$locacion, 'layout'=>'show']);
     }
 
@@ -83,7 +64,7 @@ class LocacionController extends Controller
     public function edit($id)
     {
         $locacion = Locacion::find($id);
-        $locaciones = Locacion::all(['id','Nombre','Capacidad','CapacidadMax','Geolocalizacion','QR','Descripcion', 'Creador']);
+        $locaciones = Locacion::all(['id','Nombre','Capacidad','CapacidadMax','Geolocalizacion','QR','Descripcion', 'user_id']);
         return view('locacion',['locaciones'=>$locaciones, 'locacion'=>$locacion, 'layout'=>'edit']);
     }
 
@@ -96,18 +77,7 @@ class LocacionController extends Controller
     public function update(Request $request, $id)
     {
         $locacion = Locacion::find($id);
-        $locacion->Nombre = $request->input('Nombre');
-        $locacion->CapacidadMax = $request->input('CapacidadMax');
-        $locacion->Geolocalizacion = $request->input('Geolocalizacion');
-        $locacion->Descripcion = $request->input('Descripcion');
-        $image_file = $request->file('Imagen');
-        if($image_file <> null) {
-            $extension = $image_file->getClientOriginalExtension();
-            $imagen_nombre = time().'.'.$extension;
-            $image_file->move('uploads/locaciones', $imagen_nombre);
-            $locacion->Imagen = $imagen_nombre;
-        }
-        $locacion->save();
+        Auth::user()->updateLocacion($locacion, $request);
         return redirect('/home');
     }
 

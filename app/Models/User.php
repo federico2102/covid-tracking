@@ -64,6 +64,57 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
+    public function resolverImagen($image_file)
+    {
+        if($image_file <> null) {
+            $extension = $image_file->getClientOriginalExtension();
+            $imagen_nombre = time() . '.' . $extension;
+            $image_file->move('uploads/locaciones', $imagen_nombre);
+            return $imagen_nombre;
+        }
+    }
+
+    public function crearLocacion($request)
+    {
+        $imagen_nombre = $this->resolverImagen($request->file('Imagen'));
+
+        $locacion = $this->locaciones()->create([
+            'Nombre' => $request->input('Nombre'),
+            'Capacidad' => 0,
+            'CapacidadMax' => $request->input('CapacidadMax'),
+            'Geolocalizacion' => $request->input('Geolocalizacion'),
+            'QR' => 'https://qrickit.com/api/qr.php?d=https://yo-estuve-ahi.herokuapp.com/concurrio/',
+            'Descripcion' => $request->input('Descripcion'),
+            'Imagen' => $imagen_nombre,
+            'user_id' => $this->id,
+        ]);
+
+        $locacion_id = serialize($locacion->id);
+        $locacion_id_encoded = base64_encode($locacion_id);
+        $locacion->QR = $locacion->QR.$locacion_id_encoded.'&t=j&qrsize=300';
+        $locacion->save();
+
+        return $locacion;
+    }
+
+    public function locaciones()
+    {
+        return $this->hasMany(Locacion::class);
+    }
+
+    public function updateLocacion($locacion, $request)
+    {
+        $imagen_nombre = $this->resolverImagen($request->file('Imagen'));
+        $locacion->Nombre = $request->input('Nombre');
+        $locacion->CapacidadMax = $request->input('CapacidadMax');
+        $locacion->Geolocalizacion = $request->input('Geolocalizacion');
+        $locacion->Descripcion = $request->input('Descripcion');
+        $locacion->Imagen = $imagen_nombre;
+        $locacion->save();
+
+        return $locacion;
+    }
+
     public function visitas()
     {
         return $this->hasMany(Concurrio::class);
@@ -73,13 +124,6 @@ class User extends Authenticatable
     {
         return $this->hasMany(Contagio::class);
     }
-
-//    public function sumarVisita($locacion_id)
-//    {
-//        $this->visitas()->create([]);
-//        $this->locacion = $locacion_id;
-//        $this->save();
-//    }
 
     public function locacionesVisitadas($date)
     {

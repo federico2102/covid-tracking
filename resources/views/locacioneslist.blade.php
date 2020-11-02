@@ -27,7 +27,7 @@
                     <td data-label="QR:"><a href="{{ $locacion->QR }}" target="_blank">Click para ver QR</a></td>
                     <td data-label="Descripcion:">{{ $locacion->Descripcion }}</td>
                     <td data-label="Imagen:"><a href="{{ url('/galeria/'.$locacion->id) }}" target="_blank">Click para ver imagenes</a></td>
-                    @if($locacion->Creador == Auth::user()->id)
+                    @if($locacion->user_id == Auth::user()->id)
                         <td>
                             <a href="{{ url('/edit/'.$locacion->id) }}" class="btn btn-sm btn-warning">Edit</a>
                         </td>

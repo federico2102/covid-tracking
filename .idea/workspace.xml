@@ -24,13 +24,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Mas refactor en ConcurrioController, haciendo uso de los modelos">
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Refactor de ContagiosController">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContagiosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContagiosController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Contagio.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Contagio.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LocacionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LocacionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MapController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MapController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Locacion.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Locacion.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_31_094933_create_contagios_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_31_094933_create_contagios_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_11_012556_create_locacions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_11_012556_create_locacions_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/locacioneslist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/locacioneslist.blade.php" afterDir="false" />
     </list>
     <list id="c16eeb1e-2a41-4503-a9b3-45b8020eb448" name="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR) -Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso -Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -294,14 +295,7 @@
       <workItem from="1604092798823" duration="36571000" />
       <workItem from="1604223273512" duration="294000" />
       <workItem from="1604261016475" duration="8000" />
-      <workItem from="1604305865244" duration="22312000" />
-    </task>
-    <task id="LOCAL-00023" summary="Tabla se adapta a la pantalla del celular">
-      <created>1602738580820</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1602738580820</updated>
+      <workItem from="1604305865244" duration="24819000" />
     </task>
     <task id="LOCAL-00024" summary="Nueva forma de ingresar geolocalizacion:&#10;Ahora funciona con una api, que dado un nombre te devuelve la data de ese lugar (entre ellos la latitud y longitud)">
       <created>1602834501759</created>
@@ -639,7 +633,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604321438999</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Refactor de ContagiosController">
+      <created>1604329144130</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1604329144130</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -669,7 +670,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Agrego redireccionar a log in cuando alguien entra directamente por QR" />
     <MESSAGE value="Arreglo funcion para agregar nueva entrada a una locacion" />
     <MESSAGE value="Agrego chequeos de que el usuario pueda ingresar solo si esta en estado &quot;no contagiado&quot; y la locacion no esta llena. Caso contrario, se le informara al usuario la razon por la cual no puede ingresar." />
     <MESSAGE value="Corrijo eror de tipeo en el nombre de una variable" />
@@ -694,7 +694,8 @@
     <MESSAGE value="Corrijo errores de tipeo" />
     <MESSAGE value="Refactor y algunos tests en la carpeta de tests" />
     <MESSAGE value="Mas refactor en ConcurrioController, haciendo uso de los modelos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mas refactor en ConcurrioController, haciendo uso de los modelos" />
+    <MESSAGE value="Refactor de ContagiosController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor de ContagiosController" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
@@ -738,10 +739,10 @@
       <screen x="0" y="23" width="1680" height="966" />
     </state>
     <state x="578" y="260" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.966@0.23.1680.966" timestamp="1602375136816" />
-    <state x="544" y="-767" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604328496982">
+    <state x="544" y="-767" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604329576523">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
-    <state x="544" y="-767" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604328496982" />
+    <state x="544" y="-767" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604329576523" />
     <state x="18" y="79" key="CommitChangelistDialog2" timestamp="1602620187914">
       <screen x="0" y="23" width="1680" height="967" />
     </state>
@@ -822,7 +823,7 @@
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="506" y="-763" key="Vcs.Multiple.Commit.Info.Dialog.Key/0.23.1680.965/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604136918977" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1604321460435">
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1604329156047">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="349" y="-829" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-154.-1057.1920.986@-154.-1057.1920.986" timestamp="1604098725927" />
@@ -831,7 +832,7 @@
     <state x="440" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.963@0.23.1680.963" timestamp="1602867516896" />
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.965/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604138702853" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.965@0.23.1680.965" timestamp="1602983009206" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604321460435" />
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604329156047" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.966@0.23.1680.966" timestamp="1602888375395" />
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603700049129" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.967@0.23.1680.967" timestamp="1603240943604" />

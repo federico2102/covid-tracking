@@ -12,6 +12,7 @@ class Locacion extends Model
         'Nombre',
         'Capacidad',
         'CapacidadMax',
+        'Geolocalizacion',
         'QR',
         'Descripcion',
         'Imagen',
