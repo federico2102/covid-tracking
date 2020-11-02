@@ -34,15 +34,15 @@ class Locacion extends Model
 
     public function ingresarUsuario($user_id)
     {
-        $this->ingresos()->create(['user_id'=>$user_id, 'locacion_id'=>$this->id, 'entrada'=>date("Y-m-d h:i:sa")]);
+        $ingreso = $this->ingresos()->create(['user_id'=>$user_id, 'locacion_id'=>$this->id, 'entrada'=>date("Y-m-d h:i:sa")]);
 
         $user = User::find($user_id);
-        $user->sumarVisita($this->id);
+        $user->locacion = $this->id;
 
         $this->Capacidad += 1;
         $this->save();
 
-        return redirect('home');
+        return $ingreso;
     }
 
     public function registrarSalida($user_id)
@@ -58,7 +58,7 @@ class Locacion extends Model
         $this->Capacidad -= 1;
         $this->save();
 
-        return redirect('home');
+        return $salida;
     }
 
     public function estuvieronJuntos($user_id, $date)

@@ -64,14 +64,16 @@ class concurrioController extends Controller
 
         if ($entrada == null and $user->locacion == 0) {
             if ($locacion->Capacidad <> $locacion->CapacidadMax and $user->estado == 'No contagiado') {
-                return $locacion->ingresarUsuario($userId);
+                $locacion->ingresarUsuario($userId);
+                return redirect('home');
             } elseif ($user->estado <> 'No contagiado') {
                 return $this->mostrarError($locacionId, false, true, false); // No puede ingresar porque esta contagiado
             } else {
                 return $this->mostrarError($locacionId, true, false, false); // No puede ingresar porque la locacion esta llena
             }
         }  elseIf($locacionId == $user->locacion) {
-            return $locacion->registrarSalida($userId);
+            $locacion->registrarSalida($userId);
+            return redirect('home');
             } else {
             return $this->mostrarError($locacionId, false, false, true); // No puede ingresar a dos locaciones al mismo tiempo
         }

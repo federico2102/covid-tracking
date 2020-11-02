@@ -30,7 +30,7 @@ class LocacionFactory extends Factory
             'QR' => Str::random(10),
             'Descripcion' => Str::random(10),
             'Imagen' => null,
-            'Creador' => 0,
+            'user_id' => 0,
         ];
     }
 }
