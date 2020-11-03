@@ -62,6 +62,10 @@ class Locacion extends Model
         return $salida;
     }
 
+    public function x_seconds($to_check1 = 'YYYY-mm-dd H:i:s', $to_check2 = 'YYYY-mm-dd H:i:s') {
+        return ($to_check2 - $to_check1 > 30 * 60) ? true : false;
+    }
+
     public function estuvieronJuntos($user_id, $date)
     {
         $entradas_usuario = $this->ingresos()->where('user_id', '=', $user_id)
@@ -71,9 +75,15 @@ class Locacion extends Model
         foreach ($this->ingresos()->where('user_id', '<>', $user_id) as $victima){
             foreach ($entradas_usuario as $usuario){
                 if ($victima->entrada >= $usuario->entrada and $victima->entrada <= $usuario->salida){
-                    array_push($estuvieron, $victima->user_id);
+                    if(x_seconds($victima->entrada, $victima->salida) and x_seconds($victima->entrada, $usuario->salida)){
+                        array_push($estuvieron, $victima->user_id);
+                    }
                 } elseif ($victima->salida >= $usuario->entrada and $victima->salida <= $usuario->salida) {
-                    array_push($estuvieron, $victima->user_id);
+                    if ($victima->entrada >= $usuario->entrada and x_seconds($victima->entrada, $victima->salida) and x_seconds($victima->entrada, $usuario->salida)){
+                        array_push($estuvieron, $victima->user_id);
+                    } elseif ($victima->entrada < $usuario->entrada and x_seconds($usuario->entrada, $victima->salida) and x_seconds($usuario->entrada, $usuario->salida)){
+                        array_push($estuvieron, $victima->user_id);
+                    }
                 }
             }
         }
