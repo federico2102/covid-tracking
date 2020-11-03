@@ -38,6 +38,7 @@ class Locacion extends Model
 
         $user = User::find($user_id);
         $user->locacion = $this->id;
+        $user->save();
 
         $this->Capacidad += 1;
         $this->save();
@@ -63,7 +64,8 @@ class Locacion extends Model
 
     public function estuvieronJuntos($user_id, $date)
     {
-        $entradas_usuario = $this->ingresos()->where('user_id', '=', $user_id);
+        $entradas_usuario = $this->ingresos()->where('user_id', '=', $user_id)
+        ->where('fecha', '>=', $date);
 
         $estuvieron = array();
         foreach ($this->ingresos()->where('user_id', '<>', $user_id) as $victima){

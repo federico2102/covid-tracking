@@ -139,7 +139,7 @@ class User extends Authenticatable
 
         $en_riesgo = array();
         foreach ($locaciones as $locacion) {
-            array_push($en_riesgo, $locacion->estuvieronJuntos($this->id));
+            array_push($en_riesgo, $locacion->estuvieronJuntos($this->id, $date));
         }
         array_merge($en_riesgo);
         array_unique($en_riesgo);

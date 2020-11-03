@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Concurrio;
 use App\Models\Locacion;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
-class concurrioController extends Controller
+class ConcurrioController extends Controller
 {
 
     public function __construct()
@@ -59,11 +60,11 @@ class concurrioController extends Controller
     public function store($locacionId, $userId)
     {
         $locacion = Locacion::find($locacionId);
-        $user = Auth::user();
+        $user = User::find($userId);
         $entrada = $locacion->buscarEntrada($userId); // Me fijo si hay una entrada abierta en esta locacion y la traigo
 
-        if ($entrada == null and $user->locacion == 0) {
-            if ($locacion->Capacidad <> $locacion->CapacidadMax and $user->estado == 'No contagiado') {
+        if ($user->locacion == 0) {
+            if ($locacion->Capacidad < $locacion->CapacidadMax and $user->estado == 'No contagiado') {
                 $locacion->ingresarUsuario($userId);
                 return redirect('home');
             } elseif ($user->estado <> 'No contagiado') {
