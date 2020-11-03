@@ -39,6 +39,10 @@ class Locacion extends Model
         return $ingreso;
     }
 
+    public function x_seconds($to_check1 = 'YYYY-mm-dd H:i:s', $to_check2 = 'YYYY-mm-dd H:i:s') {
+        return ($to_check2 - $to_check1 > 30 * 60) ? true : false;
+    }
+
     public function registrarSalida($user_id)
     {
         $salida = $this->buscarEntrada($user_id);
@@ -56,8 +60,13 @@ class Locacion extends Model
             $tiempoCompartido = $this->estuvoCon()->whereNull('hasta')
                 ->where('user_id', '=', $user_id)->update(['hasta'=>date("Y-m-d h:i:sa")]);
             //if($tiempoCompartido->hasta - $tiempoCompartido-desde >=  ){
-            $user->agregarVictima($usuario);
-            $usuario->agregarVictima($user);
+            if($usuario->entrada >= $user->entrada and x_seconds($usuario->entrada, $usuario->salida) and x_seconds($usuario->entrada, $user->salida)){
+                $user->agregarVictima($usuario);
+                $usuario->agregarVictima($user);
+            } elseif ($usuario->entrada < $user->entrada and x_seconds($user->entrada, $usuario->salida) and x_seconds($user->entrada, $user->salida)){
+                $user->agregarVictima($usuario);
+                $usuario->agregarVictima($user);
+            }
             //}
         }
 
@@ -91,10 +100,6 @@ class Locacion extends Model
     public function estuvoCon()
     {
         return $this->hasMany(Compartieron::class);
-    }
-
-    public function x_seconds($to_check1 = 'YYYY-mm-dd H:i:s', $to_check2 = 'YYYY-mm-dd H:i:s') {
-        return ($to_check2 - $to_check1 > 30 * 60) ? true : false;
     }
 
     public function estuvieronJuntos($user_id, $date)
