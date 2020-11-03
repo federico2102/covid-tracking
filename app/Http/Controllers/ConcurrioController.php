@@ -40,28 +40,10 @@ class ConcurrioController extends Controller
         return view('concurrio', ['locacion' => $locacion, 'isFull' => $isFull, 'contagiado' => $contagiado, 'salidaAbierta' => $salidaAbierta]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @param int $id
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Http\Response|\Illuminate\Routing\Redirector
-     */
     public function store($locacionId, $userId)
     {
         $locacion = Locacion::find($locacionId);
         $user = User::find($userId);
-        $entrada = $locacion->buscarEntrada($userId); // Me fijo si hay una entrada abierta en esta locacion y la traigo
 
         if ($user->locacion == 0) {
             if ($locacion->Capacidad < $locacion->CapacidadMax and $user->estado == 'No contagiado') {

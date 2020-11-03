@@ -19,24 +19,6 @@ class Locacion extends Model
         'Creador'
     ];
 
-    public function buscarEntrada($user_id)
-    {
-       return $this->ingresos()
-            ->where('user_id', '=', $user_id)
-           ->whereNull('salida')
-            ->orderBy('id', 'desc')->first();
-    }
-
-    public function usuariosEnLocacion()
-    {
-        return User::all()->where('locacion', '=', $this->id);
-    }
-
-    public function ingresos()
-    {
-        return $this->hasMany(Concurrio::class);
-    }
-
     public function ingresarUsuario($user_id)
     {
         $ingreso = $this->ingresos()->create(['user_id'=>$user_id, 'locacion_id'=>$this->id, 'entrada'=>date("Y-m-d h:i:sa")]);
@@ -57,11 +39,6 @@ class Locacion extends Model
         return $ingreso;
     }
 
-    public function estuvoCon()
-    {
-        return $this->hasMany(Compartieron::class);
-    }
-
     public function registrarSalida($user_id)
     {
         $salida = $this->buscarEntrada($user_id);
@@ -79,8 +56,8 @@ class Locacion extends Model
             $tiempoCompartido = $this->estuvoCon()->whereNull('hasta')
                 ->where('user_id', '=', $user_id)->update(['hasta'=>date("Y-m-d h:i:sa")]);
             //if($tiempoCompartido->hasta - $tiempoCompartido-desde >=  ){
-               $user->agregarVictima($usuario);
-               $usuario->agregarVictima($user);
+            $user->agregarVictima($usuario);
+            $usuario->agregarVictima($user);
             //}
         }
 
@@ -91,6 +68,29 @@ class Locacion extends Model
         $user->save();
 
         return $salida;
+    }
+
+    public function buscarEntrada($user_id)
+    {
+       return $this->ingresos()
+            ->where('user_id', '=', $user_id)
+           ->whereNull('salida')
+            ->orderBy('id', 'desc')->first();
+    }
+
+    public function usuariosEnLocacion()
+    {
+        return User::all()->where('locacion', '=', $this->id);
+    }
+
+    public function ingresos()
+    {
+        return $this->hasMany(Concurrio::class);
+    }
+
+    public function estuvoCon()
+    {
+        return $this->hasMany(Compartieron::class);
     }
 
     public function x_seconds($to_check1 = 'YYYY-mm-dd H:i:s', $to_check2 = 'YYYY-mm-dd H:i:s') {

@@ -64,17 +64,6 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
-    public function resolverImagen($image_file)
-    {
-        if($image_file <> null) {
-            $extension = $image_file->getClientOriginalExtension();
-            $imagen_nombre = time() . '.' . $extension;
-            $image_file->move('uploads/locaciones', $imagen_nombre);
-            return $imagen_nombre;
-        }
-        return null;
-    }
-
     public function crearLocacion($request)
     {
         $imagen_nombre = $this->resolverImagen($request->file('Imagen'));
@@ -98,11 +87,6 @@ class User extends Authenticatable
         return $locacion;
     }
 
-    public function locaciones()
-    {
-        return $this->hasMany(Locacion::class);
-    }
-
     public function updateLocacion($locacion, $request)
     {
         $imagen_nombre = $this->resolverImagen($request->file('Imagen'));
@@ -114,21 +98,6 @@ class User extends Authenticatable
         $locacion->save();
 
         return $locacion;
-    }
-
-    public function contagios()
-    {
-        return $this->hasMany(Contagio::class);
-    }
-
-    public function agregarVictima($user)
-    {
-        return $this->victimas()->attach($user->id, ['entrada'=>date("Y-m-d h:i:sa")]);
-    }
-
-    public function victimas()
-    {
-        return $this->belongsToMany(User::class, 'victimas', 'user_id', 'victima_id');
     }
 
     public function contagiar($fecha_minima, $fecha_diagnostico)
@@ -159,13 +128,41 @@ class User extends Authenticatable
 
     public function curado($date)
     {
-        $contagioId = Contagio::all()->where('user_id', '=', $this->id)->sortByDesc('id')
-            ->first()->id;
-        $contagio = Contagio::find($contagioId);
-        $contagio->fecha_alta = $date;
-        $contagio->save();
+        Contagio::all()->where('user_id', '=', $this->id)->sortByDesc('id')
+            ->first()->update(['fecha_alta'=>$date]);
 
         $this->estado = 'No contagiado';
         $this->save();
+    }
+
+    public function locaciones()
+    {
+        return $this->hasMany(Locacion::class);
+    }
+
+    public function contagios()
+    {
+        return $this->hasMany(Contagio::class);
+    }
+
+    public function agregarVictima($user)
+    {
+        return $this->victimas()->attach($user->id, ['entrada'=>date("Y-m-d h:i:sa")]);
+    }
+
+    public function victimas()
+    {
+        return $this->belongsToMany(User::class, 'victimas', 'user_id', 'victima_id');
+    }
+
+    public function resolverImagen($image_file)
+    {
+        if($image_file <> null) {
+            $extension = $image_file->getClientOriginalExtension();
+            $imagen_nombre = time() . '.' . $extension;
+            $image_file->move('uploads/locaciones', $imagen_nombre);
+            return $imagen_nombre;
+        }
+        return null;
     }
 }

@@ -3,6 +3,7 @@
 namespace Tests\Unit;
 
 use App\Models\Compartieron;
+use App\Models\Contagio;
 use App\Models\Locacion;
 use App\Models\User;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
@@ -70,5 +71,23 @@ class ContagiosTest extends TestCase
 
         $this->assertEquals('En riesgo', User::find($user2->id)->estado);
         $this->assertEquals('En riesgo', User::find($user3->id)->estado);
+    }
+
+    /** @test */
+    public function usuario_en_riesgo_puede_informar_alta_o_contagio()
+    {
+        $user = User::factory()->create(['estado'=>'En riesgo']);
+        Contagio::factory()->create(['user_id'=>$user->id]);
+        $this->actingAs($user);
+
+        $user->curado(date("Y-m-d h:i:sa"));
+        $this->assertEquals('No contagiado', User::find($user->id)->estado);
+
+        $user2 = User::factory()->create(['estado'=>'En riesgo']);
+        Contagio::factory()->create(['user_id'=>$user2->id]);
+        $this->actingAs($user2);
+
+        $this->json('GET', '/informarcontagio');
+        $this->assertEquals('Contagiado', User::find($user2->id)->estado);
     }
 }
