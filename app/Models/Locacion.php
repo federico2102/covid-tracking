@@ -27,6 +27,11 @@ class Locacion extends Model
             ->orderBy('id', 'desc')->first();
     }
 
+    public function usuariosEnLocacion()
+    {
+        return User::all()->where('locacion', '=', $this->id);
+    }
+
     public function ingresos()
     {
         return $this->hasMany(Concurrio::class);
@@ -36,14 +41,25 @@ class Locacion extends Model
     {
         $ingreso = $this->ingresos()->create(['user_id'=>$user_id, 'locacion_id'=>$this->id, 'entrada'=>date("Y-m-d h:i:sa")]);
 
-        $user = User::find($user_id);
-        $user->locacion = $this->id;
-        $user->save();
-
         $this->Capacidad += 1;
         $this->save();
 
+        $user = User::find($user_id);
+
+        $estuvoCon = $this->usuariosEnLocacion();
+        foreach ($estuvoCon as $usuario){
+            $this->estuvoCon()->create(['user_id'=>$usuario->id, 'locacion_id'=>$this->id, 'desde'=> date("Y-m-d h:i:sa")]);
+        }
+
+        $user->locacion = $this->id;
+        $user->save();
+
         return $ingreso;
+    }
+
+    public function estuvoCon()
+    {
+        return $this->hasMany(Compartieron::class);
     }
 
     public function registrarSalida($user_id)
@@ -53,11 +69,26 @@ class Locacion extends Model
         $salida->save();
 
         $user = User::find($user_id);
-        $user->locacion = 0;
-        $user->save();
 
         $this->Capacidad -= 1;
         $this->save();
+
+        $estuvoCon = $this->usuariosEnLocacion()->where('id', '<>', $user_id);
+
+        foreach ($estuvoCon as $usuario) {
+            $tiempoCompartido = $this->estuvoCon()->whereNull('hasta')
+                ->where('user_id', '=', $user_id)->update(['hasta'=>date("Y-m-d h:i:sa")]);
+            //if($tiempoCompartido->hasta - $tiempoCompartido-desde >=  ){
+               $user->agregarVictima($usuario);
+               $usuario->agregarVictima($user);
+            //}
+        }
+
+        $this->estuvoCon()->whereNull('hasta')
+            ->update(['hasta'=>date("Y-m-d h:i:sa")]);
+
+        $user->locacion = 0;
+        $user->save();
 
         return $salida;
     }

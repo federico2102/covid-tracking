@@ -32,7 +32,6 @@ class LocacionesTest extends TestCase
         $this->assertEquals($ingreso->user_id, $user->id);
         $this->assertEquals($ingreso->locacion_id, $locacion->id);
         $this->assertNotNull($locacion->ingresos()->find($ingreso->id));
-        $this->assertNotNull($user->visitas()->find($ingreso->id));
     }
 
     /** @test */
@@ -79,5 +78,40 @@ class LocacionesTest extends TestCase
         $this->json('POST', '/concurrio/store/'.$locacion2->id.'/'.$user->id);
         $ingreso2 = $locacion2->BuscarEntrada($user->id);
         $this->assertNull($ingreso2);
+    }
+
+    /** @test */
+    public function usuario_no_puede_ingresar_si_locacion_esta_llena()
+    {
+        $user = User::factory()->create();
+        $this->actingAs($user);
+
+        $user2 = User::factory()->create();
+        $this->actingAs($user2);
+
+        $locacion = Locacion::factory()->create(['user_id'=>$user->id, 'CapacidadMax'=>1]);
+
+        $this->json('POST', '/concurrio/store/'.$locacion->id.'/'.$user->id);
+        $this->json('POST', '/concurrio/store/'.$locacion->id.'/'.$user2->id);
+        $ingreso = $locacion->BuscarEntrada($user2->id);
+
+        $this->assertNull($ingreso);
+    }
+
+    /** @test */
+    public function usuario_puede_salir_de_locacion()
+    {
+        $user = User::factory()->create();
+        $this->actingAs($user);
+
+        $locacion = Locacion::factory()->create(['user_id'=>$user->id]);
+
+        $this->json('POST', '/concurrio/store/'.$locacion->id.'/'.$user->id);
+        $ingreso = $locacion->BuscarEntrada($user->id);
+        $this->assertNotNull($ingreso);
+
+        $this->json('POST', '/concurrio/store/'.$locacion->id.'/'.$user->id);
+        $ingreso = $locacion->BuscarEntrada($user->id);
+        $this->assertNull($ingreso);
     }
 }

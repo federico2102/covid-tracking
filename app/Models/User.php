@@ -72,6 +72,7 @@ class User extends Authenticatable
             $image_file->move('uploads/locaciones', $imagen_nombre);
             return $imagen_nombre;
         }
+        return null;
     }
 
     public function crearLocacion($request)
@@ -115,49 +116,40 @@ class User extends Authenticatable
         return $locacion;
     }
 
-    public function visitas()
-    {
-        return $this->hasMany(Concurrio::class);
-    }
-
-    public function victimas()
+    public function contagios()
     {
         return $this->hasMany(Contagio::class);
     }
 
-    public function locacionesVisitadas($date)
+    public function agregarVictima($user)
     {
-        $locaciones = $this->visitas()->select('locacion_id', 'entrada', 'salida')
-            ->distinct('locacion_id')->where('entrada', '>=', $date);
-
-        return $locaciones;
+        return $this->victimas()->attach($user->id, ['entrada'=>date("Y-m-d h:i:sa")]);
     }
 
-    public function contagiar($date, $fecha_diagnostico)
+    public function victimas()
     {
-        $locaciones = $this->locacionesVisitadas($date);
+        return $this->belongsToMany(User::class, 'victimas', 'user_id', 'victima_id');
+    }
 
-        $en_riesgo = array();
-        foreach ($locaciones as $locacion) {
-            array_push($en_riesgo, $locacion->estuvieronJuntos($this->id, $date));
-        }
-        array_merge($en_riesgo);
-        array_unique($en_riesgo);
+    public function contagiar($fecha_minima, $fecha_diagnostico)
+    {
+        $victimas = $this->victimas()->where('entrada', '>=', $fecha_minima)->get();
 
-        foreach ($en_riesgo as $victima){
-            $victima->estado = 'En riesgo';
-            $victima->save();
-            $this->victimas()->create(['user_id' => $victima->id,
-            'estado' => 'En riesgo',
-            'fecha' => date("Y-m-d h:i:sa")]);
-            Mail::to($victima->email)->send(new contagioMail());
+        foreach ($victimas as $victima){
+            if($victima->estado == 'No contagiado'){
+                $victima->update(['estado'=>'En riesgo']);
+                $this->contagios()->create(['user_id' => $victima->id,
+                    'estado' => 'En riesgo',
+                    'fecha' => date("Y-m-d h:i:sa")]);
+                Mail::to($victima->email)->send(new contagioMail());
+            }
         }
 
         if ($this->estado == 'No contagiado') {
-            $this->victimas()->create(['user_id'=>$this->id, 'estado'=>'Contagiado',
+            $this->contagios()->create(['user_id'=>$this->id, 'estado'=>'Contagiado',
                 'fecha'=>$fecha_diagnostico]);
         } else {
-            $this->victimas()->where('user_id', '=', $this->id)->orderBy('id','desc')
+            $this->contagios()->where('user_id', '=', $this->id)->orderBy('id','desc')
                 ->first()->fecha = $fecha_diagnostico;
         }
 
