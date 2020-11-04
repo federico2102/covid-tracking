@@ -17,7 +17,7 @@
 * Riesgo de contagio
     * El sistema deberá notificar mediante un mensaje en la pantalla y mediante correo electrónico a todos aquellos 
     usuarios que hayan estado compartiendo presencia dentro de una locación en algún rango horario 
-    (se puede asumir un bloque de 15 o 30 minutos como mínimo). (FALTA CONFIGURAR QUE HAYAN ESTADO 15 O 30 MINUTOS. POR AHORA CON QUE HAYAN ESTADO UN MINUTO YA SE INFORMA)
+    (se puede asumir un bloque de 15 o 30 minutos como mínimo). (LISTO)
     * El mensaje en pantalla no necesariamente se requiere que sea instantáneo: podría aparecer recién en el próximo ingreso del usuario. (LISTO)
 * Perfil administrador (FALTA IMPLEMENTAR EL ROL)
     * El rol administrador podrá visualizar en un mapa todas las locaciones registradas junto con su información de 
@@ -38,3 +38,8 @@
 * Incorporar al perfil administrador, un mapa de calor que indique la cantidad de
 contagios actuales e históricos, día x día. (NO)
 
+####Falta arreglar (aca pueden ir escribiendo todo lo que falla o falta y no esta en el enunciado)
+* Hacer un view presentable en el archivo cuerpoMail.blade.php
+* Ver por que siempre hay que hacer doble loggin para ingresar
+* Hacer que el boton check-in abra la camara o decidir como va a funcionar eso
+* Modificar handler de excepciones para que si hay un error, el usuario vea la pantalla de "404 not found"

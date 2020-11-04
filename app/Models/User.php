@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Mail\contagioMail;
+use Carbon\Carbon;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -109,7 +110,7 @@ class User extends Authenticatable
                 $victima->update(['estado'=>'En riesgo']);
                 $this->contagios()->create(['user_id' => $victima->id,
                     'estado' => 'En riesgo',
-                    'fecha' => date("Y-m-d h:i:sa")]);
+                    'fecha' => Carbon::now()]);
                 Mail::to($victima->email)->send(new contagioMail());
             }
         }
@@ -148,6 +149,11 @@ class User extends Authenticatable
     public function agregarVictima($user)
     {
         return $this->victimas()->attach($user->id, ['entrada'=>date("Y-m-d h:i:sa")]);
+    }
+
+    public function borrarVictima($user)
+    {
+        return $this->victimas()->detach($user->id);
     }
 
     public function victimas()

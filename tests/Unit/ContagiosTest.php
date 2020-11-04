@@ -6,6 +6,7 @@ use App\Models\Compartieron;
 use App\Models\Contagio;
 use App\Models\Locacion;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Tests\TestCase;
 
@@ -58,13 +59,12 @@ class ContagiosTest extends TestCase
         $this->json('POST', '/concurrio/store/'.$locacion->id.'/'.$user2->id);
         $this->json('POST', '/concurrio/store/'.$locacion->id.'/'.$user3->id);
 
+        Carbon::setTestNow(Carbon::now()->addHours(1)); // Simulo que pasa una hora
+
         // Salen los 3 usuarios
         $this->json('POST', '/concurrio/store/'.$locacion->id.'/'.$user->id);
         $this->json('POST', '/concurrio/store/'.$locacion->id.'/'.$user2->id);
         $this->json('POST', '/concurrio/store/'.$locacion->id.'/'.$user3->id);
-
-        $salidas_abiertas = Compartieron::all()->whereNull('hasta');
-        $this->assertNull($salidas_abiertas->first());
 
         $user->contagiar(date("Y-m-d h:i:sa"), date("Y-m-d h:i:sa"));
         //dd($user2->estado);
