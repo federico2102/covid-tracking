@@ -18,7 +18,8 @@
         "laravel/tinker": "^2.0",
         "livewire/livewire": "^2.0",
         "intervention/image": "dev-master",
-        "farhanwazir/laravelgooglemaps": "dev-master"
+        "farhanwazir/laravelgooglemaps": "dev-master",
+        "santigarcor/laratrust": "^6.3"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",

@@ -32,6 +32,7 @@ Route::post('/concurrio/store/{locacionId}/{userId}',"ConcurrioController@store"
 Route::get('/galeria/{id}',"LocacionController@getImages");
 Route::get('/informarcontagio',"ContagiosController@informarContagio");
 Route::get('/informartest',"ContagiosController@testNegativo");
+Route::get('/admin', "AdminPanel@index");
 
 
 

@@ -48,7 +48,7 @@
     </div>
 
     <div class="container">
-      <div class="card-deck mb-3 text-center">
+      <div class="card-deck mb-4 text-center">
         <div class="card mb-4 shadow-sm">
           <div class="card-header">
             <h4 class="my-0 font-weight-normal">Locacion</h4>
@@ -60,7 +60,20 @@
             <button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="location.href='location'">Locacion</button>
           </div>
           </div>
-        <div class="card mb-4 shadow-sm">
+          @role('administrator')
+          <div class="card mb-4 shadow-sm">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Estadísticas del sistema</h4>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Ver estadísticas</li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="location.href='admin'">Estadísticas del sistema</button>
+          </div>
+        </div>
+          @endrole
+          <div class="card mb-4 shadow-sm">
           <div class="card-header">
             @if(Auth::user()->locacion == 0)
                 <h4 class="my-0 font-weight-normal">CheckIn</h4>
@@ -94,7 +107,7 @@
                   <h4 class="my-0 font-weight-normal">Testeo negativo</h4>
               @endif
                   </div>
-                  <div class="card-body">
+          <div class="card-body">
                     <ul class="list-unstyled mt-3 mb-4">
                     @if(Auth::user()->estado == 'No contagiado')
                       <li>Avisar estas contagiado</li>
@@ -130,8 +143,7 @@
                         </form>
         </div>
         </div>
-        </div>
-    </div>
+      </div>
     </div>
 
     <div class="card-footer">
@@ -141,9 +153,9 @@
         <h5 class="my-0 mr-md-auto font-weight-normal">Estado: </h5>
       </nav>
       @if(Auth::user()->estado == 'No contagiado')
-        <a class="btn btn-success" href="#">{{ Auth::user()->estado }}</a>              
+        <a class="btn btn-success" href="#">{{ Auth::user()->estado }}</a>
       @elseif(Auth::user()->estado == 'Contagiado')
-        <a class="btn btn-danger" href="#">{{ Auth::user()->estado }}</a> 
+        <a class="btn btn-danger" href="#">{{ Auth::user()->estado }}</a>
       @endif
     </div>
     </div>
