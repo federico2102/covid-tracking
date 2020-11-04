@@ -108,7 +108,7 @@ class User extends Authenticatable
         foreach ($victimas as $victima){
             if($victima->estado == 'No contagiado'){
                 $victima->update(['estado'=>'En riesgo']);
-                $this->contagios()->create(['user_id' => $victima->id,
+                $victima->contagios()->create(['user_id' => $victima->id,
                     'estado' => 'En riesgo',
                     'fecha' => Carbon::now()]);
                 Mail::to($victima->email)->send(new contagioMail());

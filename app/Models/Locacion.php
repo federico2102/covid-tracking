@@ -42,9 +42,9 @@ class Locacion extends Model
         return $ingreso;
     }
 
-    public function x_seconds($to_check1, $to_check2)
+    public function tiempoMinimo($desde, $hasta)
     {
-        return Carbon::create($to_check1)->diffInMinutes($to_check2) >= 1;
+        return Carbon::create($desde)->diffInMinutes($hasta) >= 30;
     }
 
     public function registrarSalida($user_id)
@@ -61,7 +61,7 @@ class Locacion extends Model
         $estuvoCon = $user->victimas()->select(['victima_id', 'entrada'])->get();
         $hasta = Carbon::now();
         foreach ($estuvoCon as $usuario) {
-            if (!$this->x_seconds($usuario->entrada, $hasta)) {
+            if (!$this->tiempoMinimo($usuario->entrada, $hasta)) {
                 $user->borrarVictima($usuario);
                 $usuario->borrarVictima($user);
             }
