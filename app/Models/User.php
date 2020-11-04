@@ -148,7 +148,7 @@ class User extends Authenticatable
 
     public function agregarVictima($user)
     {
-        return $this->victimas()->attach($user->id, ['entrada'=>date("Y-m-d h:i:sa")]);
+        return $this->victimas()->attach($user->id, ['entrada'=>Carbon::now()]);
     }
 
     public function borrarVictima($user)

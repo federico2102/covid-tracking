@@ -44,7 +44,7 @@ class Locacion extends Model
 
     public function x_seconds($to_check1, $to_check2)
     {
-        return Carbon::create($to_check1)->diffInMinutes($to_check2) > 30;
+        return Carbon::create($to_check1)->diffInMinutes($to_check2) >= 1;
     }
 
     public function registrarSalida($user_id)

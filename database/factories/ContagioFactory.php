@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Contagio;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -24,7 +25,7 @@ class ContagioFactory extends Factory
     {
         return [
             'estado'=>'En riesgo',
-            'fecha'=>date("Y-m-d h:i:sa"),
+            'fecha'=>Carbon::now(),
             'user_id'=>0,
         ];
     }

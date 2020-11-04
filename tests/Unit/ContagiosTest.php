@@ -7,7 +7,9 @@ use App\Models\Contagio;
 use App\Models\Locacion;
 use App\Models\User;
 use Carbon\Carbon;
+use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Support\Facades\Artisan;
 use Tests\TestCase;
 
 
@@ -89,5 +91,24 @@ class ContagiosTest extends TestCase
 
         $this->json('GET', '/informarcontagio');
         $this->assertEquals('Contagiado', User::find($user2->id)->estado);
+    }
+
+    /** @test */
+    public function usuario_en_riesgo_pasa_a_no_contagiado_despues_de_14_dias()
+    {
+        $user = User::factory()->create(['estado'=>'En riesgo']);
+        Contagio::factory()->create(['user_id'=>$user->id, 'fecha'=>Carbon::now()->subDays(15)]);
+
+        $user2 = User::factory()->create(['estado'=>'En riesgo']);
+        Contagio::factory()->create(['user_id'=>$user2->id, 'fecha'=>Carbon::now()->subDays(15)]);
+
+//        $this->assertEquals('En riesgo', User::find($user->id)->estado);
+//        $this->assertEquals('En riesgo', User::find($user2->id)->estado);
+//
+//        Carbon::setTestNow(Carbon::now()->addDays(15)); // Simulo que pasan 14 dias
+        Artisan::call('schedule:run');
+
+        $this->assertEquals('No contagiado', User::find($user->id)->estado);
+        $this->assertEquals('No contagiado', User::find($user2->id)->estado);
     }
 }

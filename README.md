@@ -30,7 +30,7 @@
 * Que los usuarios con riesgo de contagio, reciban una advertencia antes de realizar un checkin. (RECIBEN MAIL)
 * Que los usuarios con riesgo de contagio, puedan regresar a tu estado normal mediante la opción de “Testeo Negativo” 
 (es decir, estando en riesgo de contagio, se hizo el test correspondiente y dio negativo). (LISTO)
-* Pasado un tiempo configurable, los usuarios con riesgo de contagio automáticamente pasen a estado normal. (FALTA IMPLEMENTAR)
+* Pasado un tiempo configurable, los usuarios con riesgo de contagio automáticamente pasen a estado normal. (LISTO)
 
 ####Deseables
 * Estando dentro de una locación, poder compartir por Whatapps el link para hacer Checkin. (NO)
@@ -43,3 +43,5 @@ contagios actuales e históricos, día x día. (NO)
 * Ver por que siempre hay que hacer doble loggin para ingresar
 * Hacer que el boton check-in abra la camara o decidir como va a funcionar eso
 * Modificar handler de excepciones para que si hay un error, el usuario vea la pantalla de "404 not found"
+* Cuando alguien contagia a otra persona, en la tabla de contagiados la victima se esta guardando con el id del 
+contagiador, en lugar del suyo
