@@ -1,2 +1,2 @@
-web: vendor/bin/heroku-php-apache2 -F fpm_custom.conf public/
+web: vendor/bin/heroku-php-apache2 public/
 release: composer update
