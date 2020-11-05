@@ -60,19 +60,19 @@
             <button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="location.href='location'">Locacion</button>
           </div>
           </div>
-{{--          @role('administrator')--}}
-{{--          <div class="card mb-4 shadow-sm">--}}
-{{--          <div class="card-header">--}}
-{{--            <h4 class="my-0 font-weight-normal">Estadísticas del sistema</h4>--}}
-{{--          </div>--}}
-{{--          <div class="card-body">--}}
-{{--            <ul class="list-unstyled mt-3 mb-4">--}}
-{{--              <li>Ver estadísticas</li>--}}
-{{--            </ul>--}}
-{{--            <button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="location.href='admin'">Estadísticas del sistema</button>--}}
-{{--          </div>--}}
-{{--        </div>--}}
-{{--          @endrole--}}
+          @if(Auth::user()->is_admin)
+          <div class="card mb-4 shadow-sm">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Estadísticas del sistema</h4>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Ver estadísticas</li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="location.href='admin'">Estadísticas del sistema</button>
+          </div>
+        </div>
+          @endif
           <div class="card mb-4 shadow-sm">
           <div class="card-header">
             @if(Auth::user()->locacion == 0)

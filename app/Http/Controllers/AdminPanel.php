@@ -24,12 +24,6 @@ class AdminPanel extends Controller
         $amount_users = count(User::all());
         $amount_infected = count(User::all()->where('estado', 'Contagiado'));
         $amount_at_risk = count(User::all()->where('estado', 'En riesgo'));
-        $stadistics = [
-            'Locaciones'=> $amount_locaciones,
-            'Usuarios'=> $amount_users,
-            'Infectados'=> $amount_infected,
-            'Riesgo'=> $amount_at_risk,
-    ];
         return view('adminpanel', [
             'Locaciones'=> $amount_locaciones,
             'Usuarios'=> $amount_users,
