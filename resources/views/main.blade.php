@@ -13,8 +13,9 @@
                   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
                   crossorigin="anonymous">
             <link rel="stylesheet" href="{{asset('css/style.css')}}">
+{{--            <link href="{{ mix('css/app.css') }}" rel="stylesheet" type="text/css">--}}
 
-    <title>Main</title>
+      <title>Main</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/pricing/">
 
@@ -81,7 +82,7 @@
                 <h4 class="my-0 font-weight-normal">CheckOut</h4>
             @endif
           </div>
-          <div class="card-body">
+          <div class="card-body" id="app">
             <ul class="list-unstyled mt-3 mb-4">
                 @if(Auth::user()->locacion == 0)
                     <li>Realizar CheckIn</li>
@@ -90,10 +91,13 @@
                 @endif
             </ul>
               @if(Auth::user()->locacion == 0)
-                <button type="button" class="btn btn-lg btn-block btn-primary" onclick="abrirCamara()" id="check">CheckIn</button>
+                <button type="button" class="btn btn-lg btn-block btn-primary" @click="mostrarCamara()" id="app">CheckIn</button>
               @else
-                  <button type="button" class="btn btn-lg btn-block btn-primary" onclick="abrirCamara()" id="check">CheckOut</button>
+                  <button type="button" class="btn btn-lg btn-block btn-primary" @click="mostrarCamara()" id="app">CheckOut</button>
               @endif
+                  <qrcode-stream v-if="isShowingCamera" @decode="onDecode"></qrcode-stream>
+              <script src="{{ mix('js/app.js') }}"></script>
+              <script src="{{ asset('js/camara.js') }}"></script>
           </div>
           </div>
         <div class="card mb-4 shadow-sm">
@@ -141,9 +145,6 @@
                       @endif
                         </form>
 
-                                <qrcode-stream @decode="onDecode" @init="onInit"></qrcode-stream>
-                                <script src="{{ mix('js/app.js') }}"></script>
-                                <script src="{{ asset('js/camara.js') }}"></script>
         </div>
         </div>
       </div>

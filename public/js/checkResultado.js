@@ -1,5 +1,4 @@
 function checkResultado() {
-    console.log('estoy aca');
     if(document.getElementById('fecha').value == "") {
         alert("seleccione una fecha");
         return false;

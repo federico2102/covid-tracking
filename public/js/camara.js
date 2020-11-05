@@ -1,6 +1,8 @@
-let isShowingCamera = false;
+// function mostrarCamara() {
+//       app.$isShowingCamera = !app.$isShowingCamera;
+// };
 
-function mostrarCamara() {
-        console.log(isShowingCamera);
-       isShowingCamera = !isShowingCamera;
+function onDecode (decodedString) {
+    window.location = decodedString;
 }
+
