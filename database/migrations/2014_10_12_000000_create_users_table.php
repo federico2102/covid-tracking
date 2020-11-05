@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->text('profile_photo_path')->nullable();
             $table->string('estado')->nullable();
             $table->integer('locacion');
+            $table->boolean('is_admin')->default(false);
             $table->timestamps();
         });
     }

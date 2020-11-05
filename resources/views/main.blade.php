@@ -48,7 +48,7 @@
     </div>
 
     <div class="container">
-      <div class="card-deck mb-3 text-center">
+      <div class="card-deck mb-4 text-center">
         <div class="card mb-4 shadow-sm">
           <div class="card-header">
             <h4 class="my-0 font-weight-normal">Locacion</h4>
@@ -60,7 +60,20 @@
             <button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="location.href='location'">Locacion</button>
           </div>
           </div>
-        <div class="card mb-4 shadow-sm">
+          @if(Auth::user()->is_admin)
+          <div class="card mb-4 shadow-sm">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Estadísticas del sistema</h4>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Ver estadísticas</li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="location.href='admin'">Estadísticas del sistema</button>
+          </div>
+        </div>
+          @endif
+          <div class="card mb-4 shadow-sm">
           <div class="card-header">
             @if(Auth::user()->locacion == 0)
                 <h4 class="my-0 font-weight-normal">CheckIn</h4>
@@ -77,10 +90,11 @@
                 @endif
             </ul>
               @if(Auth::user()->locacion == 0)
-                <button type="button" class="btn btn-lg btn-block btn-primary" onclick="mostrarCamara()">CheckIn</button>
+                <button type="button" class="btn btn-lg btn-block btn-primary" onclick="abrirCamara()" id="check">CheckIn</button>
               @else
-                  <button type="button" class="btn btn-lg btn-block btn-primary" onclick="mostrarCamara()">CheckOut</button>
+                  <button type="button" class="btn btn-lg btn-block btn-primary" onclick="abrirCamara()" id="check">CheckOut</button>
               @endif
+              <script src="{{ asset('js/camara.js') }}"></script>
           </div>
           </div>
         <div class="card mb-4 shadow-sm">
@@ -93,7 +107,7 @@
                   <h4 class="my-0 font-weight-normal">Testeo negativo</h4>
               @endif
                   </div>
-                  <div class="card-body">
+          <div class="card-body">
                     <ul class="list-unstyled mt-3 mb-4">
                     @if(Auth::user()->estado == 'No contagiado')
                       <li>Avisar estas contagiado</li>
@@ -127,12 +141,9 @@
                           <input type="submit" class="btn btn-lg btn-block btn-primary" onclick="checkResultado();" value="Informar">
                       @endif
                         </form>
-                                <qrcode-stream @decode="onDecode" @init="onInit"></qrcode-stream>
-                                <script type="module" src="{!! mix('js/app.js') !!}"></script>
-                                <script src="{{ asset('js/camara.js') }}"></script>
         </div>
         </div>
-        </div>
+      </div>
     </div>
 
     <div class="card-footer">
