@@ -1,3 +1,6 @@
-function abrirCamara() {
-       navigator.mediaDevices.getUserMedia({video: true, audio: false});
+let isShowingCamera = false;
+
+function mostrarCamara() {
+        console.log(isShowingCamera);
+       isShowingCamera = !isShowingCamera;
 }

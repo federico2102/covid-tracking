@@ -77,11 +77,10 @@
                 @endif
             </ul>
               @if(Auth::user()->locacion == 0)
-                <button type="button" class="btn btn-lg btn-block btn-primary" onclick="abrirCamara()" id="check">CheckIn</button>
+                <button type="button" class="btn btn-lg btn-block btn-primary" onclick="mostrarCamara()">CheckIn</button>
               @else
-                  <button type="button" class="btn btn-lg btn-block btn-primary" onclick="abrirCamara()" id="check">CheckOut</button>
+                  <button type="button" class="btn btn-lg btn-block btn-primary" onclick="mostrarCamara()">CheckOut</button>
               @endif
-              <script src="{{ asset('js/camara.js') }}"></script>
           </div>
           </div>
         <div class="card mb-4 shadow-sm">
@@ -128,10 +127,12 @@
                           <input type="submit" class="btn btn-lg btn-block btn-primary" onclick="checkResultado();" value="Informar">
                       @endif
                         </form>
+                                <qrcode-stream @decode="onDecode" @init="onInit"></qrcode-stream>
+                                <script type="module" src="{!! mix('js/app.js') !!}"></script>
+                                <script src="{{ asset('js/camara.js') }}"></script>
         </div>
         </div>
         </div>
-    </div>
     </div>
 
     <div class="card-footer">
@@ -141,9 +142,9 @@
         <h5 class="my-0 mr-md-auto font-weight-normal">Estado: </h5>
       </nav>
       @if(Auth::user()->estado == 'No contagiado')
-        <a class="btn btn-success" href="#">{{ Auth::user()->estado }}</a>              
+        <a class="btn btn-success" href="#">{{ Auth::user()->estado }}</a>
       @elseif(Auth::user()->estado == 'Contagiado')
-        <a class="btn btn-danger" href="#">{{ Auth::user()->estado }}</a> 
+        <a class="btn btn-danger" href="#">{{ Auth::user()->estado }}</a>
       @endif
     </div>
     </div>

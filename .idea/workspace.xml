@@ -24,12 +24,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Agrego trigger en Kernel.php, para que despues de 14 dias, un usuario &quot;en riesgo&quot; pase a &quot;no contagiado&quot;. Hice tests basicos a mano.. habria que ver bien si efectivamente eso chequea solo todos los dias.&#10;Agrego al readme algunos errores que encontre en la app">
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Arregle el ultimo error que habia subido al README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Locacion.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Locacion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ContagiosTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ContagiosTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/camara.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/camara.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <list id="c16eeb1e-2a41-4503-a9b3-45b8020eb448" name="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR) -Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso -Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -216,26 +219,27 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/js" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/js" />
       <recent name="$PROJECT_DIR$/resources" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers" />
       <recent name="$PROJECT_DIR$/resources/js" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/vendor" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.ContagiosTest.usuario_puede_contagiar_usuarios">
+  <component name="RunManager" selected="PHPUnit.phpunit.xml">
     <configuration name="ContagiosTest.usuario_contagiado_puede_informar_alta" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Unit\ContagiosTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/ContagiosTest.php" method="usuario_contagiado_puede_informar_alta" scope="Method" />
       <method v="2" />
@@ -309,14 +313,8 @@
       <workItem from="1604223273512" duration="294000" />
       <workItem from="1604261016475" duration="8000" />
       <workItem from="1604305865244" duration="63237000" />
-      <workItem from="1604460617085" duration="13800000" />
-    </task>
-    <task id="LOCAL-00031" summary="Arreglo error en el view de check-in">
-      <created>1603410623438</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1603410623438</updated>
+      <workItem from="1604460617085" duration="13927000" />
+      <workItem from="1604535018536" duration="10273000" />
     </task>
     <task id="LOCAL-00032" summary="Arreglo en view de check-in.. lo subo para testearlo en heroku">
       <created>1603414854440</created>
@@ -654,7 +652,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604472913152</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="Arregle el ultimo error que habia subido al README.md">
+      <created>1604475698657</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1604475698658</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -684,7 +689,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="actualizo gitIgnore" />
     <MESSAGE value="Primeras pruebas de abrir la camara del celu haciendo click en check-in" />
     <MESSAGE value="Implemento envio de mail a gente que compartio locacion con quien informa contagio" />
     <MESSAGE value="Refactors" />
@@ -709,7 +713,8 @@
     <MESSAGE value="Agrego tests de que un usuario en riesgo puede informar contagio o informar no estar contagiado y su estado cambia" />
     <MESSAGE value="Ahora un usuario solo contagia a quienes estuvieron con el mas de 30 minutos en una locacion" />
     <MESSAGE value="Agrego trigger en Kernel.php, para que despues de 14 dias, un usuario &quot;en riesgo&quot; pase a &quot;no contagiado&quot;. Hice tests basicos a mano.. habria que ver bien si efectivamente eso chequea solo todos los dias.&#10;Agrego al readme algunos errores que encontre en la app" />
-    <option name="LAST_COMMIT_MESSAGE" value="Agrego trigger en Kernel.php, para que despues de 14 dias, un usuario &quot;en riesgo&quot; pase a &quot;no contagiado&quot;. Hice tests basicos a mano.. habria que ver bien si efectivamente eso chequea solo todos los dias.&#10;Agrego al readme algunos errores que encontre en la app" />
+    <MESSAGE value="Arregle el ultimo error que habia subido al README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arregle el ultimo error que habia subido al README.md" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
@@ -732,10 +737,11 @@
       <screen x="0" y="23" width="1680" height="966" />
     </state>
     <state x="428" y="168" key="#Test_Frameworks/0.23.1680.966@0.23.1680.966" timestamp="1602374156074" />
-    <state x="304" y="168" width="1071" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602373696615">
-      <screen x="0" y="23" width="1680" height="966" />
+    <state x="908" y="-906" width="1071" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604544431824">
+      <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="304" y="168" width="1071" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.966@0.23.1680.966" timestamp="1602373696615" />
+    <state x="908" y="-906" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604544431824" />
     <state x="-54" y="-957" width="1720" height="857" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1604475652310">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
@@ -776,37 +782,37 @@
     <state x="38" y="-963" width="1344" height="773" key="DiffContextDialog/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604389259861" />
     <state x="168" y="109" key="DiffContextDialog/0.23.1680.967@0.23.1680.967" timestamp="1602619590479" />
     <state x="38" y="-963" width="1344" height="773" key="DiffContextDialog/0.23.1680.972/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603936398810" />
-    <state width="1878" height="294" key="GridCell.Tab.0.bottom" timestamp="1604475595310">
+    <state width="1878" height="294" key="GridCell.Tab.0.bottom" timestamp="1604475780061">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state width="1638" height="245" key="GridCell.Tab.0.bottom/0.23.1680.963@0.23.1680.963" timestamp="1602782494262" />
     <state width="1878" height="274" key="GridCell.Tab.0.bottom/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604360881866" />
     <state width="1638" height="247" key="GridCell.Tab.0.bottom/0.23.1680.966@0.23.1680.966" timestamp="1602375464895" />
-    <state width="1878" height="294" key="GridCell.Tab.0.bottom/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604475595310" />
+    <state width="1878" height="294" key="GridCell.Tab.0.bottom/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604475780061" />
     <state width="1638" height="247" key="GridCell.Tab.0.bottom/0.23.1680.967@0.23.1680.967" timestamp="1602638145567" />
-    <state width="1878" height="294" key="GridCell.Tab.0.center" timestamp="1604475595309">
+    <state width="1878" height="294" key="GridCell.Tab.0.center" timestamp="1604475780061">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state width="1638" height="245" key="GridCell.Tab.0.center/0.23.1680.963@0.23.1680.963" timestamp="1602782494244" />
     <state width="1878" height="274" key="GridCell.Tab.0.center/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604360881865" />
     <state width="1638" height="247" key="GridCell.Tab.0.center/0.23.1680.966@0.23.1680.966" timestamp="1602375464894" />
-    <state width="1878" height="294" key="GridCell.Tab.0.center/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604475595309" />
+    <state width="1878" height="294" key="GridCell.Tab.0.center/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604475780061" />
     <state width="1638" height="247" key="GridCell.Tab.0.center/0.23.1680.967@0.23.1680.967" timestamp="1602638145567" />
-    <state width="1878" height="294" key="GridCell.Tab.0.left" timestamp="1604475595309">
+    <state width="1878" height="294" key="GridCell.Tab.0.left" timestamp="1604475780061">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state width="1638" height="245" key="GridCell.Tab.0.left/0.23.1680.963@0.23.1680.963" timestamp="1602782494244" />
     <state width="1878" height="274" key="GridCell.Tab.0.left/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604360881864" />
     <state width="1638" height="247" key="GridCell.Tab.0.left/0.23.1680.966@0.23.1680.966" timestamp="1602375464894" />
-    <state width="1878" height="294" key="GridCell.Tab.0.left/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604475595309" />
+    <state width="1878" height="294" key="GridCell.Tab.0.left/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604475780061" />
     <state width="1638" height="247" key="GridCell.Tab.0.left/0.23.1680.967@0.23.1680.967" timestamp="1602638145566" />
-    <state width="1878" height="294" key="GridCell.Tab.0.right" timestamp="1604475595310">
+    <state width="1878" height="294" key="GridCell.Tab.0.right" timestamp="1604475780061">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state width="1638" height="245" key="GridCell.Tab.0.right/0.23.1680.963@0.23.1680.963" timestamp="1602782494261" />
     <state width="1878" height="274" key="GridCell.Tab.0.right/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604360881865" />
     <state width="1638" height="247" key="GridCell.Tab.0.right/0.23.1680.966@0.23.1680.966" timestamp="1602375464894" />
-    <state width="1878" height="294" key="GridCell.Tab.0.right/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604475595310" />
+    <state width="1878" height="294" key="GridCell.Tab.0.right/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604475780061" />
     <state width="1638" height="247" key="GridCell.Tab.0.right/0.23.1680.967@0.23.1680.967" timestamp="1602638145567" />
     <state x="134" y="-925" key="MergeDialog" timestamp="1604136935627">
       <screen x="-154" y="-1057" width="1920" height="1057" />
@@ -850,7 +856,7 @@
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="506" y="-763" key="Vcs.Multiple.Commit.Info.Dialog.Key/0.23.1680.965/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604136918977" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1604475650312">
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1604475708508">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="349" y="-829" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-154.-1057.1920.986@-154.-1057.1920.986" timestamp="1604098725927" />
@@ -861,7 +867,7 @@
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.965@0.23.1680.965" timestamp="1602983009206" />
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604333965649" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.966@0.23.1680.966" timestamp="1602888375395" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604475650312" />
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604475708508" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.967@0.23.1680.967" timestamp="1603240943604" />
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.972/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603954544505" />
     <state x="575" y="-615" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603698939707">
@@ -890,11 +896,12 @@
       <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state x="559" y="410" key="git4idea.ui.GitStashDialog/0.23.1680.963@0.23.1680.963" timestamp="1602719222330" />
-    <state x="423" y="-825" width="766" height="739" key="search.everywhere.popup" timestamp="1604314350319">
+    <state x="423" y="-825" width="766" height="739" key="search.everywhere.popup" timestamp="1604546798800">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="423" y="-825" width="766" height="739" key="search.everywhere.popup/0.23.1680.965/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604118633072" />
     <state x="423" y="-825" width="766" height="739" key="search.everywhere.popup/0.23.1680.966/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604314350319" />
+    <state x="423" y="-825" width="766" height="739" key="search.everywhere.popup/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604546798800" />
     <state x="505" y="235" width="670" height="676" key="search.everywhere.popup/0.23.1680.967@0.23.1680.967" timestamp="1602614335035" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
