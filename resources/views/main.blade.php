@@ -94,7 +94,6 @@
               @else
                   <button type="button" class="btn btn-lg btn-block btn-primary" onclick="abrirCamara()" id="check">CheckOut</button>
               @endif
-              <script src="{{ asset('js/camara.js') }}"></script>
           </div>
           </div>
         <div class="card mb-4 shadow-sm">
@@ -141,6 +140,10 @@
                           <input type="submit" class="btn btn-lg btn-block btn-primary" onclick="checkResultado();" value="Informar">
                       @endif
                         </form>
+
+                                <qrcode-stream @decode="onDecode" @init="onInit"></qrcode-stream>
+                                <script src="{{ mix('js/app.js') }}"></script>
+                                <script src="{{ asset('js/camara.js') }}"></script>
         </div>
         </div>
       </div>
