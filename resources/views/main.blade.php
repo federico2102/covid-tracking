@@ -95,7 +95,7 @@
               @else
                   <button type="button" class="btn btn-lg btn-block btn-primary" @click="mostrarCamara()" id="app">CheckOut</button>
               @endif
-                  <qrcode-stream v-if="isShowingCamera" @decode="onDecode"></qrcode-stream>
+                  <qrcode-stream v-if="isShowingCamera" @decode="onDecode" @init="onInit"></qrcode-stream>
               <script src="{{ mix('js/app.js') }}"></script>
               <script src="{{ asset('js/camara.js') }}"></script>
           </div>
