@@ -19,7 +19,7 @@ class LocacionController extends Controller
      */
     public function index()
     {
-        $locaciones = Locacion::all(['id','Nombre','Capacidad','CapacidadMax','Geolocalizacion','QR','Descripcion', 'user_id']);
+        $locaciones = Locacion::all();
         return view('locacion', ['locaciones'=>$locaciones, 'layout'=>'index']);
     }
 
@@ -29,7 +29,7 @@ class LocacionController extends Controller
      */
     public function create()
     {
-        $locaciones = Locacion::all(['id','Nombre','Capacidad','CapacidadMax','Geolocalizacion','QR','Descripcion', 'user_id']);
+        $locaciones = Locacion::all();
         return view('locacion',['locaciones'=>$locaciones, 'layout'=>'create']);
     }
 
@@ -52,7 +52,7 @@ class LocacionController extends Controller
     public function show($id)
     {
         $locacion = Locacion::find($id);
-        $locaciones = Locacion::all(['id','Nombre','Capacidad','CapacidadMax','Geolocalizacion','QR','Descripcion', 'user_id']);
+        $locaciones = Locacion::all();
         return view('locacion',['locaciones'=>$locaciones, 'locacion'=>$locacion, 'layout'=>'show']);
     }
 
@@ -64,7 +64,7 @@ class LocacionController extends Controller
     public function edit($id)
     {
         $locacion = Locacion::find($id);
-        $locaciones = Locacion::all(['id','Nombre','Capacidad','CapacidadMax','Geolocalizacion','QR','Descripcion', 'user_id']);
+        $locaciones = Locacion::all();
         return view('locacion',['locaciones'=>$locaciones, 'locacion'=>$locacion, 'layout'=>'edit']);
     }
 

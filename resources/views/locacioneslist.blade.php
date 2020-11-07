@@ -24,9 +24,19 @@
                     <td data-label="Capacidad:">{{ $locacion->Capacidad }}</td>
                     <td data-label="CapacidadMax:">{{ $locacion->CapacidadMax }}</td>
                     <td data-label="Geolocacion:"><a href="{{ url('/map/'.$locacion->Geolocalizacion) }}" target="_blank">Click para abrir mapa</a></td>
-                    <td data-label="QR:"><a href="{{ $locacion->QR }}" target="_blank">Click para ver QR</a></td>
+                    @if($locacion->user_id == Auth::user()->id || Auth::user()->is_admin)
+                        <td data-label="QR:"><a href="{{ $locacion->QR }}" target="_blank">Click para ver QR</a></td>
+                    @else
+                        <td data-label="QR:">No disponible</td>
+                    @endif
                     <td data-label="Descripcion:">{{ $locacion->Descripcion }}</td>
-                    <td data-label="Imagen:"><a href="{{ url('/galeria/'.$locacion->id) }}" target="_blank">Click para ver imagenes</a></td>
+                    @if($locacion->Imagen == null)
+                        <td data-label="QR:">Sin imagenes</td>
+
+                    @else
+                        <td data-label="Imagen:"><a href="{{ url('/galeria/'.$locacion->id) }}" target="_blank">Click para ver imagenes</a></td>
+
+                    @endif
                     @if($locacion->user_id == Auth::user()->id || Auth::user()->is_admin)
                         <td>
                             <a href="{{ url('/edit/'.$locacion->id) }}" class="btn btn-sm btn-warning">Edit</a>

@@ -24,8 +24,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Agego boton para compartir check in por whatsapp.&#10;Actualizo el readme con lo ultimo que hizo santi y lo mio">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Ahora despues de crear una locacion se redirecciona a la misma pagina.&#10;Actualizo el readme">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/locacioneslist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/locacioneslist.blade.php" afterDir="false" />
     </list>
     <list id="c16eeb1e-2a41-4503-a9b3-45b8020eb448" name="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR) -Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso -Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -313,13 +314,6 @@
       <workItem from="1604305865244" duration="63237000" />
       <workItem from="1604460617085" duration="13927000" />
       <workItem from="1604535018536" duration="20496000" />
-    </task>
-    <task id="LOCAL-00039" summary="Vuelvo a dejar como base de datos la de heroku e hice un migrate:refresh para borrar datos agregados antes de la ultima modificacion.">
-      <created>1603479629976</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1603479629976</updated>
     </task>
     <task id="LOCAL-00040" summary="Agrego redireccionar a log in cuando alguien entra directamente por QR">
       <created>1603699874732</created>
@@ -657,7 +651,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604726291637</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="Ahora despues de crear una locacion se redirecciona a la misma pagina.&#10;Actualizo el readme">
+      <created>1604727076710</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1604727076710</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -687,7 +688,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Agrego variable faltante en index de concurrioController" />
     <MESSAGE value="Corrijo errores en la nueva restriccion de que no se pueda estar en dos lugares al mismo tiempo. Ahora esta testeado y funciona" />
     <MESSAGE value="Actualizo readme con lo que esta hecho y lo que falta hacer" />
     <MESSAGE value="codifico parametros que se pasan por url" />
@@ -712,7 +712,8 @@
     <MESSAGE value="Agrego boton para que se pueda compartir el check-in por whatsapp" />
     <MESSAGE value="Agrego nueva api key para googlemaps" />
     <MESSAGE value="Agego boton para compartir check in por whatsapp.&#10;Actualizo el readme con lo ultimo que hizo santi y lo mio" />
-    <option name="LAST_COMMIT_MESSAGE" value="Agego boton para compartir check in por whatsapp.&#10;Actualizo el readme con lo ultimo que hizo santi y lo mio" />
+    <MESSAGE value="Ahora despues de crear una locacion se redirecciona a la misma pagina.&#10;Actualizo el readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ahora despues de crear una locacion se redirecciona a la misma pagina.&#10;Actualizo el readme" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
