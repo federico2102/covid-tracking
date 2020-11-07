@@ -21,6 +21,7 @@ class CreateLocacionsTable extends Migration
             $table->string('Geolocalizacion');
             $table->string('QR');
             $table->string('Descripcion')->nullable();
+            $table->string('Link');
             $table->mediumText('Imagen')->nullable();
             $table->foreignId('user_id')->references('id')->on('users');
             $table->timestamps();

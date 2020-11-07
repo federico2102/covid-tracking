@@ -24,8 +24,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Camara implementada. No pude ubicarla exactamente donde queria, pero funciona">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Agrego nueva api key para googlemaps">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Locacion.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Locacion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_11_012556_create_locacions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_11_012556_create_locacions_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/concurrio.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/concurrio.blade.php" afterDir="false" />
     </list>
     <list id="c16eeb1e-2a41-4503-a9b3-45b8020eb448" name="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR) -Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso -Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -313,13 +318,6 @@
       <workItem from="1604305865244" duration="63237000" />
       <workItem from="1604460617085" duration="13927000" />
       <workItem from="1604535018536" duration="20496000" />
-    </task>
-    <task id="LOCAL-00037" summary="Corrijo creacion de tabla concurrio en archivo &quot;ConcurrioController&quot;">
-      <created>1603436668484</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1603436668484</updated>
     </task>
     <task id="LOCAL-00038" summary="Implemento check in y check out. Se va a la pagina desde confirmacion a traves del QR de la locacion y detecta solo si es check in o check out. Si es check in, suma una nueva entrada en la tabla &quot;concurrios&quot; y suma uno en la capacidad de la locacion. Si es check out, agrega la fecha y hora de salida y resta uno en la capacidad de la locacion.">
       <created>1603479506349</created>
@@ -657,7 +655,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604558195329</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="Agrego nueva api key para googlemaps">
+      <created>1604725717844</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1604725717845</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -687,7 +692,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Agrego opcion de testeo negativo cuando el usuario esta en riesgo o contagiado" />
     <MESSAGE value="Agrego restriccion para que un usuario no pueda estar en dos locaciones al mismo tiempo" />
     <MESSAGE value="Agrego variable faltante en index de concurrioController" />
     <MESSAGE value="Corrijo errores en la nueva restriccion de que no se pueda estar en dos lugares al mismo tiempo. Ahora esta testeado y funciona" />
@@ -712,7 +716,8 @@
     <MESSAGE value="Agrego funcionalidad para abrir camara" />
     <MESSAGE value="Camara implementada. No pude ubicarla exactamente donde queria, pero funciona" />
     <MESSAGE value="Agrego boton para que se pueda compartir el check-in por whatsapp" />
-    <option name="LAST_COMMIT_MESSAGE" value="Agrego boton para que se pueda compartir el check-in por whatsapp" />
+    <MESSAGE value="Agrego nueva api key para googlemaps" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agrego nueva api key para googlemaps" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
@@ -857,7 +862,7 @@
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="506" y="-763" key="Vcs.Multiple.Commit.Info.Dialog.Key/0.23.1680.965/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604136918977" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1604725447815">
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1604725727141">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="349" y="-829" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-154.-1057.1920.986@-154.-1057.1920.986" timestamp="1604098725927" />
@@ -871,7 +876,7 @@
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604558202056" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.967@0.23.1680.967" timestamp="1603240943604" />
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.972/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603954544505" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.973/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604725447815" />
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.973/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604725727141" />
     <state x="575" y="-615" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603698939707">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>

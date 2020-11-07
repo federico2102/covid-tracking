@@ -32,7 +32,6 @@
                     <th scope="col">Capacidad</th>
                     <th scope="col">CapacidadMax</th>
                     <th scope="col">Geolocalizacion</th>
-                    <th scope="col">QR</th>
 
                 </tr>
                 </thead>
@@ -42,7 +41,9 @@
                         <td data-label="Capacidad:">{{ $locacion->Capacidad }}</td>
                         <td data-label="CapacidadMax:">{{ $locacion->CapacidadMax }}</td>
                         <td data-label="Geolocacion:"><a href="{{ url('/map/'.$locacion->Geolocalizacion) }}" target="_blank">Click para abrir mapa</a></td>
-                        <td data-label="QR:"><a href="{{ $locacion->QR }}" target="_blank">Click para ver QR</a></td>
+                        <td>
+                            <a href="whatsapp://send?text=A traves de este link podes hacer check-in en {{ $locacion->Nombre }}: {{ $locacion->Link }}" data-action="share/whatsapp/share" class="btn btn-sm btn-success">Share via Whatsapp</a>
+                        </td>
                     </tr>
                 </tbody>
             </table>

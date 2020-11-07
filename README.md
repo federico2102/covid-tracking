@@ -19,11 +19,11 @@
     usuarios que hayan estado compartiendo presencia dentro de una locación en algún rango horario 
     (se puede asumir un bloque de 15 o 30 minutos como mínimo). (LISTO)
     * El mensaje en pantalla no necesariamente se requiere que sea instantáneo: podría aparecer recién en el próximo ingreso del usuario. (LISTO)
-* Perfil administrador (FALTA IMPLEMENTAR EL ROL)
+* Perfil administrador (LISTO)
     * El rol administrador podrá visualizar en un mapa todas las locaciones registradas junto con su información de 
     estado (capacidad versus concurrencia) (LISTO)
     * También podrá visualizar un dashboard con las estadísticas de uso del sistema (cantidad de usuarios, cantidad de 
-    locaciones, cantidad de usuarios infectados, cantidad de personas en riesgo de contagio). (FALTA IMPLEMENTAR)
+    locaciones, cantidad de usuarios infectados, cantidad de personas en riesgo de contagio). (LISTO)
 
 ####Importantes
 * Que el propietario pueda asociarle a la locación, además de su nombre y descripción: Imágenes (POR AHORA SOLO SE PUEDE UNA IMAGEN)
@@ -33,7 +33,7 @@
 * Pasado un tiempo configurable, los usuarios con riesgo de contagio automáticamente pasen a estado normal. (LISTO)
 
 ####Deseables
-* Estando dentro de una locación, poder compartir por Whatapps el link para hacer Checkin. (NO)
+* Estando dentro de una locación, poder compartir por Whatapps el link para hacer Checkin. (LISTO)
 * Incorporar notificaciones como alerta al recibir un contagio (instantáneas) (NO)
 * Incorporar al perfil administrador, un mapa de calor que indique la cantidad de
 contagios actuales e históricos, día x día. (NO)

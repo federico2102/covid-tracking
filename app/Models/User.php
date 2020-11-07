@@ -77,6 +77,7 @@ class User extends Authenticatable
             'Geolocalizacion' => $request->input('Geolocalizacion'),
             'QR' => 'https://qrickit.com/api/qr.php?d=https://yo-estuve-ahi.herokuapp.com/concurrio/',
             'Descripcion' => $request->input('Descripcion'),
+            'Link' => 'https://yo-estuve-ahi.herokuapp.com/concurrio/',
             'Imagen' => $imagen_nombre,
             'user_id' => $this->id,
         ]);
@@ -84,6 +85,7 @@ class User extends Authenticatable
         $locacion_id = serialize($locacion->id);
         $locacion_id_encoded = base64_encode($locacion_id);
         $locacion->QR = $locacion->QR.$locacion_id_encoded.'&t=j&qrsize=300';
+        $locacion->Link = $locacion->Link.$locacion_id_encoded;
         $locacion->save();
 
         return $locacion;

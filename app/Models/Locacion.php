@@ -17,8 +17,9 @@ class Locacion extends Model
         'Geolocalizacion',
         'QR',
         'Descripcion',
+        'Link',
         'Imagen',
-        'Creador'
+        'user_id'
     ];
 
     public function ingresarUsuario($user_id)
