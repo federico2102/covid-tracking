@@ -41,7 +41,7 @@ class LocacionController extends Controller
     public function store(Request $request)
     {
         Auth::user()->crearLocacion($request);
-        return redirect('/home');
+        return redirect('/location');
     }
 
     /**

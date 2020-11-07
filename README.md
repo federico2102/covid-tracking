@@ -41,5 +41,5 @@ contagios actuales e históricos, día x día. (NO)
 ####Falta arreglar (aca pueden ir escribiendo todo lo que falla o falta y no esta en el enunciado)
 * Hacer un view presentable en el archivo cuerpoMail.blade.php
 * Ver por que siempre hay que hacer doble loggin para ingresar
-* Hacer que el boton check-in abra la camara o decidir como va a funcionar eso
+* Hacer que el boton check-in abra la camara o decidir como va a funcionar eso (Esta implementado, pero no funciona si no es Https)
 * Modificar handler de excepciones para que si hay un error, el usuario vea la pantalla de "404 not found"
