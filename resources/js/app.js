@@ -57,3 +57,14 @@ let app = new Vue({
         }
     }
 });
+
+let noti = new Vue({
+    el: '#noti',
+
+    created() {
+        window.Echo.private('Notificacion')
+            .listen('Notificacion', (e) => {
+                console.log(e)
+            })
+    },
+});

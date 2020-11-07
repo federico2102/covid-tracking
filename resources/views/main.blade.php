@@ -1,6 +1,9 @@
 <!doctype html>
 <x-app-layout>
 <html lang="en">
+<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+{{--<script src={{ asset('js/app.js') }}></script>--}}
+<div id="noti"></div>
 <x-slot name="header">
   <head>
     <meta charset="utf-8">
@@ -97,7 +100,6 @@
               @endif
                   <qrcode-stream v-if="isShowingCamera" @decode="onDecode" @init="onInit"></qrcode-stream>
               <script src="{{ mix('js/app.js') }}"></script>
-              <script src="{{ asset('js/camara.js') }}"></script>
           </div>
           </div>
         <div class="card mb-4 shadow-sm">

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\Notificacion;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -14,6 +15,7 @@ class ContagiosController extends Controller
         $fecha_minima = $fecha_diagnostico->subDays(7); //Fecha configurable
 
         Auth::user()->contagiar($fecha_minima, $fecha_diagnostico);
+        event(new Notificacion('holis'));
 
         return redirect("/home");
     }

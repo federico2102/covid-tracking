@@ -24,6 +24,8 @@
     },
     "dependencies": {
         "inputmask": "^5.0.5",
+        "laravel-echo": "^1.9.0",
+        "pusher-js": "^7.0.1",
         "vue": "^2.6.12",
         "vue-qrcode-reader": "^2.3.14"
     }

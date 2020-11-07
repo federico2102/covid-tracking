@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\Notificacion;
 use App\Models\Locacion;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -29,6 +30,7 @@ class LocacionController extends Controller
      */
     public function create()
     {
+        event(new Notificacion('holis'));
         $locaciones = Locacion::all();
         return view('locacion',['locaciones'=>$locaciones, 'layout'=>'create']);
     }

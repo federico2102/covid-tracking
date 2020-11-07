@@ -1,5 +1,6 @@
 <?php
 
+use App\Events\Notificacion;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,14 +34,14 @@ Route::get('/galeria/{id}',"LocacionController@getImages");
 Route::get('/informarcontagio',"ContagiosController@informarContagio");
 Route::get('/informartest',"ContagiosController@testNegativo");
 Route::get('/admin', "AdminPanel@index");
-Route::get('notificacion-leida', function() {
+Route::get('notificacion', function() {
     Auth::user()->unreadNotifications->markAsRead();
     return redirect()->back();
 })->name('leida');
 
 
 
-
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    event(new App\Events\Notificacion(Auth::user()->name));
     return view('dashboard');
 })->name('dashboard');
