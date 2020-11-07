@@ -25,6 +25,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Broadcast de notificacion">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
     </list>
     <list id="c16eeb1e-2a41-4503-a9b3-45b8020eb448" name="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR) -Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso -Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" comment="" />
@@ -316,13 +318,6 @@
       <workItem from="1604305865244" duration="63237000" />
       <workItem from="1604460617085" duration="13927000" />
       <workItem from="1604535018536" duration="20496000" />
-    </task>
-    <task id="LOCAL-00044" summary="Cambio el orden de los chequeos para el check in. Ahora, en caso de que el lugar este lleno, y ademas el usuario no este en estado &quot;no contagiado&quot; se informara que debe estar en estado &quot;no contagiado&quot; para ingresar. (Antes, en ese caso solo se informaba que la locacion estaba llena)">
-      <created>1603838617530</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1603838617530</updated>
     </task>
     <task id="LOCAL-00045" summary="Agrego mapa con todas las locaciones en view de locaciones">
       <created>1603913087428</created>
@@ -660,7 +655,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604747130392</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="Broadcast de notificacion">
+      <created>1604747792642</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1604747792642</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -860,7 +862,7 @@
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="506" y="-763" key="Vcs.Multiple.Commit.Info.Dialog.Key/0.23.1680.965/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604136918977" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1604747135727">
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1604747799413">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="349" y="-829" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-154.-1057.1920.986@-154.-1057.1920.986" timestamp="1604098725927" />
@@ -874,7 +876,7 @@
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604558202056" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.967@0.23.1680.967" timestamp="1603240943604" />
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.972/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603954544505" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.973/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604747135727" />
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.973/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604747799413" />
     <state x="575" y="-615" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603698939707">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
