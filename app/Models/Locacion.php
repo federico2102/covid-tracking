@@ -45,7 +45,7 @@ class Locacion extends Model
 
     public function tiempoMinimo($desde, $hasta)
     {
-        return Carbon::create($desde)->diffInMinutes($hasta) >= 30;
+        return Carbon::create($desde)->diffInMinutes($hasta) >= 1;
     }
 
     public function registrarSalida($user_id)

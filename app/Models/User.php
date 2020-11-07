@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Mail\contagioMail;
+use App\Notifications\AvisarContagio;
 use Carbon\Carbon;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -115,6 +116,7 @@ class User extends Authenticatable
                     'estado' => 'En riesgo',
                     'fecha' => Carbon::now()]);
                 Mail::to($victima->email)->send(new contagioMail());
+                $victima->notify(new AvisarContagio);
             }
         }
 

@@ -33,6 +33,10 @@ Route::get('/galeria/{id}',"LocacionController@getImages");
 Route::get('/informarcontagio',"ContagiosController@informarContagio");
 Route::get('/informartest',"ContagiosController@testNegativo");
 Route::get('/admin', "AdminPanel@index");
+Route::get('notificacion-leida', function() {
+    Auth::user()->unreadNotifications->markAsRead();
+    return redirect()->back();
+})->name('leida');
 
 
 

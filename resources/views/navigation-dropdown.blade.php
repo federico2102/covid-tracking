@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,6 +20,35 @@
             </div>
 
             <!-- Settings Dropdown -->
+            <div class="hidden sm:flex sm:items-center sm:ml-6">
+            <x-jet-dropdown align="right" width="48">
+                <x-slot name="trigger">
+                    <li><a href="#"><i class="fa fa-bell"></i></a>
+                        <span class="badge badge-light">{{ Auth::user()->unreadNotifications->count() }}</span>
+                </x-slot>
+                <x-slot name="content">
+                    <div class="block px-4 py-2 text-xs text-gray-400">
+                        {{ __('Notificaciones') }}
+                    </div>
+
+                    @foreach(Auth::user()->unreadNotifications as $notification)
+                        <x-jet-dropdown-link href="{{ route('leida') }}" style="background-color: lightgray">
+                            {{ __($notification->data['data']) }}
+                        </x-jet-dropdown-link>
+                    @endforeach
+
+                    @foreach(Auth::user()->readNotifications as $notification)
+                        <x-jet-dropdown-link href="#">
+                            {{ __($notification->data['data']) }}
+                        </x-jet-dropdown-link>
+                    @endforeach
+
+
+{{--                    <a href="#">Notificar</a>--}}
+                </x-slot>
+            </x-jet-dropdown>
+            </div>
+
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <x-jet-dropdown align="right" width="48">
                     <x-slot name="trigger">
