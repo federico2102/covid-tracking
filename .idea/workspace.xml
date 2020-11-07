@@ -24,27 +24,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Agrego notificaciones">
-      <change afterPath="$PROJECT_DIR$/app/Events/Notificacion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="bb1e0b10-23f8-4028-aa70-e0bd6b82eb40" name="Default Changelist" comment="Broadcast de notificacion">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/yoEstuveAhi-laravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/yoEstuveAhi-laravel.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContagiosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContagiosController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LocacionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LocacionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Notifications/AvisarContagio.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/AvisarContagio.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/broadcasting.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/broadcasting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/main.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <list id="c16eeb1e-2a41-4503-a9b3-45b8020eb448" name="-Agrego link a codigo QR en la tabla de locaciones (por ahora todas se crean con el mismo QR) -Hay que ver como hacemos QRs distintos para cada locacion y como linkeamos eso con la accion de registrar ingreso -Para lo anterior, hay que hacer el sistema de log in en la app con distintos roles" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -335,13 +317,6 @@
       <workItem from="1604305865244" duration="63237000" />
       <workItem from="1604460617085" duration="13927000" />
       <workItem from="1604535018536" duration="20496000" />
-    </task>
-    <task id="LOCAL-00042" summary="Agrego chequeos de que el usuario pueda ingresar solo si esta en estado &quot;no contagiado&quot; y la locacion no esta llena. Caso contrario, se le informara al usuario la razon por la cual no puede ingresar.">
-      <created>1603837710509</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1603837710509</updated>
     </task>
     <task id="LOCAL-00043" summary="Corrijo eror de tipeo en el nombre de una variable">
       <created>1603838193592</created>
@@ -679,7 +654,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604734983662</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="Broadcast de notificacion">
+      <created>1604746452220</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1604746452220</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -709,7 +691,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="codifico parametros que se pasan por url" />
     <MESSAGE value="Corrijo errores del ultimo cambio" />
     <MESSAGE value="Agrego atriburo &quot;Creador&quot; a las locaciones, asi ahora solo puede editar las locaciones quien las haya creado (mas adelante tambien lo va a poder hacer quien tenga rol de admin)" />
     <MESSAGE value="-Ya implemente la fecha para informar contagio o alta de contagio.&#10;-Cree una nueva tabla donde se guarda cada persona que estuvo contagiada, o en riesgo, con su fecha de alta en caso de que ya la tenga (va a servir para el dashboard)" />
@@ -734,7 +715,8 @@
     <MESSAGE value="Ahora despues de crear una locacion se redirecciona a la misma pagina.&#10;Actualizo el readme" />
     <MESSAGE value="Ahora solo puede ver los QR quien creo la locacion o el admin (en la tabla de locaciones).&#10;Tambien, si no hay imagenes, se muestra un aviso &quot;sin imagenes&quot; en la columna correspondiente." />
     <MESSAGE value="Agrego notificaciones" />
-    <option name="LAST_COMMIT_MESSAGE" value="Agrego notificaciones" />
+    <MESSAGE value="Broadcast de notificacion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Broadcast de notificacion" />
   </component>
   <component name="WindowStateProjectService">
     <state x="428" y="187" key="#CLI_Interpreters" timestamp="1602373966883">
@@ -879,7 +861,7 @@
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="506" y="-763" key="Vcs.Multiple.Commit.Info.Dialog.Key/0.23.1680.965/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604136918977" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1604734994693">
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2" timestamp="1604746460018">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>
     <state x="349" y="-829" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-154.-1057.1920.986@-154.-1057.1920.986" timestamp="1604098725927" />
@@ -893,7 +875,7 @@
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.967/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604558202056" />
     <state x="440" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.967@0.23.1680.967" timestamp="1603240943604" />
     <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.972/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1603954544505" />
-    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.973/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604734994693" />
+    <state x="349" y="-813" key="Vcs.Push.Dialog.v2/0.23.1680.973/-154.-1057.1920.1057@-154.-1057.1920.1057" timestamp="1604746460018" />
     <state x="575" y="-615" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603698939707">
       <screen x="-154" y="-1057" width="1920" height="1057" />
     </state>

@@ -2,8 +2,8 @@
 <x-app-layout>
 <html lang="en">
 <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-{{--<script src={{ asset('js/app.js') }}></script>--}}
 <div id="noti"></div>
+<script src={{ mix('js/app.js') }}></script>
 <x-slot name="header">
   <head>
     <meta charset="utf-8">
