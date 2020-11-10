@@ -4,6 +4,8 @@ require('inputmask');
 import Vue from "vue";
 import VueQrcodeReader from "vue-qrcode-reader";
 
+window.Vue = require('vue');
+
 Vue.use(VueQrcodeReader);
 
 window.onload = function () {

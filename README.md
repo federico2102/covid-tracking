@@ -43,3 +43,14 @@ contagios actuales e históricos, día x día. (NO)
 * Ver por que siempre hay que hacer doble loggin para ingresar
 * Hacer que el boton check-in abra la camara o decidir como va a funcionar eso (Esta implementado, pero no funciona si no es Https)
 * Modificar handler de excepciones para que si hay un error, el usuario vea la pantalla de "404 not found"
+
+####Diagramas para la presentacion
+*Diagrama de clases para los modelos (modelos mas importantes y sus funciones y como interactuan)
+*Diagramas de flujo para eventos centrales (crear locacion, check-in, check-out, contagiar)
+*MER (relacion entre las tablas)
+*
+
+####Decisiones de diseño
+*Admin implementado con atributo "is_admin" en el usuario
+*La tabla de victimas para saber con quienes se compartio mas de x tiempo
+*Hashear los parametros que llegan al index de concurrio

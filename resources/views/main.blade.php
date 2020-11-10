@@ -2,6 +2,7 @@
 <x-app-layout>
 <html lang="en">
 <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <div id="noti"></div>
 <script src={{ mix('js/app.js') }}></script>
 <x-slot name="header">
