@@ -54,3 +54,8 @@ contagios actuales e históricos, día x día. (NO)
 *Admin implementado con atributo "is_admin" en el usuario
 *La tabla de victimas para saber con quienes se compartio mas de x tiempo
 *Hashear los parametros que llegan al index de concurrio
+
+####Puntos problematicos
+*Google maps pide pagar para usar su api sin marca de agua
+*Abrir la camara no funciona si no es https, y heroku cobra por eso
+*Hay que hacer log in dos veces para poder ingresar (no llegamos a debuggear eso)
