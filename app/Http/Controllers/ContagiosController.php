@@ -12,7 +12,7 @@ class ContagiosController extends Controller
     public function informarContagio(Request $request)
     {
         $fecha_diagnostico = Carbon::create($request->input('fecha'));
-        $fecha_minima = $fecha_diagnostico->subDays(7); //Fecha configurable
+        $fecha_minima = $fecha_diagnostico->subDays(env('RECUPERACION_EN_RIESGO', 7)); //Fecha configurable
 
         Auth::user()->contagiar($fecha_minima, $fecha_diagnostico);
         event(new Notificacion('holis'));
