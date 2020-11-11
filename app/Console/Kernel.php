@@ -29,7 +29,7 @@ class Kernel extends ConsoleKernel
     {
         $schedule->call(function (){
             $contagios = Contagio::all()->where('fecha_alta', '=', null)
-                ->where('fecha', '<=', Carbon::now()->subDays(14))
+                ->where('fecha', '<=', Carbon::now()->subDays(env('RECUPERACION_EN_RIESGO', 14)))
             ->where('estado', '=', 'En riesgo');
 
             foreach ($contagios as $contagio){
