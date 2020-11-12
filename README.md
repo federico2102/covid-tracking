@@ -25,24 +25,26 @@
     * También podrá visualizar un dashboard con las estadísticas de uso del sistema (cantidad de usuarios, cantidad de 
     locaciones, cantidad de usuarios infectados, cantidad de personas en riesgo de contagio). (LISTO)
 
-####Importantes
+#### Importantes
 * Que el propietario pueda asociarle a la locación, además de su nombre y descripción: Imágenes (POR AHORA SOLO SE PUEDE UNA IMAGEN)
 * Que los usuarios con riesgo de contagio, reciban una advertencia antes de realizar un checkin. (RECIBEN MAIL)
 * Que los usuarios con riesgo de contagio, puedan regresar a tu estado normal mediante la opción de “Testeo Negativo” 
 (es decir, estando en riesgo de contagio, se hizo el test correspondiente y dio negativo). (LISTO)
 * Pasado un tiempo configurable, los usuarios con riesgo de contagio automáticamente pasen a estado normal. (LISTO)
 
-####Deseables
+#### Deseables
 * Estando dentro de una locación, poder compartir por Whatapps el link para hacer Checkin. (LISTO)
 * Incorporar notificaciones como alerta al recibir un contagio (instantáneas) (NO)
 * Incorporar al perfil administrador, un mapa de calor que indique la cantidad de
 contagios actuales e históricos, día x día. (NO)
 
-####Falta arreglar (aca pueden ir escribiendo todo lo que falla o falta y no esta en el enunciado)
+#### Falta arreglar (aca pueden ir escribiendo todo lo que falla o falta y no esta en el enunciado)
 * Hacer un view presentable en el archivo cuerpoMail.blade.php
 * Ver por que siempre hay que hacer doble loggin para ingresar
 * Hacer que el boton check-in abra la camara o decidir como va a funcionar eso (Esta implementado, pero no funciona si no es Https)
 * Modificar handler de excepciones para que si hay un error, el usuario vea la pantalla de "404 not found"
+* Handler de error 404, actualmente lo agarra laravel
+* Crear variable de entorno que represente los 14 dias para hacer busquedas de locaciones visitadas por un contagiado
 
 ####Diagramas para la presentacion
 *Diagrama de clases para los modelos (modelos mas importantes y sus funciones y como interactuan)
@@ -59,3 +61,10 @@ contagios actuales e históricos, día x día. (NO)
 *Google maps pide pagar para usar su api sin marca de agua
 *Abrir la camara no funciona si no es https, y heroku cobra por eso
 *Hay que hacer log in dos veces para poder ingresar (no llegamos a debuggear eso)
+
+#### Para ppt
+* Sobre como configuramos DB (se crearon modelos y laravel hizo su magia)
+* Uso de Eloquent como orm de laravel (ventajas desventajas?)
+* La autenticacion con paquete externo no basico de laravel (?)
+* Hablar sobre el flujo interno que produce un request (views, controllers, etc, todo el caminito) diagramas que ayuden a ver esto
+
