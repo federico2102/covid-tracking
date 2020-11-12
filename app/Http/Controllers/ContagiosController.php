@@ -15,7 +15,7 @@ class ContagiosController extends Controller
         $fecha_minima = $fecha_diagnostico->subDays(env('RECUPERACION_EN_RIESGO', 7)); //Fecha configurable
 
         Auth::user()->contagiar($fecha_minima, $fecha_diagnostico);
-        event(new Notificacion('holis'));
+        //event(new Notificacion('holis'));
 
         return redirect("/home");
     }

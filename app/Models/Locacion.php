@@ -24,8 +24,6 @@ class Locacion extends Model
 
     public function ingresarUsuario($user_id)
     {
-        $ingreso = $this->ingresos()->create(['user_id' => $user_id, 'locacion_id' => $this->id, 'entrada' => date("Y-m-d h:i:sa")]);
-
         $this->Capacidad += 1;
         $this->save();
 
@@ -40,7 +38,7 @@ class Locacion extends Model
         $user->locacion = $this->id;
         $user->save();
 
-        return $ingreso;
+        return $this;
     }
 
     public function tiempoMinimo($desde, $hasta)
@@ -50,10 +48,6 @@ class Locacion extends Model
 
     public function registrarSalida($user_id)
     {
-        $salida = $this->buscarEntrada($user_id);
-        $salida->salida = Carbon::now();
-        $salida->save();
-
         $user = User::find($user_id);
 
         $this->Capacidad -= 1;
@@ -71,24 +65,11 @@ class Locacion extends Model
         $user->locacion = 0;
         $user->save();
 
-        return $salida;
-    }
-
-    public function buscarEntrada($user_id)
-    {
-        return $this->ingresos()
-            ->where('user_id', '=', $user_id)
-            ->whereNull('salida')
-            ->orderBy('id', 'desc')->first();
+        return $this;
     }
 
     public function usuariosEnLocacion()
     {
         return User::all()->where('locacion', '=', $this->id);
-    }
-
-    public function ingresos()
-    {
-        return $this->hasMany(Concurrio::class);
     }
 }

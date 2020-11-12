@@ -26,12 +26,9 @@ class LocacionesTest extends TestCase
         $locacion = Locacion::factory()->create(['user_id'=>$user->id]);
 
         $this->json('POST', '/concurrio/store/'.$locacion->id.'/'.$user->id);
-        $ingreso = $locacion->buscarEntrada($user->id);
+        $ingreso = User::find($user->id)->locacion;
 
-        $this->assertNotNull($ingreso);
-        $this->assertEquals($ingreso->user_id, $user->id);
-        $this->assertEquals($ingreso->locacion_id, $locacion->id);
-        $this->assertNotNull($locacion->ingresos()->find($ingreso->id));
+        $this->assertEquals($locacion->id, $ingreso);
     }
 
     /** @test */
@@ -51,13 +48,16 @@ class LocacionesTest extends TestCase
         $locacion = Locacion::factory()->create(['user_id'=>$user_contagiado->id]);
 
         $this->json('POST', '/concurrio/store/'.$locacion->id.'/'.$user_contagiado->id);
-        $this->assertNull($locacion->buscarEntrada($user_contagiado->id));
+        $ingreso_contagiado = User::find($user_contagiado->id)->locacion;
+        $this->assertEquals(0, $ingreso_contagiado);
 
         $this->json('POST', '/concurrio/store/'.$locacion->id.'/'.$user_en_riesgo->id);
-        $this->assertNull($locacion->buscarEntrada($user_en_riesgo->id));
+        $ingreso_en_riesgo = User::find($user_en_riesgo->id)->locacion;
+        $this->assertEquals(0, $ingreso_en_riesgo);
 
         $this->json('POST', '/concurrio/store/'.$locacion->id.'/'.$user_no_contagiado->id);
-        $this->assertNotNull($locacion->buscarEntrada($user_no_contagiado->id));
+        $ingreso_no_contagiado = User::find($user_no_contagiado->id)->locacion;
+        $this->assertEquals($locacion->id, $ingreso_no_contagiado);
     }
 
     /** @test */
@@ -72,12 +72,12 @@ class LocacionesTest extends TestCase
         $locacion2 = Locacion::factory()->create(['user_id'=>$user->id]);
 
         $this->json('POST', '/concurrio/store/'.$locacion->id.'/'.$user->id);
-        $ingreso = $locacion->BuscarEntrada($user->id);
-        $this->assertNotNull($ingreso);
+        $ingreso = User::find($user->id)->locacion;
+        $this->assertEquals($locacion->id,$ingreso);
 
         $this->json('POST', '/concurrio/store/'.$locacion2->id.'/'.$user->id);
-        $ingreso2 = $locacion2->BuscarEntrada($user->id);
-        $this->assertNull($ingreso2);
+        $ingreso2 = User::find($user->id)->locacion;
+        $this->assertEquals($locacion->id,$ingreso2);
     }
 
     /** @test */
@@ -93,9 +93,9 @@ class LocacionesTest extends TestCase
 
         $this->json('POST', '/concurrio/store/'.$locacion->id.'/'.$user->id);
         $this->json('POST', '/concurrio/store/'.$locacion->id.'/'.$user2->id);
-        $ingreso = $locacion->BuscarEntrada($user2->id);
+        $ingreso = User::find($user2->id)->locacion;
 
-        $this->assertNull($ingreso);
+        $this->assertEquals(0, $ingreso);
     }
 
     /** @test */
@@ -107,11 +107,11 @@ class LocacionesTest extends TestCase
         $locacion = Locacion::factory()->create(['user_id'=>$user->id]);
 
         $this->json('POST', '/concurrio/store/'.$locacion->id.'/'.$user->id);
-        $ingreso = $locacion->BuscarEntrada($user->id);
-        $this->assertNotNull($ingreso);
+        $ingreso = User::find($user->id)->locacion;
+        $this->assertEquals($locacion->id, $ingreso);
 
         $this->json('POST', '/concurrio/store/'.$locacion->id.'/'.$user->id);
-        $ingreso = $locacion->BuscarEntrada($user->id);
-        $this->assertNull($ingreso);
+        $ingreso = User::find($user->id)->locacion;
+        $this->assertEquals(0, $ingreso);
     }
 }
