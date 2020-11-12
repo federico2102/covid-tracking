@@ -137,7 +137,7 @@
                       @endif
                           <div class="form-group">
                               <label>Fecha del diagnostico</label>
-                              <input id='fecha' name="fecha" type="date" class="form-control" required>
+                              <input id='fecha' name="fecha" type="date" max="{{date('Y-m-d')}}" class="form-control" required>
                           </div>
                       @if(Auth::user()->estado == 'No contagiado')
                         <input type="submit" class="btn btn-lg btn-block btn-primary" value="Contagiado">
