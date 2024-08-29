@@ -1,3 +1,6 @@
+# covid-tracking
+Web app to track covid cases and inform people of possible contact with positive cases. Users can check-in at different locations by scanning a QR code. If someone is positive for a covid test, everyone who was at the same location during the same time range will be informed through the app and by email. 
+
 # yoEstuveAhi-laravel
 * Permitir que los usuarios puedan registrar locaciones. (LISTO)
     * Por cada locación, el sistema deberá saber:
@@ -67,4 +70,6 @@ contagios actuales e históricos, día x día. (NO)
 * Uso de Eloquent como orm de laravel (ventajas desventajas?)
 * La autenticacion con paquete externo no basico de laravel (?)
 * Hablar sobre el flujo interno que produce un request (views, controllers, etc, todo el caminito) diagramas que ayuden a ver esto
+
+
 
