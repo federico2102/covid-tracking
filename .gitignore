@@ -1,14 +1,56 @@
-/node_modules
-/public/hot
-/public/storage
-/storage/*.key
-/vendor
-.env.backup
-.phpunit.result.cache
-Homestead.json
-Homestead.yaml
+# Node.js dependencies
+node_modules/
 npm-debug.log
 yarn-error.log
-.idea
-public/uploads
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Laravel specific (if using PHP/Laravel)
+vendor/
 .env
+
+# Composer dependencies
+composer.lock
+
+# Cache files
+bootstrap/cache/*
+!bootstrap/cache/.gitignore
+
+# Public files (if using Laravel or similar framework)
+public/storage
+public/hot
+storage/*.key
+storage/app/public/*
+!public/.htaccess
+
+# IDE specific
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Operating system specific
+.DS_Store
+Thumbs.db
+
+# Miscellaneous
+.env.backup
+*.bak
+*.swp
+*.tmp
+
+# Coverage and reports
+coverage/
+.phpunit.result.cache
+
+# Mac-specific files
+*.DS_Store
+
+# Executable files and object files
+*.exe
+*.out
+*.obj
+*.o
